@@ -431,7 +431,7 @@
     "pinned_symbol_libs": []
   },
   "meta": {
-    "filename": "Bridge.kicad_pro",
+    "filename": "Tablet.kicad_pro",
     "version": 1
   },
   "net_settings": {
@@ -466,12 +466,12 @@
       "gencad": "",
       "idf": "",
       "netlist": "",
-      "plot": "../../Downloads/BRIDGEPCBV1.2",
-      "pos_files": "../../Downloads/BRIDGEPCBV1.2/",
+      "plot": "",
+      "pos_files": "",
       "specctra_dsn": "",
       "step": "",
       "svg": "",
-      "vrml": "Bridge.wrl"
+      "vrml": ""
     },
     "page_layout_descr_file": ""
   },
@@ -576,7 +576,7 @@
   },
   "sheets": [
     [
-      "629dad9c-9aa5-4937-99d8-a711c090ea7c",
+      "677ec330-6efd-44e6-bc18-c1a3962e40e6",
       "Root"
     ]
   ],

@@ -1,0 +1,8 @@
+diagrams/Bridge-backups
+diagrams/Logger/Logger-backups
+diagrams/Logger/Logo-backups
+diagrams/Logo-backups
+diagrams/PowerCable/PowerCable-backups
+fp-info-cache
+*-backups
+.DS_Store

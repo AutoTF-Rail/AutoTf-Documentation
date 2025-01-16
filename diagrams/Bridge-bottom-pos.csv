@@ -1,0 +1,7 @@
+Ref,Val,Package,PosX,PosY,Rot,Side
+"J1","USB_A","USB_A_Molex_67643_Horizontal",105.710000,-115.290000,90.000000,bottom
+"J2","USB_A","USB_A_Molex_67643_Horizontal",131.790000,-81.365372,-90.000000,bottom
+"J3","USB_A","USB_A_Molex_67643_Horizontal",131.790000,-99.070000,-90.000000,bottom
+"J4","USB_A","USB_A_Molex_67643_Horizontal",140.020127,-115.041795,180.000000,bottom
+"J5","USB_A","USB_A_Molex_67643_Horizontal",121.930000,-115.140000,180.000000,bottom
+"U1","WeMos_D1_mini","WEMOS_D1_mini_light",119.430000,-101.360000,90.000000,bottom

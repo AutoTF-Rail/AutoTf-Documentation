@@ -431,7 +431,7 @@
     "pinned_symbol_libs": []
   },
   "meta": {
-    "filename": "Bridge.kicad_pro",
+    "filename": "PowerCable.kicad_pro",
     "version": 1
   },
   "net_settings": {
@@ -466,12 +466,12 @@
       "gencad": "",
       "idf": "",
       "netlist": "",
-      "plot": "../../Downloads/BRIDGEPCBV1.2",
-      "pos_files": "../../Downloads/BRIDGEPCBV1.2/",
+      "plot": "../../../Downloads/PowerCablePCBV1/",
+      "pos_files": "",
       "specctra_dsn": "",
       "step": "",
       "svg": "",
-      "vrml": "Bridge.wrl"
+      "vrml": ""
     },
     "page_layout_descr_file": ""
   },
@@ -576,7 +576,7 @@
   },
   "sheets": [
     [
-      "629dad9c-9aa5-4937-99d8-a711c090ea7c",
+      "68362ddc-e18a-440e-a862-44ac6a7ebe90",
       "Root"
     ]
   ],
