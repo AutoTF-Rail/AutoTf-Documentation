@@ -6,3 +6,5 @@ diagrams/PowerCable/PowerCable-backups
 fp-info-cache
 *-backups
 .DS_Store
+*.blend1
+*.bkp

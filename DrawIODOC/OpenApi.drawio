@@ -1,6 +1,6 @@
-<mxfile host="Electron" agent="Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) draw.io/26.0.3 Chrome/130.0.6723.137 Electron/33.2.1 Safari/537.36" version="26.0.3">
+<mxfile host="Electron" agent="Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) draw.io/26.0.9 Chrome/128.0.6613.186 Electron/32.2.5 Safari/537.36" version="26.0.9">
   <diagram name="Page-1" id="dq8juwHjYBTWb1SoAbBf">
-    <mxGraphModel dx="3490" dy="1084" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="1920" pageHeight="1200" math="0" shadow="0">
+    <mxGraphModel dx="2515" dy="608" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="1920" pageHeight="1200" math="0" shadow="0">
       <root>
         <mxCell id="0" />
         <mxCell id="1" parent="0" />
@@ -82,29 +82,107 @@
         <mxCell id="D0AqdsrFLwhoFKeQuo0Y-30" value="If a device doesn&#39;t say hello in the first 4 minutes of joining the network, its kicked" style="text;html=1;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;" parent="1" vertex="1">
           <mxGeometry x="650" y="360" width="160" height="50" as="geometry" />
         </mxCell>
-        <mxCell id="nHDwqZT88RZeFxS14gR3-1" value="Tablet internet startup" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+        <mxCell id="nHDwqZT88RZeFxS14gR3-1" value="Tablet internet startup" style="rounded=0;whiteSpace=wrap;html=1;" parent="1" vertex="1">
           <mxGeometry x="140" y="620" width="120" height="60" as="geometry" />
         </mxCell>
-        <mxCell id="nHDwqZT88RZeFxS14gR3-2" value="User enters name, pw" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+        <mxCell id="nHDwqZT88RZeFxS14gR3-2" value="User enters name, pw" style="rounded=0;whiteSpace=wrap;html=1;" parent="1" vertex="1">
           <mxGeometry x="140" y="690" width="120" height="60" as="geometry" />
         </mxCell>
-        <mxCell id="nHDwqZT88RZeFxS14gR3-3" value="To register a yubikey" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+        <mxCell id="nHDwqZT88RZeFxS14gR3-3" value="To register a yubikey" style="rounded=0;whiteSpace=wrap;html=1;" parent="1" vertex="1">
           <mxGeometry x="270" y="635" width="120" height="30" as="geometry" />
         </mxCell>
-        <mxCell id="nHDwqZT88RZeFxS14gR3-4" value="Code is grabbed from yubikey and supplied to authentik" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+        <mxCell id="nHDwqZT88RZeFxS14gR3-4" value="Code is grabbed from yubikey and supplied to authentik" style="rounded=0;whiteSpace=wrap;html=1;" parent="1" vertex="1">
           <mxGeometry x="140" y="760" width="120" height="60" as="geometry" />
         </mxCell>
-        <mxCell id="nHDwqZT88RZeFxS14gR3-5" value="If successful, grab secret from yubikey, and upload it to the server" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+        <mxCell id="nHDwqZT88RZeFxS14gR3-5" value="If successful, grab secret from yubikey, and upload it to the server" style="rounded=0;whiteSpace=wrap;html=1;" parent="1" vertex="1">
           <mxGeometry x="140" y="830" width="120" height="60" as="geometry" />
         </mxCell>
-        <mxCell id="nHDwqZT88RZeFxS14gR3-6" value="" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+        <mxCell id="nHDwqZT88RZeFxS14gR3-6" value="" style="rounded=0;whiteSpace=wrap;html=1;" parent="1" vertex="1">
           <mxGeometry x="430" y="620" width="120" height="60" as="geometry" />
         </mxCell>
-        <mxCell id="nHDwqZT88RZeFxS14gR3-7" value="GET: /LastSyncTry" style="rounded=1;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+        <mxCell id="nHDwqZT88RZeFxS14gR3-7" value="GET: /LastSyncTry" style="rounded=1;whiteSpace=wrap;html=1;" parent="1" vertex="1">
           <mxGeometry x="70" y="250" width="120" height="60" as="geometry" />
         </mxCell>
-        <mxCell id="nHDwqZT88RZeFxS14gR3-8" value="GET: /LastSynced" style="rounded=1;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+        <mxCell id="nHDwqZT88RZeFxS14gR3-8" value="GET: /LastSynced" style="rounded=1;whiteSpace=wrap;html=1;" parent="1" vertex="1">
           <mxGeometry x="-60" y="250" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="RrzdnQDn-9nG9QoV303n-1" value="Camera Setup Flow" style="swimlane;whiteSpace=wrap;html=1;" parent="1" vertex="1">
+          <mxGeometry x="450" y="820" width="610" height="570" as="geometry" />
+        </mxCell>
+        <mxCell id="RrzdnQDn-9nG9QoV303n-23" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" parent="RrzdnQDn-9nG9QoV303n-1" source="RrzdnQDn-9nG9QoV303n-2" target="RrzdnQDn-9nG9QoV303n-3" edge="1">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="RrzdnQDn-9nG9QoV303n-24" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" parent="RrzdnQDn-9nG9QoV303n-1" source="RrzdnQDn-9nG9QoV303n-2" target="RrzdnQDn-9nG9QoV303n-11" edge="1">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="RrzdnQDn-9nG9QoV303n-2" value="Initialize" style="rounded=0;whiteSpace=wrap;html=1;" parent="RrzdnQDn-9nG9QoV303n-1" vertex="1">
+          <mxGeometry x="125" y="40" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="RrzdnQDn-9nG9QoV303n-8" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" parent="RrzdnQDn-9nG9QoV303n-1" source="RrzdnQDn-9nG9QoV303n-3" target="RrzdnQDn-9nG9QoV303n-5" edge="1">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="RrzdnQDn-9nG9QoV303n-3" value="Scan for local cameras (usb connected)" style="rounded=0;whiteSpace=wrap;html=1;" parent="RrzdnQDn-9nG9QoV303n-1" vertex="1">
+          <mxGeometry x="10" y="170" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="RrzdnQDn-9nG9QoV303n-10" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" parent="RrzdnQDn-9nG9QoV303n-1" source="RrzdnQDn-9nG9QoV303n-4" target="RrzdnQDn-9nG9QoV303n-6" edge="1">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="RrzdnQDn-9nG9QoV303n-4" value="Try to start Camera Service for port" style="rounded=0;whiteSpace=wrap;html=1;" parent="RrzdnQDn-9nG9QoV303n-1" vertex="1">
+          <mxGeometry x="10" y="390" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="RrzdnQDn-9nG9QoV303n-9" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" parent="RrzdnQDn-9nG9QoV303n-1" source="RrzdnQDn-9nG9QoV303n-5" target="RrzdnQDn-9nG9QoV303n-4" edge="1">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="RrzdnQDn-9nG9QoV303n-5" value="Startup proxy for port i" style="rounded=0;whiteSpace=wrap;html=1;" parent="RrzdnQDn-9nG9QoV303n-1" vertex="1">
+          <mxGeometry x="10" y="280" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="RrzdnQDn-9nG9QoV303n-6" value="Add to camera count" style="rounded=0;whiteSpace=wrap;html=1;" parent="RrzdnQDn-9nG9QoV303n-1" vertex="1">
+          <mxGeometry x="10" y="500" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="RrzdnQDn-9nG9QoV303n-16" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" parent="RrzdnQDn-9nG9QoV303n-1" source="RrzdnQDn-9nG9QoV303n-11" target="RrzdnQDn-9nG9QoV303n-14" edge="1">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="RrzdnQDn-9nG9QoV303n-11" value="POST&lt;br&gt;/camera/addextcamera" style="rounded=0;whiteSpace=wrap;html=1;" parent="RrzdnQDn-9nG9QoV303n-1" vertex="1">
+          <mxGeometry x="240" y="170" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="RrzdnQDn-9nG9QoV303n-12" value="Returns port i" style="rounded=0;whiteSpace=wrap;html=1;" parent="RrzdnQDn-9nG9QoV303n-1" vertex="1">
+          <mxGeometry x="240" y="490" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="RrzdnQDn-9nG9QoV303n-19" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" parent="RrzdnQDn-9nG9QoV303n-1" source="RrzdnQDn-9nG9QoV303n-14" target="RrzdnQDn-9nG9QoV303n-18" edge="1">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="RrzdnQDn-9nG9QoV303n-14" value="starts proxy for port i" style="rounded=0;whiteSpace=wrap;html=1;" parent="RrzdnQDn-9nG9QoV303n-1" vertex="1">
+          <mxGeometry x="240" y="280" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="RrzdnQDn-9nG9QoV303n-20" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" parent="RrzdnQDn-9nG9QoV303n-1" source="RrzdnQDn-9nG9QoV303n-18" target="RrzdnQDn-9nG9QoV303n-12" edge="1">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="RrzdnQDn-9nG9QoV303n-18" value="Add to external camera count" style="rounded=0;whiteSpace=wrap;html=1;" parent="RrzdnQDn-9nG9QoV303n-1" vertex="1">
+          <mxGeometry x="240" y="390" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="RrzdnQDn-9nG9QoV303n-22" value="This is a seperate count, for easier management of the direction of the train, and cameras associated with a direction" style="rounded=0;whiteSpace=wrap;html=1;" parent="RrzdnQDn-9nG9QoV303n-1" vertex="1">
+          <mxGeometry x="400" y="380" width="200" height="80" as="geometry" />
+        </mxCell>
+        <mxCell id="RrzdnQDn-9nG9QoV303n-25" value="Called by mesh extensions" style="rounded=0;whiteSpace=wrap;html=1;" parent="RrzdnQDn-9nG9QoV303n-1" vertex="1">
+          <mxGeometry x="370" y="185" width="100" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="RrzdnQDn-9nG9QoV303n-26" value="/camera/{sideIndex}/startStream" style="rounded=0;whiteSpace=wrap;html=1;" parent="1" vertex="1">
+          <mxGeometry x="1080" y="860" width="170" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="RrzdnQDn-9nG9QoV303n-27" value="Rangierbegleiter müssen im zug einstellen, welche seiten tatsächlich genutzt werden müssen, wenn zug teile getrennt/dran getan werden, um mehrere meshes zu unterstützen" style="rounded=0;whiteSpace=wrap;html=1;" parent="1" vertex="1">
+          <mxGeometry x="1420" y="790" width="250" height="70" as="geometry" />
+        </mxCell>
+        <mxCell id="RrzdnQDn-9nG9QoV303n-28" value="Rangier begleiter können &quot;2 züge zu einem machen&quot;&lt;div&gt;Und den zügen sagen dass sie sich mit einander verbinden sollen&lt;/div&gt;" style="rounded=0;whiteSpace=wrap;html=1;" parent="1" vertex="1">
+          <mxGeometry x="1420" y="870" width="250" height="70" as="geometry" />
+        </mxCell>
+        <mxCell id="RrzdnQDn-9nG9QoV303n-29" value="Die seiten verbinden sich dann untereinander über wlan an den enden (wlan0)&lt;br&gt;Beide seiten müssen in den &quot;kupplungs modus&quot; getan werden vom rangier begleiter" style="rounded=0;whiteSpace=wrap;html=1;" parent="1" vertex="1">
+          <mxGeometry x="1680" y="870" width="250" height="70" as="geometry" />
+        </mxCell>
+        <mxCell id="fbIB9J7qFFFKaNbtSgQg-2" value="Danach suchen die seiten nach sich (mby über bluetooth?)" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="1940" y="870" width="250" height="70" as="geometry" />
+        </mxCell>
+        <mxCell id="fbIB9J7qFFFKaNbtSgQg-3" value="Dadurch dass die beiden seiten die sich suchen so nah an einander sind, deaktivieren sie ihre eigene steuerung danach selbst" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="1940" y="950" width="250" height="70" as="geometry" />
         </mxCell>
       </root>
     </mxGraphModel>
