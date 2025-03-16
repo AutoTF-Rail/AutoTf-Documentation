@@ -13,16 +13,16 @@ The documentation might lag behind a bit, because the safety and functionality o
 
 ## Drawn Documentation
 
-Documentation is made using Draw.IO and saved in [DrawIODOC](https://github.com/username/repository/tree/main/DrawIODoc/)
+Documentation is made using Draw.IO and saved in [DrawIODOC](https://github.com/AutoTF-Rail/AutoTf-Documentation/tree/main/DrawIODOC/)
 
 
 
 ## 3D models
 
-The molds for motors, and other prototyping is done in blender, and all models can be found in [Models](https://github.com/username/repository/tree/main/Models/).
+The molds for motors, and other prototyping is done in blender, and all models can be found in [Models](https://github.com/AutoTF-Rail/AutoTf-Documentation/tree/main/Models/).
 
 
-There will always be a printable example version in the [ExampleLever](https://github.com/username/repository/tree/main/Models/Export/Print/ExampleLever/) folder.
+There will always be a printable example version in the [ExampleLever](https://github.com/AutoTF-Rail/AutoTf-Documentation/tree/main/Models/Export/Print/ExampleLever/) folder.
 
 
 
