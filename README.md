@@ -9,7 +9,7 @@ Be aware that the documentation might not reflect the actual code in every corne
 The documentation might lag behind a bit, because the safety and functionality of actively running systems is priorizied.
 
 
-**All info given in this repository are without warranty. AutoTF and individiuals representing AutoTF are not liable for any damanges occuring due to the contents.**
+### **All info given in this repository are without warranty. AutoTF and individiuals representing AutoTF are not liable for any damanges occuring due to the contents unless specified otherwise in a contract.**
 
 
 ## Active repositories
