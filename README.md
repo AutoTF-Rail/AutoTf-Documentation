@@ -22,6 +22,7 @@ Active repositories of AutoTF, that contain code that is used in prod are:
 * [AutoTf.MotorCalibration](https://github.com/AutoTF-Rail/AutoTf.MotorCalibration): CLI Tool to calibrate and test motors.
 * [Machine-Setup](https://github.com/AutoTF-Rail/Machine-Setup): Commands for a central bridge installation(To be moved to docs repo.)
 * [AutoTf.Manager](https://github.com/AutoTF-Rail/AutoTf.Manager): Desktop app to manage the central server and trains.
+* [AutoTf.GpsTest](https://github.com/AutoTF-Rail/AutoTf.GpsTest): A very simple console app to get the latitude and longitude as well as speed from a Gps device. (Code is partially used in Central Bridge)
 
 ### Central Code:
 * [AutoTf.CentralBridgeOS](https://github.com/AutoTF-Rail/AutoTf.CentralBridgeOS): OS that runs on the raspberry PI's on a train, that act as a central brain.
