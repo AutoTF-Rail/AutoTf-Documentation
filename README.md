@@ -24,6 +24,7 @@ Active repositories of AutoTF, that contain code that is used in prod are:
 * [AutoTf.Manager](https://github.com/AutoTF-Rail/AutoTf.Manager): Desktop app to manage the central server and trains.
 * [AutoTf.GpsTest](https://github.com/AutoTF-Rail/AutoTf.GpsTest): A very simple console app to get the latitude and longitude as well as speed from a Gps device. (Code is partially used in Central Bridge)
 * [AutoTf.FahrplanParser](https://github.com/AutoTF-Rail/AutoTf.FahrplanParser): A console app/package that parses images of a fahrplan into code to be used in automation.
+* [AutoTf.Localisation](https://github.com/AutoTF-Rail/AutoTf.Localisation): CLI Demo to localise a train based on train display outputs + Hektometer recognition infront of the train. (Works with [AutoTf.FahrplanParser](https://github.com/AutoTF-Rail/AutoTf.FahrplanParser)
 
 ### Central Code:
 * [AutoTf.CentralBridgeOS](https://github.com/AutoTF-Rail/AutoTf.CentralBridgeOS): OS that runs on the raspberry PI's on a train, that act as a central brain.
