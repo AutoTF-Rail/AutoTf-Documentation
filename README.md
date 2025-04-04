@@ -49,6 +49,11 @@ The molds for motors, and other prototyping is done in blender, and all models c
 There will always be a printable example version in the [ExampleLever](https://github.com/AutoTF-Rail/AutoTf-Documentation/tree/main/Models/Export/Print/ExampleLever/) folder.
 
 
+## Licenses
+
+While some repositories are listed under the Apache 2.0 license, main parts like the [CentralBridge](https://github.com/AutoTF-Rail/AutoTf.CentralBridgeOS) are listed under the [GPL](https://www.gnu.org/licenses/gpl-3.0.txt) due to the usage of software/packages of third party listed as well under the GPL license.
+
+For a list of used packages please refer to the individiual repository.
 
 
 ## Contributions
