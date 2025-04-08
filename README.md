@@ -39,6 +39,17 @@ Please keep in mind that some repositories might not be public yet due to their 
 
 Documentation is made using Draw.IO and saved in [DrawIODOC](https://github.com/AutoTF-Rail/AutoTf-Documentation/tree/main/DrawIODOC/)
 
+Exports can be found in
+
+### Train setup diagram:
+
+![Train Setup](https://github.com/AutoTF-Rail/AutoTf-Documentation/tree/main/DrawIODOC/Export/TrainSetup.png?raw=true)
+
+
+### AI Control diagram:
+
+![Train Setup](https://github.com/AutoTF-Rail/AutoTf-Documentation/tree/main/DrawIODOC/Export/AI_Control.png?raw=true)
+
 
 
 ## 3D models
