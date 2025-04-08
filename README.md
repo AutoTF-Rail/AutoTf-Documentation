@@ -43,12 +43,12 @@ Exports can be found in
 
 ### Train setup diagram:
 
-![Train Setup](https://github.com/AutoTF-Rail/AutoTf-Documentation/tree/main/DrawIODOC/Export/TrainSetup.png?raw=true)
+![Train Setup](https://raw.githubusercontent.com/AutoTF-Rail/AutoTf-Documentation/main/DrawIODOC/Export/TrainSetup.png)
 
 
 ### AI Control diagram:
 
-![Train Setup](https://github.com/AutoTF-Rail/AutoTf-Documentation/tree/main/DrawIODOC/Export/AI_Control.png?raw=true)
+![Train Setup](https://raw.githubusercontent.com/AutoTF-Rail/AutoTf-Documentation/main/DrawIODOC/Export/AI_Control.png)
 
 
 
