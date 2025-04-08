@@ -50,6 +50,10 @@ Exports can be found in
 
 ![Train Setup](https://raw.githubusercontent.com/AutoTF-Rail/AutoTf-Documentation/main/DrawIODOC/Export/AI_Control.png)
 
+### Open API diagram:
+
+![OpenApi](https://raw.githubusercontent.com/AutoTF-Rail/AutoTf-Documentation/main/DrawIODOC/Export/OpenApi.png)
+
 
 
 ## 3D models

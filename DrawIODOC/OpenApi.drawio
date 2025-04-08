@@ -1,36 +1,9 @@
-<mxfile host="Electron" agent="Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) draw.io/26.0.9 Chrome/128.0.6613.186 Electron/32.2.5 Safari/537.36" version="26.0.9">
+<mxfile host="Electron" agent="Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) draw.io/26.2.2 Chrome/134.0.6998.178 Electron/35.1.2 Safari/537.36" version="26.2.2">
   <diagram name="Page-1" id="dq8juwHjYBTWb1SoAbBf">
-    <mxGraphModel dx="2515" dy="608" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="1920" pageHeight="1200" math="0" shadow="0">
+    <mxGraphModel dx="1725" dy="1782" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="1920" pageHeight="1200" math="0" shadow="0">
       <root>
         <mxCell id="0" />
         <mxCell id="1" parent="0" />
-        <mxCell id="D0AqdsrFLwhoFKeQuo0Y-23" value="" style="rounded=0;whiteSpace=wrap;html=1;" parent="1" vertex="1">
-          <mxGeometry x="880" y="230" width="310" height="100" as="geometry" />
-        </mxCell>
-        <mxCell id="D0AqdsrFLwhoFKeQuo0Y-1" value="Central Bridge" style="rounded=0;whiteSpace=wrap;html=1;" parent="1" vertex="1">
-          <mxGeometry x="740" y="520" width="120" height="60" as="geometry" />
-        </mxCell>
-        <mxCell id="D0AqdsrFLwhoFKeQuo0Y-2" value="/Information" style="rounded=1;whiteSpace=wrap;html=1;" parent="1" vertex="1">
-          <mxGeometry x="440" y="410" width="120" height="60" as="geometry" />
-        </mxCell>
-        <mxCell id="D0AqdsrFLwhoFKeQuo0Y-4" value="GET: /EvuName" style="rounded=1;whiteSpace=wrap;html=1;" parent="1" vertex="1">
-          <mxGeometry x="210" y="250" width="120" height="60" as="geometry" />
-        </mxCell>
-        <mxCell id="D0AqdsrFLwhoFKeQuo0Y-5" value="GET: /IsSimAvailable" style="rounded=1;whiteSpace=wrap;html=1;" parent="1" vertex="1">
-          <mxGeometry x="360" y="250" width="120" height="60" as="geometry" />
-        </mxCell>
-        <mxCell id="D0AqdsrFLwhoFKeQuo0Y-6" value="GET: /IsInternetAvailable" style="rounded=1;whiteSpace=wrap;html=1;" parent="1" vertex="1">
-          <mxGeometry x="520" y="250" width="120" height="60" as="geometry" />
-        </mxCell>
-        <mxCell id="D0AqdsrFLwhoFKeQuo0Y-7" value="&lt;font style=&quot;font-size: 10px;&quot;&gt;returns: string&lt;/font&gt;" style="text;html=1;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;" parent="1" vertex="1">
-          <mxGeometry x="210" y="310" width="120" height="20" as="geometry" />
-        </mxCell>
-        <mxCell id="D0AqdsrFLwhoFKeQuo0Y-8" value="&lt;font style=&quot;font-size: 10px;&quot;&gt;returns: bool&lt;/font&gt;" style="text;html=1;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;" parent="1" vertex="1">
-          <mxGeometry x="360" y="310" width="120" height="20" as="geometry" />
-        </mxCell>
-        <mxCell id="D0AqdsrFLwhoFKeQuo0Y-9" value="&lt;font style=&quot;font-size: 10px;&quot;&gt;returns: bool&lt;/font&gt;" style="text;html=1;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;" parent="1" vertex="1">
-          <mxGeometry x="520" y="310" width="120" height="20" as="geometry" />
-        </mxCell>
         <mxCell id="D0AqdsrFLwhoFKeQuo0Y-10" value="Tablet can log in to the hotspot if the MAC Address is known" style="rounded=1;whiteSpace=wrap;html=1;" parent="1" vertex="1">
           <mxGeometry x="1380" y="370" width="120" height="60" as="geometry" />
         </mxCell>
@@ -49,125 +22,14 @@
         <mxCell id="D0AqdsrFLwhoFKeQuo0Y-15" value="Networks are seperated and can only interact through the Bridge" style="rounded=1;whiteSpace=wrap;html=1;" parent="1" vertex="1">
           <mxGeometry x="1750" y="360" width="120" height="70" as="geometry" />
         </mxCell>
-        <mxCell id="D0AqdsrFLwhoFKeQuo0Y-16" value="/Tablet" style="rounded=1;whiteSpace=wrap;html=1;" parent="1" vertex="1">
-          <mxGeometry x="970" y="410" width="120" height="60" as="geometry" />
-        </mxCell>
-        <mxCell id="D0AqdsrFLwhoFKeQuo0Y-17" value="/Hello" style="rounded=1;whiteSpace=wrap;html=1;" parent="1" vertex="1">
-          <mxGeometry x="670" y="250" width="120" height="60" as="geometry" />
-        </mxCell>
-        <mxCell id="D0AqdsrFLwhoFKeQuo0Y-18" value="/RegisterTablet" style="rounded=1;whiteSpace=wrap;html=1;" parent="1" vertex="1">
-          <mxGeometry x="895" y="250" width="120" height="60" as="geometry" />
-        </mxCell>
-        <mxCell id="D0AqdsrFLwhoFKeQuo0Y-20" value="Endpoint so that it can be logged what user etc logged into the train" style="text;html=1;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;" parent="1" vertex="1">
-          <mxGeometry x="650" y="310" width="160" height="50" as="geometry" />
-        </mxCell>
-        <mxCell id="D0AqdsrFLwhoFKeQuo0Y-21" value="/RegisterOnline" style="rounded=1;whiteSpace=wrap;html=1;" parent="1" vertex="1">
-          <mxGeometry x="1045" y="250" width="120" height="60" as="geometry" />
-        </mxCell>
-        <mxCell id="D0AqdsrFLwhoFKeQuo0Y-22" value="Obviously only accessable if the Tablet is connected over LAN" style="text;html=1;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;" parent="1" vertex="1">
-          <mxGeometry x="955" y="190" width="160" height="30" as="geometry" />
-        </mxCell>
         <mxCell id="D0AqdsrFLwhoFKeQuo0Y-24" value="When in depot, the train uses the raspberry PI antenna to connect to the depot. All devices connected to the Bridge still can&#39;t access the internet by themselfes" style="rounded=1;whiteSpace=wrap;html=1;" parent="1" vertex="1">
           <mxGeometry x="1750" y="440" width="170" height="90" as="geometry" />
         </mxCell>
         <mxCell id="D0AqdsrFLwhoFKeQuo0Y-25" value="Tablet shows a notice, when the train isnt online, and it cant register the tablets MAC, that the tablet needs to connect over lan again next time" style="rounded=1;whiteSpace=wrap;html=1;" parent="1" vertex="1">
           <mxGeometry x="1750" y="540" width="170" height="90" as="geometry" />
         </mxCell>
-        <mxCell id="D0AqdsrFLwhoFKeQuo0Y-27" value="return 200 if successful" style="text;html=1;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;" parent="1" vertex="1">
-          <mxGeometry x="920" y="310" width="230" height="20" as="geometry" />
-        </mxCell>
         <mxCell id="D0AqdsrFLwhoFKeQuo0Y-29" value="When in depot, a tablet prioritizes the depots network instead of a train network, unless a handshake was made to leave the depot, or connection to depo is left" style="rounded=1;whiteSpace=wrap;html=1;" parent="1" vertex="1">
           <mxGeometry x="1350" y="600" width="210" height="70" as="geometry" />
-        </mxCell>
-        <mxCell id="D0AqdsrFLwhoFKeQuo0Y-30" value="If a device doesn&#39;t say hello in the first 4 minutes of joining the network, its kicked" style="text;html=1;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;" parent="1" vertex="1">
-          <mxGeometry x="650" y="360" width="160" height="50" as="geometry" />
-        </mxCell>
-        <mxCell id="nHDwqZT88RZeFxS14gR3-1" value="Tablet internet startup" style="rounded=0;whiteSpace=wrap;html=1;" parent="1" vertex="1">
-          <mxGeometry x="140" y="620" width="120" height="60" as="geometry" />
-        </mxCell>
-        <mxCell id="nHDwqZT88RZeFxS14gR3-2" value="User enters name, pw" style="rounded=0;whiteSpace=wrap;html=1;" parent="1" vertex="1">
-          <mxGeometry x="140" y="690" width="120" height="60" as="geometry" />
-        </mxCell>
-        <mxCell id="nHDwqZT88RZeFxS14gR3-3" value="To register a yubikey" style="rounded=0;whiteSpace=wrap;html=1;" parent="1" vertex="1">
-          <mxGeometry x="270" y="635" width="120" height="30" as="geometry" />
-        </mxCell>
-        <mxCell id="nHDwqZT88RZeFxS14gR3-4" value="Code is grabbed from yubikey and supplied to authentik" style="rounded=0;whiteSpace=wrap;html=1;" parent="1" vertex="1">
-          <mxGeometry x="140" y="760" width="120" height="60" as="geometry" />
-        </mxCell>
-        <mxCell id="nHDwqZT88RZeFxS14gR3-5" value="If successful, grab secret from yubikey, and upload it to the server" style="rounded=0;whiteSpace=wrap;html=1;" parent="1" vertex="1">
-          <mxGeometry x="140" y="830" width="120" height="60" as="geometry" />
-        </mxCell>
-        <mxCell id="nHDwqZT88RZeFxS14gR3-6" value="" style="rounded=0;whiteSpace=wrap;html=1;" parent="1" vertex="1">
-          <mxGeometry x="430" y="620" width="120" height="60" as="geometry" />
-        </mxCell>
-        <mxCell id="nHDwqZT88RZeFxS14gR3-7" value="GET: /LastSyncTry" style="rounded=1;whiteSpace=wrap;html=1;" parent="1" vertex="1">
-          <mxGeometry x="70" y="250" width="120" height="60" as="geometry" />
-        </mxCell>
-        <mxCell id="nHDwqZT88RZeFxS14gR3-8" value="GET: /LastSynced" style="rounded=1;whiteSpace=wrap;html=1;" parent="1" vertex="1">
-          <mxGeometry x="-60" y="250" width="120" height="60" as="geometry" />
-        </mxCell>
-        <mxCell id="RrzdnQDn-9nG9QoV303n-1" value="Camera Setup Flow" style="swimlane;whiteSpace=wrap;html=1;" parent="1" vertex="1">
-          <mxGeometry x="450" y="820" width="610" height="570" as="geometry" />
-        </mxCell>
-        <mxCell id="RrzdnQDn-9nG9QoV303n-23" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" parent="RrzdnQDn-9nG9QoV303n-1" source="RrzdnQDn-9nG9QoV303n-2" target="RrzdnQDn-9nG9QoV303n-3" edge="1">
-          <mxGeometry relative="1" as="geometry" />
-        </mxCell>
-        <mxCell id="RrzdnQDn-9nG9QoV303n-24" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" parent="RrzdnQDn-9nG9QoV303n-1" source="RrzdnQDn-9nG9QoV303n-2" target="RrzdnQDn-9nG9QoV303n-11" edge="1">
-          <mxGeometry relative="1" as="geometry" />
-        </mxCell>
-        <mxCell id="RrzdnQDn-9nG9QoV303n-2" value="Initialize" style="rounded=0;whiteSpace=wrap;html=1;" parent="RrzdnQDn-9nG9QoV303n-1" vertex="1">
-          <mxGeometry x="125" y="40" width="120" height="60" as="geometry" />
-        </mxCell>
-        <mxCell id="RrzdnQDn-9nG9QoV303n-8" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" parent="RrzdnQDn-9nG9QoV303n-1" source="RrzdnQDn-9nG9QoV303n-3" target="RrzdnQDn-9nG9QoV303n-5" edge="1">
-          <mxGeometry relative="1" as="geometry" />
-        </mxCell>
-        <mxCell id="RrzdnQDn-9nG9QoV303n-3" value="Scan for local cameras (usb connected)" style="rounded=0;whiteSpace=wrap;html=1;" parent="RrzdnQDn-9nG9QoV303n-1" vertex="1">
-          <mxGeometry x="10" y="170" width="120" height="60" as="geometry" />
-        </mxCell>
-        <mxCell id="RrzdnQDn-9nG9QoV303n-10" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" parent="RrzdnQDn-9nG9QoV303n-1" source="RrzdnQDn-9nG9QoV303n-4" target="RrzdnQDn-9nG9QoV303n-6" edge="1">
-          <mxGeometry relative="1" as="geometry" />
-        </mxCell>
-        <mxCell id="RrzdnQDn-9nG9QoV303n-4" value="Try to start Camera Service for port" style="rounded=0;whiteSpace=wrap;html=1;" parent="RrzdnQDn-9nG9QoV303n-1" vertex="1">
-          <mxGeometry x="10" y="390" width="120" height="60" as="geometry" />
-        </mxCell>
-        <mxCell id="RrzdnQDn-9nG9QoV303n-9" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" parent="RrzdnQDn-9nG9QoV303n-1" source="RrzdnQDn-9nG9QoV303n-5" target="RrzdnQDn-9nG9QoV303n-4" edge="1">
-          <mxGeometry relative="1" as="geometry" />
-        </mxCell>
-        <mxCell id="RrzdnQDn-9nG9QoV303n-5" value="Startup proxy for port i" style="rounded=0;whiteSpace=wrap;html=1;" parent="RrzdnQDn-9nG9QoV303n-1" vertex="1">
-          <mxGeometry x="10" y="280" width="120" height="60" as="geometry" />
-        </mxCell>
-        <mxCell id="RrzdnQDn-9nG9QoV303n-6" value="Add to camera count" style="rounded=0;whiteSpace=wrap;html=1;" parent="RrzdnQDn-9nG9QoV303n-1" vertex="1">
-          <mxGeometry x="10" y="500" width="120" height="60" as="geometry" />
-        </mxCell>
-        <mxCell id="RrzdnQDn-9nG9QoV303n-16" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" parent="RrzdnQDn-9nG9QoV303n-1" source="RrzdnQDn-9nG9QoV303n-11" target="RrzdnQDn-9nG9QoV303n-14" edge="1">
-          <mxGeometry relative="1" as="geometry" />
-        </mxCell>
-        <mxCell id="RrzdnQDn-9nG9QoV303n-11" value="POST&lt;br&gt;/camera/addextcamera" style="rounded=0;whiteSpace=wrap;html=1;" parent="RrzdnQDn-9nG9QoV303n-1" vertex="1">
-          <mxGeometry x="240" y="170" width="120" height="60" as="geometry" />
-        </mxCell>
-        <mxCell id="RrzdnQDn-9nG9QoV303n-12" value="Returns port i" style="rounded=0;whiteSpace=wrap;html=1;" parent="RrzdnQDn-9nG9QoV303n-1" vertex="1">
-          <mxGeometry x="240" y="490" width="120" height="60" as="geometry" />
-        </mxCell>
-        <mxCell id="RrzdnQDn-9nG9QoV303n-19" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" parent="RrzdnQDn-9nG9QoV303n-1" source="RrzdnQDn-9nG9QoV303n-14" target="RrzdnQDn-9nG9QoV303n-18" edge="1">
-          <mxGeometry relative="1" as="geometry" />
-        </mxCell>
-        <mxCell id="RrzdnQDn-9nG9QoV303n-14" value="starts proxy for port i" style="rounded=0;whiteSpace=wrap;html=1;" parent="RrzdnQDn-9nG9QoV303n-1" vertex="1">
-          <mxGeometry x="240" y="280" width="120" height="60" as="geometry" />
-        </mxCell>
-        <mxCell id="RrzdnQDn-9nG9QoV303n-20" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" parent="RrzdnQDn-9nG9QoV303n-1" source="RrzdnQDn-9nG9QoV303n-18" target="RrzdnQDn-9nG9QoV303n-12" edge="1">
-          <mxGeometry relative="1" as="geometry" />
-        </mxCell>
-        <mxCell id="RrzdnQDn-9nG9QoV303n-18" value="Add to external camera count" style="rounded=0;whiteSpace=wrap;html=1;" parent="RrzdnQDn-9nG9QoV303n-1" vertex="1">
-          <mxGeometry x="240" y="390" width="120" height="60" as="geometry" />
-        </mxCell>
-        <mxCell id="RrzdnQDn-9nG9QoV303n-22" value="This is a seperate count, for easier management of the direction of the train, and cameras associated with a direction" style="rounded=0;whiteSpace=wrap;html=1;" parent="RrzdnQDn-9nG9QoV303n-1" vertex="1">
-          <mxGeometry x="400" y="380" width="200" height="80" as="geometry" />
-        </mxCell>
-        <mxCell id="RrzdnQDn-9nG9QoV303n-25" value="Called by mesh extensions" style="rounded=0;whiteSpace=wrap;html=1;" parent="RrzdnQDn-9nG9QoV303n-1" vertex="1">
-          <mxGeometry x="370" y="185" width="100" height="30" as="geometry" />
-        </mxCell>
-        <mxCell id="RrzdnQDn-9nG9QoV303n-26" value="/camera/{sideIndex}/startStream" style="rounded=0;whiteSpace=wrap;html=1;" parent="1" vertex="1">
-          <mxGeometry x="1080" y="860" width="170" height="60" as="geometry" />
         </mxCell>
         <mxCell id="RrzdnQDn-9nG9QoV303n-27" value="Rangierbegleiter müssen im zug einstellen, welche seiten tatsächlich genutzt werden müssen, wenn zug teile getrennt/dran getan werden, um mehrere meshes zu unterstützen" style="rounded=0;whiteSpace=wrap;html=1;" parent="1" vertex="1">
           <mxGeometry x="1420" y="790" width="250" height="70" as="geometry" />
@@ -178,11 +40,131 @@
         <mxCell id="RrzdnQDn-9nG9QoV303n-29" value="Die seiten verbinden sich dann untereinander über wlan an den enden (wlan0)&lt;br&gt;Beide seiten müssen in den &quot;kupplungs modus&quot; getan werden vom rangier begleiter" style="rounded=0;whiteSpace=wrap;html=1;" parent="1" vertex="1">
           <mxGeometry x="1680" y="870" width="250" height="70" as="geometry" />
         </mxCell>
-        <mxCell id="fbIB9J7qFFFKaNbtSgQg-2" value="Danach suchen die seiten nach sich (mby über bluetooth?)" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+        <mxCell id="fbIB9J7qFFFKaNbtSgQg-2" value="Danach suchen die seiten nach sich (mby über bluetooth?)" style="rounded=0;whiteSpace=wrap;html=1;" parent="1" vertex="1">
           <mxGeometry x="1940" y="870" width="250" height="70" as="geometry" />
         </mxCell>
-        <mxCell id="fbIB9J7qFFFKaNbtSgQg-3" value="Dadurch dass die beiden seiten die sich suchen so nah an einander sind, deaktivieren sie ihre eigene steuerung danach selbst" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+        <mxCell id="fbIB9J7qFFFKaNbtSgQg-3" value="Dadurch dass die beiden seiten die sich suchen so nah an einander sind, deaktivieren sie ihre eigene steuerung danach selbst" style="rounded=0;whiteSpace=wrap;html=1;" parent="1" vertex="1">
           <mxGeometry x="1940" y="950" width="250" height="70" as="geometry" />
+        </mxCell>
+        <mxCell id="RWCcXeoH5vesJ5peBKe--1" value="[/ebula] EbulaController" style="swimlane;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="50" y="100" width="1070" height="220" as="geometry" />
+        </mxCell>
+        <mxCell id="RWCcXeoH5vesJ5peBKe--8" value="GET" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#d5e8d4;strokeColor=#82b366;" vertex="1" parent="RWCcXeoH5vesJ5peBKe--1">
+          <mxGeometry x="30" y="60" width="40" height="20" as="geometry" />
+        </mxCell>
+        <mxCell id="RWCcXeoH5vesJ5peBKe--10" value="/currentTable" style="rounded=1;whiteSpace=wrap;html=1;" vertex="1" parent="RWCcXeoH5vesJ5peBKe--1">
+          <mxGeometry x="70" y="60" width="120" height="20" as="geometry" />
+        </mxCell>
+        <mxCell id="RWCcXeoH5vesJ5peBKe--11" value="&lt;font style=&quot;font-size: 10px;&quot;&gt;Returns the current timetable.&lt;/font&gt;" style="rounded=1;whiteSpace=wrap;html=1;" vertex="1" parent="RWCcXeoH5vesJ5peBKe--1">
+          <mxGeometry x="30" y="80" width="160" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="RWCcXeoH5vesJ5peBKe--15" value="POST" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#dae8fc;strokeColor=#6c8ebf;" vertex="1" parent="RWCcXeoH5vesJ5peBKe--1">
+          <mxGeometry x="200" y="60" width="40" height="20" as="geometry" />
+        </mxCell>
+        <mxCell id="RWCcXeoH5vesJ5peBKe--16" value="/edit" style="rounded=1;whiteSpace=wrap;html=1;" vertex="1" parent="RWCcXeoH5vesJ5peBKe--1">
+          <mxGeometry x="240" y="60" width="120" height="20" as="geometry" />
+        </mxCell>
+        <mxCell id="RWCcXeoH5vesJ5peBKe--17" value="&lt;div style=&quot;line-height: 50%;&quot;&gt;&lt;p&gt;&lt;font style=&quot;font-size: 7px;&quot;&gt;&lt;font style=&quot;&quot;&gt;Creates/overwrites/edits the&amp;nbsp;&lt;/font&gt;&lt;span style=&quot;background-color: transparent; color: light-dark(rgb(0, 0, 0), rgb(255, 255, 255));&quot;&gt;current timetable.&lt;/span&gt;&lt;/font&gt;&lt;/p&gt;&lt;/div&gt;" style="rounded=1;whiteSpace=wrap;html=1;" vertex="1" parent="RWCcXeoH5vesJ5peBKe--1">
+          <mxGeometry x="200" y="80" width="160" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="RWCcXeoH5vesJ5peBKe--18" value="GET" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#d5e8d4;strokeColor=#82b366;" vertex="1" parent="RWCcXeoH5vesJ5peBKe--1">
+          <mxGeometry x="370" y="60" width="40" height="20" as="geometry" />
+        </mxCell>
+        <mxCell id="RWCcXeoH5vesJ5peBKe--19" value="/currentConditions" style="rounded=1;whiteSpace=wrap;html=1;" vertex="1" parent="RWCcXeoH5vesJ5peBKe--1">
+          <mxGeometry x="410" y="60" width="120" height="20" as="geometry" />
+        </mxCell>
+        <mxCell id="RWCcXeoH5vesJ5peBKe--20" value="&lt;font style=&quot;line-height: 70%; font-size: 7px;&quot;&gt;Returns the current conditions based on the current location. (E.g. Speed limit, next stop, etc.)&lt;/font&gt;" style="rounded=1;whiteSpace=wrap;html=1;" vertex="1" parent="RWCcXeoH5vesJ5peBKe--1">
+          <mxGeometry x="370" y="80" width="160" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="RWCcXeoH5vesJ5peBKe--21" value="POST" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#dae8fc;strokeColor=#6c8ebf;" vertex="1" parent="RWCcXeoH5vesJ5peBKe--1">
+          <mxGeometry x="710" y="60" width="40" height="20" as="geometry" />
+        </mxCell>
+        <mxCell id="RWCcXeoH5vesJ5peBKe--22" value="&lt;font style=&quot;font-size: 11px;&quot;&gt;/disableAutoDetection&lt;/font&gt;" style="rounded=1;whiteSpace=wrap;html=1;" vertex="1" parent="RWCcXeoH5vesJ5peBKe--1">
+          <mxGeometry x="750" y="60" width="120" height="20" as="geometry" />
+        </mxCell>
+        <mxCell id="RWCcXeoH5vesJ5peBKe--23" value="&lt;div style=&quot;line-height: 50%;&quot;&gt;&lt;p&gt;&lt;span style=&quot;font-size: 7px;&quot;&gt;Disables the auto detection of EbuLa changes for this session.&lt;/span&gt;&lt;/p&gt;&lt;/div&gt;" style="rounded=1;whiteSpace=wrap;html=1;" vertex="1" parent="RWCcXeoH5vesJ5peBKe--1">
+          <mxGeometry x="710" y="80" width="160" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="RWCcXeoH5vesJ5peBKe--26" value="&lt;div style=&quot;line-height: 50%;&quot;&gt;&lt;p&gt;&lt;span style=&quot;font-size: 7px;&quot;&gt;Disables the localisation using the location marker on the EbuLa device for this session.&lt;/span&gt;&lt;/p&gt;&lt;/div&gt;" style="rounded=1;whiteSpace=wrap;html=1;" vertex="1" parent="RWCcXeoH5vesJ5peBKe--1">
+          <mxGeometry x="880" y="80" width="160" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="RWCcXeoH5vesJ5peBKe--25" value="&lt;font style=&quot;font-size: 11px;&quot;&gt;/disableLocalisation&lt;/font&gt;" style="rounded=1;whiteSpace=wrap;html=1;" vertex="1" parent="RWCcXeoH5vesJ5peBKe--1">
+          <mxGeometry x="920" y="60" width="120" height="20" as="geometry" />
+        </mxCell>
+        <mxCell id="RWCcXeoH5vesJ5peBKe--24" value="POST" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#dae8fc;strokeColor=#6c8ebf;" vertex="1" parent="RWCcXeoH5vesJ5peBKe--1">
+          <mxGeometry x="880" y="60" width="40" height="20" as="geometry" />
+        </mxCell>
+        <mxCell id="RWCcXeoH5vesJ5peBKe--27" value="POST" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#dae8fc;strokeColor=#6c8ebf;" vertex="1" parent="RWCcXeoH5vesJ5peBKe--1">
+          <mxGeometry x="30" y="140" width="40" height="20" as="geometry" />
+        </mxCell>
+        <mxCell id="RWCcXeoH5vesJ5peBKe--28" value="&lt;font style=&quot;font-size: 11px;&quot;&gt;/turnOffDetection&lt;/font&gt;" style="rounded=1;whiteSpace=wrap;html=1;" vertex="1" parent="RWCcXeoH5vesJ5peBKe--1">
+          <mxGeometry x="70" y="140" width="120" height="20" as="geometry" />
+        </mxCell>
+        <mxCell id="RWCcXeoH5vesJ5peBKe--29" value="&lt;div style=&quot;line-height: 50%;&quot;&gt;&lt;p&gt;&lt;span style=&quot;font-size: 7px;&quot;&gt;Permanently turns off the auto detection of a timetable from the EbuLa.&lt;/span&gt;&lt;/p&gt;&lt;/div&gt;" style="rounded=1;whiteSpace=wrap;html=1;" vertex="1" parent="RWCcXeoH5vesJ5peBKe--1">
+          <mxGeometry x="30" y="160" width="160" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="RWCcXeoH5vesJ5peBKe--30" value="POST" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#dae8fc;strokeColor=#6c8ebf;" vertex="1" parent="RWCcXeoH5vesJ5peBKe--1">
+          <mxGeometry x="200" y="140" width="40" height="20" as="geometry" />
+        </mxCell>
+        <mxCell id="RWCcXeoH5vesJ5peBKe--31" value="&lt;font style=&quot;font-size: 11px;&quot;&gt;/turnOffLocalisation&lt;/font&gt;" style="rounded=1;whiteSpace=wrap;html=1;" vertex="1" parent="RWCcXeoH5vesJ5peBKe--1">
+          <mxGeometry x="240" y="140" width="120" height="20" as="geometry" />
+        </mxCell>
+        <mxCell id="RWCcXeoH5vesJ5peBKe--32" value="&lt;div style=&quot;line-height: 50%;&quot;&gt;&lt;p&gt;&lt;span style=&quot;font-size: 7px;&quot;&gt;Permanently turns off the localisation using the location marker on the EbuLa device.&lt;/span&gt;&lt;/p&gt;&lt;/div&gt;" style="rounded=1;whiteSpace=wrap;html=1;" vertex="1" parent="RWCcXeoH5vesJ5peBKe--1">
+          <mxGeometry x="200" y="160" width="160" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="RWCcXeoH5vesJ5peBKe--33" value="POST" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#dae8fc;strokeColor=#6c8ebf;" vertex="1" parent="RWCcXeoH5vesJ5peBKe--1">
+          <mxGeometry x="370" y="140" width="40" height="20" as="geometry" />
+        </mxCell>
+        <mxCell id="RWCcXeoH5vesJ5peBKe--34" value="&lt;font style=&quot;font-size: 11px;&quot;&gt;/enableAutoDetection&lt;/font&gt;" style="rounded=1;whiteSpace=wrap;html=1;" vertex="1" parent="RWCcXeoH5vesJ5peBKe--1">
+          <mxGeometry x="410" y="140" width="120" height="20" as="geometry" />
+        </mxCell>
+        <mxCell id="RWCcXeoH5vesJ5peBKe--35" value="&lt;div style=&quot;line-height: 50%;&quot;&gt;&lt;p&gt;&lt;span style=&quot;font-size: 7px;&quot;&gt;Re-enables the auto detection of the timetable using the EbuLa. This invokes a full re scan of the current timetable.&lt;/span&gt;&lt;/p&gt;&lt;/div&gt;" style="rounded=1;whiteSpace=wrap;html=1;" vertex="1" parent="RWCcXeoH5vesJ5peBKe--1">
+          <mxGeometry x="370" y="160" width="160" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="RWCcXeoH5vesJ5peBKe--36" value="POST" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#dae8fc;strokeColor=#6c8ebf;" vertex="1" parent="RWCcXeoH5vesJ5peBKe--1">
+          <mxGeometry x="540" y="140" width="40" height="20" as="geometry" />
+        </mxCell>
+        <mxCell id="RWCcXeoH5vesJ5peBKe--37" value="&lt;font style=&quot;font-size: 11px;&quot;&gt;/enableLocalisation&lt;/font&gt;" style="rounded=1;whiteSpace=wrap;html=1;" vertex="1" parent="RWCcXeoH5vesJ5peBKe--1">
+          <mxGeometry x="580" y="140" width="120" height="20" as="geometry" />
+        </mxCell>
+        <mxCell id="RWCcXeoH5vesJ5peBKe--38" value="&lt;div style=&quot;line-height: 50%;&quot;&gt;&lt;p&gt;&lt;span style=&quot;font-size: 7px;&quot;&gt;Re-enables the localisation using the location marker on the EbuLa device. This invokes a jump to the current page on the EbuLa.&lt;/span&gt;&lt;/p&gt;&lt;/div&gt;" style="rounded=1;whiteSpace=wrap;html=1;" vertex="1" parent="RWCcXeoH5vesJ5peBKe--1">
+          <mxGeometry x="540" y="160" width="160" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="RWCcXeoH5vesJ5peBKe--39" value="POST" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#dae8fc;strokeColor=#6c8ebf;" vertex="1" parent="RWCcXeoH5vesJ5peBKe--1">
+          <mxGeometry x="540" y="60" width="40" height="20" as="geometry" />
+        </mxCell>
+        <mxCell id="RWCcXeoH5vesJ5peBKe--40" value="&lt;font style=&quot;font-size: 11px;&quot;&gt;/rescan&lt;/font&gt;" style="rounded=1;whiteSpace=wrap;html=1;" vertex="1" parent="RWCcXeoH5vesJ5peBKe--1">
+          <mxGeometry x="580" y="60" width="120" height="20" as="geometry" />
+        </mxCell>
+        <mxCell id="RWCcXeoH5vesJ5peBKe--41" value="&lt;div style=&quot;line-height: 50%;&quot;&gt;&lt;p&gt;&lt;span style=&quot;font-size: 7px;&quot;&gt;Rescans the entire timetable from the EbuLa device and returns it.&lt;/span&gt;&lt;/p&gt;&lt;/div&gt;" style="rounded=1;whiteSpace=wrap;html=1;" vertex="1" parent="RWCcXeoH5vesJ5peBKe--1">
+          <mxGeometry x="540" y="80" width="160" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="RWCcXeoH5vesJ5peBKe--42" value="POST" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#dae8fc;strokeColor=#6c8ebf;" vertex="1" parent="RWCcXeoH5vesJ5peBKe--1">
+          <mxGeometry x="710" y="140" width="40" height="20" as="geometry" />
+        </mxCell>
+        <mxCell id="RWCcXeoH5vesJ5peBKe--43" value="&lt;font style=&quot;font-size: 11px;&quot;&gt;/turnOnAutoDetection&lt;/font&gt;" style="rounded=1;whiteSpace=wrap;html=1;" vertex="1" parent="RWCcXeoH5vesJ5peBKe--1">
+          <mxGeometry x="750" y="140" width="120" height="20" as="geometry" />
+        </mxCell>
+        <mxCell id="RWCcXeoH5vesJ5peBKe--44" value="&lt;div style=&quot;line-height: 50%;&quot;&gt;&lt;p&gt;&lt;span style=&quot;font-size: 7px;&quot;&gt;Turns on the auto detection of a timetable on startup back on.&lt;/span&gt;&lt;/p&gt;&lt;/div&gt;" style="rounded=1;whiteSpace=wrap;html=1;" vertex="1" parent="RWCcXeoH5vesJ5peBKe--1">
+          <mxGeometry x="710" y="160" width="160" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="RWCcXeoH5vesJ5peBKe--45" value="POST" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#dae8fc;strokeColor=#6c8ebf;" vertex="1" parent="RWCcXeoH5vesJ5peBKe--1">
+          <mxGeometry x="880" y="140" width="40" height="20" as="geometry" />
+        </mxCell>
+        <mxCell id="RWCcXeoH5vesJ5peBKe--46" value="&lt;font style=&quot;font-size: 11px;&quot;&gt;/turnOnLocalisation&lt;/font&gt;" style="rounded=1;whiteSpace=wrap;html=1;" vertex="1" parent="RWCcXeoH5vesJ5peBKe--1">
+          <mxGeometry x="920" y="140" width="120" height="20" as="geometry" />
+        </mxCell>
+        <mxCell id="RWCcXeoH5vesJ5peBKe--47" value="&lt;div style=&quot;line-height: 50%;&quot;&gt;&lt;p&gt;&lt;span style=&quot;font-size: 7px;&quot;&gt;Turns on the localisation using the location marker on the Ebula. This invokes a jump to the current page on the EbuLa.&lt;/span&gt;&lt;/p&gt;&lt;/div&gt;" style="rounded=1;whiteSpace=wrap;html=1;" vertex="1" parent="RWCcXeoH5vesJ5peBKe--1">
+          <mxGeometry x="880" y="160" width="160" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="RWCcXeoH5vesJ5peBKe--12" value="&lt;font style=&quot;font-size: 8px;&quot;&gt;METHOD&lt;/font&gt;" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#d5e8d4;strokeColor=#82b366;" vertex="1" parent="1">
+          <mxGeometry x="70" y="30" width="40" height="20" as="geometry" />
+        </mxCell>
+        <mxCell id="RWCcXeoH5vesJ5peBKe--13" value="ENDPOINT" style="rounded=1;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="110" y="30" width="120" height="20" as="geometry" />
+        </mxCell>
+        <mxCell id="RWCcXeoH5vesJ5peBKe--14" value="&lt;font style=&quot;font-size: 10px;&quot;&gt;DESCRIPTION&lt;/font&gt;" style="rounded=1;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="70" y="50" width="160" height="20" as="geometry" />
         </mxCell>
       </root>
     </mxGraphModel>
