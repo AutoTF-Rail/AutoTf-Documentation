@@ -1,170 +1,569 @@
 <mxfile host="Electron" agent="Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) draw.io/26.2.2 Chrome/134.0.6998.178 Electron/35.1.2 Safari/537.36" version="26.2.2">
   <diagram name="Page-1" id="dq8juwHjYBTWb1SoAbBf">
-    <mxGraphModel dx="1725" dy="1782" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="1920" pageHeight="1200" math="0" shadow="0">
+    <mxGraphModel dx="1994" dy="2138" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="1920" pageHeight="1200" math="0" shadow="0">
       <root>
         <mxCell id="0" />
         <mxCell id="1" parent="0" />
-        <mxCell id="D0AqdsrFLwhoFKeQuo0Y-10" value="Tablet can log in to the hotspot if the MAC Address is known" style="rounded=1;whiteSpace=wrap;html=1;" parent="1" vertex="1">
-          <mxGeometry x="1380" y="370" width="120" height="60" as="geometry" />
-        </mxCell>
-        <mxCell id="D0AqdsrFLwhoFKeQuo0Y-11" value="It can also add a temporary MAC Address to the train if it connects over LAN" style="rounded=1;whiteSpace=wrap;html=1;" parent="1" vertex="1">
-          <mxGeometry x="1380" y="440" width="120" height="60" as="geometry" />
-        </mxCell>
-        <mxCell id="D0AqdsrFLwhoFKeQuo0Y-12" value="If the train has WIFI, the Tablet can Add its own MAC address over the trains connection" style="rounded=1;whiteSpace=wrap;html=1;" parent="1" vertex="1">
-          <mxGeometry x="1380" y="510" width="120" height="70" as="geometry" />
-        </mxCell>
-        <mxCell id="D0AqdsrFLwhoFKeQuo0Y-13" value="The hotspot is on 192.168.1.1" style="rounded=1;whiteSpace=wrap;html=1;" parent="1" vertex="1">
-          <mxGeometry x="1620" y="360" width="120" height="70" as="geometry" />
-        </mxCell>
-        <mxCell id="D0AqdsrFLwhoFKeQuo0Y-14" value="The switch is on 192.168.0.1" style="rounded=1;whiteSpace=wrap;html=1;" parent="1" vertex="1">
-          <mxGeometry x="1620" y="440" width="120" height="70" as="geometry" />
-        </mxCell>
-        <mxCell id="D0AqdsrFLwhoFKeQuo0Y-15" value="Networks are seperated and can only interact through the Bridge" style="rounded=1;whiteSpace=wrap;html=1;" parent="1" vertex="1">
-          <mxGeometry x="1750" y="360" width="120" height="70" as="geometry" />
-        </mxCell>
-        <mxCell id="D0AqdsrFLwhoFKeQuo0Y-24" value="When in depot, the train uses the raspberry PI antenna to connect to the depot. All devices connected to the Bridge still can&#39;t access the internet by themselfes" style="rounded=1;whiteSpace=wrap;html=1;" parent="1" vertex="1">
-          <mxGeometry x="1750" y="440" width="170" height="90" as="geometry" />
-        </mxCell>
-        <mxCell id="D0AqdsrFLwhoFKeQuo0Y-25" value="Tablet shows a notice, when the train isnt online, and it cant register the tablets MAC, that the tablet needs to connect over lan again next time" style="rounded=1;whiteSpace=wrap;html=1;" parent="1" vertex="1">
-          <mxGeometry x="1750" y="540" width="170" height="90" as="geometry" />
-        </mxCell>
-        <mxCell id="D0AqdsrFLwhoFKeQuo0Y-29" value="When in depot, a tablet prioritizes the depots network instead of a train network, unless a handshake was made to leave the depot, or connection to depo is left" style="rounded=1;whiteSpace=wrap;html=1;" parent="1" vertex="1">
-          <mxGeometry x="1350" y="600" width="210" height="70" as="geometry" />
-        </mxCell>
         <mxCell id="RrzdnQDn-9nG9QoV303n-27" value="Rangierbegleiter müssen im zug einstellen, welche seiten tatsächlich genutzt werden müssen, wenn zug teile getrennt/dran getan werden, um mehrere meshes zu unterstützen" style="rounded=0;whiteSpace=wrap;html=1;" parent="1" vertex="1">
-          <mxGeometry x="1420" y="790" width="250" height="70" as="geometry" />
+          <mxGeometry x="1380" y="790" width="250" height="70" as="geometry" />
         </mxCell>
         <mxCell id="RrzdnQDn-9nG9QoV303n-28" value="Rangier begleiter können &quot;2 züge zu einem machen&quot;&lt;div&gt;Und den zügen sagen dass sie sich mit einander verbinden sollen&lt;/div&gt;" style="rounded=0;whiteSpace=wrap;html=1;" parent="1" vertex="1">
-          <mxGeometry x="1420" y="870" width="250" height="70" as="geometry" />
+          <mxGeometry x="1380" y="870" width="250" height="70" as="geometry" />
         </mxCell>
         <mxCell id="RrzdnQDn-9nG9QoV303n-29" value="Die seiten verbinden sich dann untereinander über wlan an den enden (wlan0)&lt;br&gt;Beide seiten müssen in den &quot;kupplungs modus&quot; getan werden vom rangier begleiter" style="rounded=0;whiteSpace=wrap;html=1;" parent="1" vertex="1">
-          <mxGeometry x="1680" y="870" width="250" height="70" as="geometry" />
+          <mxGeometry x="1640" y="870" width="250" height="70" as="geometry" />
         </mxCell>
         <mxCell id="fbIB9J7qFFFKaNbtSgQg-2" value="Danach suchen die seiten nach sich (mby über bluetooth?)" style="rounded=0;whiteSpace=wrap;html=1;" parent="1" vertex="1">
-          <mxGeometry x="1940" y="870" width="250" height="70" as="geometry" />
+          <mxGeometry x="1640" y="950" width="250" height="70" as="geometry" />
         </mxCell>
         <mxCell id="fbIB9J7qFFFKaNbtSgQg-3" value="Dadurch dass die beiden seiten die sich suchen so nah an einander sind, deaktivieren sie ihre eigene steuerung danach selbst" style="rounded=0;whiteSpace=wrap;html=1;" parent="1" vertex="1">
-          <mxGeometry x="1940" y="950" width="250" height="70" as="geometry" />
+          <mxGeometry x="1640" y="1030" width="250" height="70" as="geometry" />
         </mxCell>
-        <mxCell id="RWCcXeoH5vesJ5peBKe--1" value="[/ebula] EbulaController" style="swimlane;whiteSpace=wrap;html=1;" vertex="1" parent="1">
-          <mxGeometry x="50" y="100" width="1070" height="220" as="geometry" />
+        <mxCell id="YDuEinJ2u5WotXFXWLW8-75" value="Controller Documentation" style="swimlane;whiteSpace=wrap;html=1;fillColor=#ffe6cc;strokeColor=#d79b00;" vertex="1" parent="1">
+          <mxGeometry x="40" y="30" width="1150" height="1160" as="geometry" />
         </mxCell>
-        <mxCell id="RWCcXeoH5vesJ5peBKe--8" value="GET" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#d5e8d4;strokeColor=#82b366;" vertex="1" parent="RWCcXeoH5vesJ5peBKe--1">
-          <mxGeometry x="30" y="60" width="40" height="20" as="geometry" />
+        <mxCell id="RWCcXeoH5vesJ5peBKe--1" value="[/ebula] EbulaController" style="swimlane;whiteSpace=wrap;html=1;fillColor=#fff2cc;strokeColor=#d6b656;" parent="YDuEinJ2u5WotXFXWLW8-75" vertex="1">
+          <mxGeometry x="10" y="230" width="1120" height="200" as="geometry" />
         </mxCell>
-        <mxCell id="RWCcXeoH5vesJ5peBKe--10" value="/currentTable" style="rounded=1;whiteSpace=wrap;html=1;" vertex="1" parent="RWCcXeoH5vesJ5peBKe--1">
-          <mxGeometry x="70" y="60" width="120" height="20" as="geometry" />
+        <mxCell id="RWCcXeoH5vesJ5peBKe--8" value="GET" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#d5e8d4;strokeColor=#82b366;" parent="RWCcXeoH5vesJ5peBKe--1" vertex="1">
+          <mxGeometry x="30" y="50" width="40" height="20" as="geometry" />
         </mxCell>
-        <mxCell id="RWCcXeoH5vesJ5peBKe--11" value="&lt;font style=&quot;font-size: 10px;&quot;&gt;Returns the current timetable.&lt;/font&gt;" style="rounded=1;whiteSpace=wrap;html=1;" vertex="1" parent="RWCcXeoH5vesJ5peBKe--1">
-          <mxGeometry x="30" y="80" width="160" height="30" as="geometry" />
+        <mxCell id="RWCcXeoH5vesJ5peBKe--10" value="/currentTable" style="rounded=1;whiteSpace=wrap;html=1;" parent="RWCcXeoH5vesJ5peBKe--1" vertex="1">
+          <mxGeometry x="70" y="50" width="120" height="20" as="geometry" />
         </mxCell>
-        <mxCell id="RWCcXeoH5vesJ5peBKe--15" value="POST" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#dae8fc;strokeColor=#6c8ebf;" vertex="1" parent="RWCcXeoH5vesJ5peBKe--1">
-          <mxGeometry x="200" y="60" width="40" height="20" as="geometry" />
+        <mxCell id="RWCcXeoH5vesJ5peBKe--11" value="&lt;font style=&quot;font-size: 10px;&quot;&gt;Returns the current timetable.&lt;/font&gt;" style="rounded=1;whiteSpace=wrap;html=1;" parent="RWCcXeoH5vesJ5peBKe--1" vertex="1">
+          <mxGeometry x="30" y="70" width="160" height="30" as="geometry" />
         </mxCell>
-        <mxCell id="RWCcXeoH5vesJ5peBKe--16" value="/edit" style="rounded=1;whiteSpace=wrap;html=1;" vertex="1" parent="RWCcXeoH5vesJ5peBKe--1">
-          <mxGeometry x="240" y="60" width="120" height="20" as="geometry" />
+        <mxCell id="RWCcXeoH5vesJ5peBKe--15" value="POST" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#dae8fc;strokeColor=#6c8ebf;" parent="RWCcXeoH5vesJ5peBKe--1" vertex="1">
+          <mxGeometry x="200" y="50" width="40" height="20" as="geometry" />
         </mxCell>
-        <mxCell id="RWCcXeoH5vesJ5peBKe--17" value="&lt;div style=&quot;line-height: 50%;&quot;&gt;&lt;p&gt;&lt;font style=&quot;font-size: 7px;&quot;&gt;&lt;font style=&quot;&quot;&gt;Creates/overwrites/edits the&amp;nbsp;&lt;/font&gt;&lt;span style=&quot;background-color: transparent; color: light-dark(rgb(0, 0, 0), rgb(255, 255, 255));&quot;&gt;current timetable.&lt;/span&gt;&lt;/font&gt;&lt;/p&gt;&lt;/div&gt;" style="rounded=1;whiteSpace=wrap;html=1;" vertex="1" parent="RWCcXeoH5vesJ5peBKe--1">
-          <mxGeometry x="200" y="80" width="160" height="30" as="geometry" />
+        <mxCell id="RWCcXeoH5vesJ5peBKe--16" value="/edit" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#f8cecc;strokeColor=#b85450;" parent="RWCcXeoH5vesJ5peBKe--1" vertex="1">
+          <mxGeometry x="240" y="50" width="120" height="20" as="geometry" />
         </mxCell>
-        <mxCell id="RWCcXeoH5vesJ5peBKe--18" value="GET" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#d5e8d4;strokeColor=#82b366;" vertex="1" parent="RWCcXeoH5vesJ5peBKe--1">
-          <mxGeometry x="370" y="60" width="40" height="20" as="geometry" />
+        <mxCell id="RWCcXeoH5vesJ5peBKe--17" value="&lt;div style=&quot;line-height: 50%;&quot;&gt;&lt;p&gt;&lt;font style=&quot;font-size: 7px;&quot;&gt;&lt;font style=&quot;&quot;&gt;Creates/overwrites/edits the&amp;nbsp;&lt;/font&gt;&lt;span style=&quot;background-color: transparent; color: light-dark(rgb(0, 0, 0), rgb(255, 255, 255));&quot;&gt;current timetable.&lt;/span&gt;&lt;/font&gt;&lt;/p&gt;&lt;/div&gt;" style="rounded=1;whiteSpace=wrap;html=1;" parent="RWCcXeoH5vesJ5peBKe--1" vertex="1">
+          <mxGeometry x="200" y="70" width="160" height="30" as="geometry" />
         </mxCell>
-        <mxCell id="RWCcXeoH5vesJ5peBKe--19" value="/currentConditions" style="rounded=1;whiteSpace=wrap;html=1;" vertex="1" parent="RWCcXeoH5vesJ5peBKe--1">
-          <mxGeometry x="410" y="60" width="120" height="20" as="geometry" />
+        <mxCell id="RWCcXeoH5vesJ5peBKe--18" value="GET" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#d5e8d4;strokeColor=#82b366;" parent="RWCcXeoH5vesJ5peBKe--1" vertex="1">
+          <mxGeometry x="370" y="50" width="40" height="20" as="geometry" />
         </mxCell>
-        <mxCell id="RWCcXeoH5vesJ5peBKe--20" value="&lt;font style=&quot;line-height: 70%; font-size: 7px;&quot;&gt;Returns the current conditions based on the current location. (E.g. Speed limit, next stop, etc.)&lt;/font&gt;" style="rounded=1;whiteSpace=wrap;html=1;" vertex="1" parent="RWCcXeoH5vesJ5peBKe--1">
-          <mxGeometry x="370" y="80" width="160" height="30" as="geometry" />
+        <mxCell id="RWCcXeoH5vesJ5peBKe--19" value="/currentConditions" style="rounded=1;whiteSpace=wrap;html=1;" parent="RWCcXeoH5vesJ5peBKe--1" vertex="1">
+          <mxGeometry x="410" y="50" width="120" height="20" as="geometry" />
         </mxCell>
-        <mxCell id="RWCcXeoH5vesJ5peBKe--21" value="POST" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#dae8fc;strokeColor=#6c8ebf;" vertex="1" parent="RWCcXeoH5vesJ5peBKe--1">
-          <mxGeometry x="710" y="60" width="40" height="20" as="geometry" />
+        <mxCell id="RWCcXeoH5vesJ5peBKe--20" value="&lt;font style=&quot;line-height: 70%; font-size: 7px;&quot;&gt;Returns the current conditions based on the current location. (E.g. Speed limit, next stop, etc.)&lt;/font&gt;" style="rounded=1;whiteSpace=wrap;html=1;" parent="RWCcXeoH5vesJ5peBKe--1" vertex="1">
+          <mxGeometry x="370" y="70" width="160" height="30" as="geometry" />
         </mxCell>
-        <mxCell id="RWCcXeoH5vesJ5peBKe--22" value="&lt;font style=&quot;font-size: 11px;&quot;&gt;/disableAutoDetection&lt;/font&gt;" style="rounded=1;whiteSpace=wrap;html=1;" vertex="1" parent="RWCcXeoH5vesJ5peBKe--1">
-          <mxGeometry x="750" y="60" width="120" height="20" as="geometry" />
+        <mxCell id="RWCcXeoH5vesJ5peBKe--21" value="POST" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#dae8fc;strokeColor=#6c8ebf;" parent="RWCcXeoH5vesJ5peBKe--1" vertex="1">
+          <mxGeometry x="760" y="50" width="40" height="20" as="geometry" />
         </mxCell>
-        <mxCell id="RWCcXeoH5vesJ5peBKe--23" value="&lt;div style=&quot;line-height: 50%;&quot;&gt;&lt;p&gt;&lt;span style=&quot;font-size: 7px;&quot;&gt;Disables the auto detection of EbuLa changes for this session.&lt;/span&gt;&lt;/p&gt;&lt;/div&gt;" style="rounded=1;whiteSpace=wrap;html=1;" vertex="1" parent="RWCcXeoH5vesJ5peBKe--1">
-          <mxGeometry x="710" y="80" width="160" height="30" as="geometry" />
+        <mxCell id="RWCcXeoH5vesJ5peBKe--22" value="&lt;font style=&quot;font-size: 11px;&quot;&gt;/disableAutoDetection&lt;/font&gt;" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#f8cecc;strokeColor=#b85450;" parent="RWCcXeoH5vesJ5peBKe--1" vertex="1">
+          <mxGeometry x="800" y="50" width="120" height="20" as="geometry" />
         </mxCell>
-        <mxCell id="RWCcXeoH5vesJ5peBKe--26" value="&lt;div style=&quot;line-height: 50%;&quot;&gt;&lt;p&gt;&lt;span style=&quot;font-size: 7px;&quot;&gt;Disables the localisation using the location marker on the EbuLa device for this session.&lt;/span&gt;&lt;/p&gt;&lt;/div&gt;" style="rounded=1;whiteSpace=wrap;html=1;" vertex="1" parent="RWCcXeoH5vesJ5peBKe--1">
-          <mxGeometry x="880" y="80" width="160" height="30" as="geometry" />
+        <mxCell id="RWCcXeoH5vesJ5peBKe--23" value="&lt;div style=&quot;line-height: 50%;&quot;&gt;&lt;p&gt;&lt;span style=&quot;font-size: 7px;&quot;&gt;Disables the auto detection of EbuLa changes for this session.&lt;/span&gt;&lt;/p&gt;&lt;/div&gt;" style="rounded=1;whiteSpace=wrap;html=1;" parent="RWCcXeoH5vesJ5peBKe--1" vertex="1">
+          <mxGeometry x="760" y="70" width="160" height="30" as="geometry" />
         </mxCell>
-        <mxCell id="RWCcXeoH5vesJ5peBKe--25" value="&lt;font style=&quot;font-size: 11px;&quot;&gt;/disableLocalisation&lt;/font&gt;" style="rounded=1;whiteSpace=wrap;html=1;" vertex="1" parent="RWCcXeoH5vesJ5peBKe--1">
-          <mxGeometry x="920" y="60" width="120" height="20" as="geometry" />
+        <mxCell id="RWCcXeoH5vesJ5peBKe--26" value="&lt;div style=&quot;line-height: 50%;&quot;&gt;&lt;p&gt;&lt;span style=&quot;font-size: 7px;&quot;&gt;Disables the localisation using the location marker on the EbuLa device for this session.&lt;/span&gt;&lt;/p&gt;&lt;/div&gt;" style="rounded=1;whiteSpace=wrap;html=1;" parent="RWCcXeoH5vesJ5peBKe--1" vertex="1">
+          <mxGeometry x="930" y="70" width="160" height="30" as="geometry" />
         </mxCell>
-        <mxCell id="RWCcXeoH5vesJ5peBKe--24" value="POST" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#dae8fc;strokeColor=#6c8ebf;" vertex="1" parent="RWCcXeoH5vesJ5peBKe--1">
-          <mxGeometry x="880" y="60" width="40" height="20" as="geometry" />
+        <mxCell id="RWCcXeoH5vesJ5peBKe--25" value="&lt;font style=&quot;font-size: 11px;&quot;&gt;/disableLocalisation&lt;/font&gt;" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#f8cecc;strokeColor=#b85450;" parent="RWCcXeoH5vesJ5peBKe--1" vertex="1">
+          <mxGeometry x="970" y="50" width="120" height="20" as="geometry" />
         </mxCell>
-        <mxCell id="RWCcXeoH5vesJ5peBKe--27" value="POST" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#dae8fc;strokeColor=#6c8ebf;" vertex="1" parent="RWCcXeoH5vesJ5peBKe--1">
-          <mxGeometry x="30" y="140" width="40" height="20" as="geometry" />
+        <mxCell id="RWCcXeoH5vesJ5peBKe--24" value="POST" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#dae8fc;strokeColor=#6c8ebf;" parent="RWCcXeoH5vesJ5peBKe--1" vertex="1">
+          <mxGeometry x="930" y="50" width="40" height="20" as="geometry" />
         </mxCell>
-        <mxCell id="RWCcXeoH5vesJ5peBKe--28" value="&lt;font style=&quot;font-size: 11px;&quot;&gt;/turnOffDetection&lt;/font&gt;" style="rounded=1;whiteSpace=wrap;html=1;" vertex="1" parent="RWCcXeoH5vesJ5peBKe--1">
-          <mxGeometry x="70" y="140" width="120" height="20" as="geometry" />
+        <mxCell id="RWCcXeoH5vesJ5peBKe--27" value="POST" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#dae8fc;strokeColor=#6c8ebf;" parent="RWCcXeoH5vesJ5peBKe--1" vertex="1">
+          <mxGeometry x="30" y="130" width="40" height="20" as="geometry" />
         </mxCell>
-        <mxCell id="RWCcXeoH5vesJ5peBKe--29" value="&lt;div style=&quot;line-height: 50%;&quot;&gt;&lt;p&gt;&lt;span style=&quot;font-size: 7px;&quot;&gt;Permanently turns off the auto detection of a timetable from the EbuLa.&lt;/span&gt;&lt;/p&gt;&lt;/div&gt;" style="rounded=1;whiteSpace=wrap;html=1;" vertex="1" parent="RWCcXeoH5vesJ5peBKe--1">
-          <mxGeometry x="30" y="160" width="160" height="30" as="geometry" />
+        <mxCell id="RWCcXeoH5vesJ5peBKe--28" value="&lt;font style=&quot;font-size: 11px;&quot;&gt;/turnOffDetection&lt;/font&gt;" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#f8cecc;strokeColor=#b85450;" parent="RWCcXeoH5vesJ5peBKe--1" vertex="1">
+          <mxGeometry x="70" y="130" width="120" height="20" as="geometry" />
         </mxCell>
-        <mxCell id="RWCcXeoH5vesJ5peBKe--30" value="POST" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#dae8fc;strokeColor=#6c8ebf;" vertex="1" parent="RWCcXeoH5vesJ5peBKe--1">
-          <mxGeometry x="200" y="140" width="40" height="20" as="geometry" />
+        <mxCell id="RWCcXeoH5vesJ5peBKe--29" value="&lt;div style=&quot;line-height: 50%;&quot;&gt;&lt;p&gt;&lt;span style=&quot;font-size: 7px;&quot;&gt;Permanently turns off the auto detection of a timetable from the EbuLa.&lt;/span&gt;&lt;/p&gt;&lt;/div&gt;" style="rounded=1;whiteSpace=wrap;html=1;" parent="RWCcXeoH5vesJ5peBKe--1" vertex="1">
+          <mxGeometry x="30" y="150" width="160" height="30" as="geometry" />
         </mxCell>
-        <mxCell id="RWCcXeoH5vesJ5peBKe--31" value="&lt;font style=&quot;font-size: 11px;&quot;&gt;/turnOffLocalisation&lt;/font&gt;" style="rounded=1;whiteSpace=wrap;html=1;" vertex="1" parent="RWCcXeoH5vesJ5peBKe--1">
-          <mxGeometry x="240" y="140" width="120" height="20" as="geometry" />
+        <mxCell id="RWCcXeoH5vesJ5peBKe--30" value="POST" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#dae8fc;strokeColor=#6c8ebf;" parent="RWCcXeoH5vesJ5peBKe--1" vertex="1">
+          <mxGeometry x="200" y="130" width="40" height="20" as="geometry" />
         </mxCell>
-        <mxCell id="RWCcXeoH5vesJ5peBKe--32" value="&lt;div style=&quot;line-height: 50%;&quot;&gt;&lt;p&gt;&lt;span style=&quot;font-size: 7px;&quot;&gt;Permanently turns off the localisation using the location marker on the EbuLa device.&lt;/span&gt;&lt;/p&gt;&lt;/div&gt;" style="rounded=1;whiteSpace=wrap;html=1;" vertex="1" parent="RWCcXeoH5vesJ5peBKe--1">
-          <mxGeometry x="200" y="160" width="160" height="30" as="geometry" />
+        <mxCell id="RWCcXeoH5vesJ5peBKe--31" value="&lt;font style=&quot;font-size: 11px;&quot;&gt;/turnOffLocalisation&lt;/font&gt;" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#f8cecc;strokeColor=#b85450;" parent="RWCcXeoH5vesJ5peBKe--1" vertex="1">
+          <mxGeometry x="240" y="130" width="120" height="20" as="geometry" />
         </mxCell>
-        <mxCell id="RWCcXeoH5vesJ5peBKe--33" value="POST" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#dae8fc;strokeColor=#6c8ebf;" vertex="1" parent="RWCcXeoH5vesJ5peBKe--1">
-          <mxGeometry x="370" y="140" width="40" height="20" as="geometry" />
+        <mxCell id="RWCcXeoH5vesJ5peBKe--32" value="&lt;div style=&quot;line-height: 50%;&quot;&gt;&lt;p&gt;&lt;span style=&quot;font-size: 7px;&quot;&gt;Permanently turns off the localisation using the location marker on the EbuLa device.&lt;/span&gt;&lt;/p&gt;&lt;/div&gt;" style="rounded=1;whiteSpace=wrap;html=1;" parent="RWCcXeoH5vesJ5peBKe--1" vertex="1">
+          <mxGeometry x="200" y="150" width="160" height="30" as="geometry" />
         </mxCell>
-        <mxCell id="RWCcXeoH5vesJ5peBKe--34" value="&lt;font style=&quot;font-size: 11px;&quot;&gt;/enableAutoDetection&lt;/font&gt;" style="rounded=1;whiteSpace=wrap;html=1;" vertex="1" parent="RWCcXeoH5vesJ5peBKe--1">
-          <mxGeometry x="410" y="140" width="120" height="20" as="geometry" />
+        <mxCell id="RWCcXeoH5vesJ5peBKe--33" value="POST" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#dae8fc;strokeColor=#6c8ebf;" parent="RWCcXeoH5vesJ5peBKe--1" vertex="1">
+          <mxGeometry x="370" y="130" width="40" height="20" as="geometry" />
         </mxCell>
-        <mxCell id="RWCcXeoH5vesJ5peBKe--35" value="&lt;div style=&quot;line-height: 50%;&quot;&gt;&lt;p&gt;&lt;span style=&quot;font-size: 7px;&quot;&gt;Re-enables the auto detection of the timetable using the EbuLa. This invokes a full re scan of the current timetable.&lt;/span&gt;&lt;/p&gt;&lt;/div&gt;" style="rounded=1;whiteSpace=wrap;html=1;" vertex="1" parent="RWCcXeoH5vesJ5peBKe--1">
-          <mxGeometry x="370" y="160" width="160" height="30" as="geometry" />
+        <mxCell id="RWCcXeoH5vesJ5peBKe--34" value="&lt;font style=&quot;font-size: 11px;&quot;&gt;/enableAutoDetection&lt;/font&gt;" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#f8cecc;strokeColor=#b85450;" parent="RWCcXeoH5vesJ5peBKe--1" vertex="1">
+          <mxGeometry x="410" y="130" width="120" height="20" as="geometry" />
         </mxCell>
-        <mxCell id="RWCcXeoH5vesJ5peBKe--36" value="POST" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#dae8fc;strokeColor=#6c8ebf;" vertex="1" parent="RWCcXeoH5vesJ5peBKe--1">
-          <mxGeometry x="540" y="140" width="40" height="20" as="geometry" />
+        <mxCell id="RWCcXeoH5vesJ5peBKe--35" value="&lt;div style=&quot;line-height: 50%;&quot;&gt;&lt;p&gt;&lt;span style=&quot;font-size: 7px;&quot;&gt;Re-enables the auto detection of the timetable using the EbuLa. This invokes a full re scan of the current timetable.&lt;/span&gt;&lt;/p&gt;&lt;/div&gt;" style="rounded=1;whiteSpace=wrap;html=1;" parent="RWCcXeoH5vesJ5peBKe--1" vertex="1">
+          <mxGeometry x="370" y="150" width="160" height="30" as="geometry" />
         </mxCell>
-        <mxCell id="RWCcXeoH5vesJ5peBKe--37" value="&lt;font style=&quot;font-size: 11px;&quot;&gt;/enableLocalisation&lt;/font&gt;" style="rounded=1;whiteSpace=wrap;html=1;" vertex="1" parent="RWCcXeoH5vesJ5peBKe--1">
-          <mxGeometry x="580" y="140" width="120" height="20" as="geometry" />
+        <mxCell id="RWCcXeoH5vesJ5peBKe--36" value="POST" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#dae8fc;strokeColor=#6c8ebf;" parent="RWCcXeoH5vesJ5peBKe--1" vertex="1">
+          <mxGeometry x="590" y="130" width="40" height="20" as="geometry" />
         </mxCell>
-        <mxCell id="RWCcXeoH5vesJ5peBKe--38" value="&lt;div style=&quot;line-height: 50%;&quot;&gt;&lt;p&gt;&lt;span style=&quot;font-size: 7px;&quot;&gt;Re-enables the localisation using the location marker on the EbuLa device. This invokes a jump to the current page on the EbuLa.&lt;/span&gt;&lt;/p&gt;&lt;/div&gt;" style="rounded=1;whiteSpace=wrap;html=1;" vertex="1" parent="RWCcXeoH5vesJ5peBKe--1">
-          <mxGeometry x="540" y="160" width="160" height="30" as="geometry" />
+        <mxCell id="RWCcXeoH5vesJ5peBKe--37" value="&lt;font style=&quot;font-size: 11px;&quot;&gt;/enableLocalisation&lt;/font&gt;" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#f8cecc;strokeColor=#b85450;" parent="RWCcXeoH5vesJ5peBKe--1" vertex="1">
+          <mxGeometry x="630" y="130" width="120" height="20" as="geometry" />
         </mxCell>
-        <mxCell id="RWCcXeoH5vesJ5peBKe--39" value="POST" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#dae8fc;strokeColor=#6c8ebf;" vertex="1" parent="RWCcXeoH5vesJ5peBKe--1">
-          <mxGeometry x="540" y="60" width="40" height="20" as="geometry" />
+        <mxCell id="RWCcXeoH5vesJ5peBKe--38" value="&lt;div style=&quot;line-height: 50%;&quot;&gt;&lt;p&gt;&lt;span style=&quot;font-size: 7px;&quot;&gt;Re-enables the localisation using the location marker on the EbuLa device. This invokes a jump to the current page on the EbuLa.&lt;/span&gt;&lt;/p&gt;&lt;/div&gt;" style="rounded=1;whiteSpace=wrap;html=1;" parent="RWCcXeoH5vesJ5peBKe--1" vertex="1">
+          <mxGeometry x="590" y="150" width="160" height="30" as="geometry" />
         </mxCell>
-        <mxCell id="RWCcXeoH5vesJ5peBKe--40" value="&lt;font style=&quot;font-size: 11px;&quot;&gt;/rescan&lt;/font&gt;" style="rounded=1;whiteSpace=wrap;html=1;" vertex="1" parent="RWCcXeoH5vesJ5peBKe--1">
-          <mxGeometry x="580" y="60" width="120" height="20" as="geometry" />
+        <mxCell id="RWCcXeoH5vesJ5peBKe--39" value="POST" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#dae8fc;strokeColor=#6c8ebf;" parent="RWCcXeoH5vesJ5peBKe--1" vertex="1">
+          <mxGeometry x="590" y="50" width="40" height="20" as="geometry" />
         </mxCell>
-        <mxCell id="RWCcXeoH5vesJ5peBKe--41" value="&lt;div style=&quot;line-height: 50%;&quot;&gt;&lt;p&gt;&lt;span style=&quot;font-size: 7px;&quot;&gt;Rescans the entire timetable from the EbuLa device and returns it.&lt;/span&gt;&lt;/p&gt;&lt;/div&gt;" style="rounded=1;whiteSpace=wrap;html=1;" vertex="1" parent="RWCcXeoH5vesJ5peBKe--1">
-          <mxGeometry x="540" y="80" width="160" height="30" as="geometry" />
+        <mxCell id="RWCcXeoH5vesJ5peBKe--40" value="&lt;font style=&quot;font-size: 11px;&quot;&gt;/rescan&lt;/font&gt;" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#f8cecc;strokeColor=#b85450;" parent="RWCcXeoH5vesJ5peBKe--1" vertex="1">
+          <mxGeometry x="630" y="50" width="120" height="20" as="geometry" />
         </mxCell>
-        <mxCell id="RWCcXeoH5vesJ5peBKe--42" value="POST" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#dae8fc;strokeColor=#6c8ebf;" vertex="1" parent="RWCcXeoH5vesJ5peBKe--1">
-          <mxGeometry x="710" y="140" width="40" height="20" as="geometry" />
+        <mxCell id="RWCcXeoH5vesJ5peBKe--41" value="&lt;div style=&quot;line-height: 50%;&quot;&gt;&lt;p&gt;&lt;span style=&quot;font-size: 7px;&quot;&gt;Rescans the entire timetable from the EbuLa device and returns it.&lt;/span&gt;&lt;/p&gt;&lt;/div&gt;" style="rounded=1;whiteSpace=wrap;html=1;" parent="RWCcXeoH5vesJ5peBKe--1" vertex="1">
+          <mxGeometry x="590" y="70" width="160" height="30" as="geometry" />
         </mxCell>
-        <mxCell id="RWCcXeoH5vesJ5peBKe--43" value="&lt;font style=&quot;font-size: 11px;&quot;&gt;/turnOnAutoDetection&lt;/font&gt;" style="rounded=1;whiteSpace=wrap;html=1;" vertex="1" parent="RWCcXeoH5vesJ5peBKe--1">
-          <mxGeometry x="750" y="140" width="120" height="20" as="geometry" />
+        <mxCell id="RWCcXeoH5vesJ5peBKe--42" value="POST" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#dae8fc;strokeColor=#6c8ebf;" parent="RWCcXeoH5vesJ5peBKe--1" vertex="1">
+          <mxGeometry x="760" y="130" width="40" height="20" as="geometry" />
         </mxCell>
-        <mxCell id="RWCcXeoH5vesJ5peBKe--44" value="&lt;div style=&quot;line-height: 50%;&quot;&gt;&lt;p&gt;&lt;span style=&quot;font-size: 7px;&quot;&gt;Turns on the auto detection of a timetable on startup back on.&lt;/span&gt;&lt;/p&gt;&lt;/div&gt;" style="rounded=1;whiteSpace=wrap;html=1;" vertex="1" parent="RWCcXeoH5vesJ5peBKe--1">
-          <mxGeometry x="710" y="160" width="160" height="30" as="geometry" />
+        <mxCell id="RWCcXeoH5vesJ5peBKe--43" value="&lt;font style=&quot;font-size: 11px;&quot;&gt;/turnOnAutoDetection&lt;/font&gt;" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#f8cecc;strokeColor=#b85450;" parent="RWCcXeoH5vesJ5peBKe--1" vertex="1">
+          <mxGeometry x="800" y="130" width="120" height="20" as="geometry" />
         </mxCell>
-        <mxCell id="RWCcXeoH5vesJ5peBKe--45" value="POST" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#dae8fc;strokeColor=#6c8ebf;" vertex="1" parent="RWCcXeoH5vesJ5peBKe--1">
-          <mxGeometry x="880" y="140" width="40" height="20" as="geometry" />
+        <mxCell id="RWCcXeoH5vesJ5peBKe--44" value="&lt;div style=&quot;line-height: 50%;&quot;&gt;&lt;p&gt;&lt;span style=&quot;font-size: 7px;&quot;&gt;Turns on the auto detection of a timetable on startup back on.&lt;/span&gt;&lt;/p&gt;&lt;/div&gt;" style="rounded=1;whiteSpace=wrap;html=1;" parent="RWCcXeoH5vesJ5peBKe--1" vertex="1">
+          <mxGeometry x="760" y="150" width="160" height="30" as="geometry" />
         </mxCell>
-        <mxCell id="RWCcXeoH5vesJ5peBKe--46" value="&lt;font style=&quot;font-size: 11px;&quot;&gt;/turnOnLocalisation&lt;/font&gt;" style="rounded=1;whiteSpace=wrap;html=1;" vertex="1" parent="RWCcXeoH5vesJ5peBKe--1">
-          <mxGeometry x="920" y="140" width="120" height="20" as="geometry" />
+        <mxCell id="RWCcXeoH5vesJ5peBKe--45" value="POST" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#dae8fc;strokeColor=#6c8ebf;" parent="RWCcXeoH5vesJ5peBKe--1" vertex="1">
+          <mxGeometry x="930" y="130" width="40" height="20" as="geometry" />
         </mxCell>
-        <mxCell id="RWCcXeoH5vesJ5peBKe--47" value="&lt;div style=&quot;line-height: 50%;&quot;&gt;&lt;p&gt;&lt;span style=&quot;font-size: 7px;&quot;&gt;Turns on the localisation using the location marker on the Ebula. This invokes a jump to the current page on the EbuLa.&lt;/span&gt;&lt;/p&gt;&lt;/div&gt;" style="rounded=1;whiteSpace=wrap;html=1;" vertex="1" parent="RWCcXeoH5vesJ5peBKe--1">
-          <mxGeometry x="880" y="160" width="160" height="30" as="geometry" />
+        <mxCell id="RWCcXeoH5vesJ5peBKe--46" value="&lt;font style=&quot;font-size: 11px;&quot;&gt;/turnOnLocalisation&lt;/font&gt;" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#f8cecc;strokeColor=#b85450;" parent="RWCcXeoH5vesJ5peBKe--1" vertex="1">
+          <mxGeometry x="970" y="130" width="120" height="20" as="geometry" />
         </mxCell>
-        <mxCell id="RWCcXeoH5vesJ5peBKe--12" value="&lt;font style=&quot;font-size: 8px;&quot;&gt;METHOD&lt;/font&gt;" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#d5e8d4;strokeColor=#82b366;" vertex="1" parent="1">
-          <mxGeometry x="70" y="30" width="40" height="20" as="geometry" />
+        <mxCell id="RWCcXeoH5vesJ5peBKe--47" value="&lt;div style=&quot;line-height: 50%;&quot;&gt;&lt;p&gt;&lt;span style=&quot;font-size: 7px;&quot;&gt;Turns on the localisation using the location marker on the Ebula. This invokes a jump to the current page on the EbuLa.&lt;/span&gt;&lt;/p&gt;&lt;/div&gt;" style="rounded=1;whiteSpace=wrap;html=1;" parent="RWCcXeoH5vesJ5peBKe--1" vertex="1">
+          <mxGeometry x="930" y="150" width="160" height="30" as="geometry" />
         </mxCell>
-        <mxCell id="RWCcXeoH5vesJ5peBKe--13" value="ENDPOINT" style="rounded=1;whiteSpace=wrap;html=1;" vertex="1" parent="1">
-          <mxGeometry x="110" y="30" width="120" height="20" as="geometry" />
+        <mxCell id="RWCcXeoH5vesJ5peBKe--12" value="&lt;font style=&quot;font-size: 8px;&quot;&gt;METHOD&lt;/font&gt;" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#d5e8d4;strokeColor=#82b366;" parent="YDuEinJ2u5WotXFXWLW8-75" vertex="1">
+          <mxGeometry x="30" y="40" width="40" height="20" as="geometry" />
         </mxCell>
-        <mxCell id="RWCcXeoH5vesJ5peBKe--14" value="&lt;font style=&quot;font-size: 10px;&quot;&gt;DESCRIPTION&lt;/font&gt;" style="rounded=1;whiteSpace=wrap;html=1;" vertex="1" parent="1">
-          <mxGeometry x="70" y="50" width="160" height="20" as="geometry" />
+        <mxCell id="RWCcXeoH5vesJ5peBKe--13" value="ENDPOINT" style="rounded=1;whiteSpace=wrap;html=1;" parent="YDuEinJ2u5WotXFXWLW8-75" vertex="1">
+          <mxGeometry x="70" y="40" width="120" height="20" as="geometry" />
+        </mxCell>
+        <mxCell id="RWCcXeoH5vesJ5peBKe--14" value="&lt;font style=&quot;font-size: 10px;&quot;&gt;DESCRIPTION&lt;/font&gt;" style="rounded=1;whiteSpace=wrap;html=1;" parent="YDuEinJ2u5WotXFXWLW8-75" vertex="1">
+          <mxGeometry x="30" y="60" width="160" height="20" as="geometry" />
+        </mxCell>
+        <mxCell id="YDuEinJ2u5WotXFXWLW8-1" value="[/camera] CameraController" style="swimlane;whiteSpace=wrap;html=1;fillColor=#fff2cc;strokeColor=#d6b656;" vertex="1" parent="YDuEinJ2u5WotXFXWLW8-75">
+          <mxGeometry x="10" y="100" width="550" height="120" as="geometry" />
+        </mxCell>
+        <mxCell id="YDuEinJ2u5WotXFXWLW8-2" value="POST" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#dae8fc;strokeColor=#6c8ebf;" vertex="1" parent="YDuEinJ2u5WotXFXWLW8-1">
+          <mxGeometry x="30" y="45" width="40" height="20" as="geometry" />
+        </mxCell>
+        <mxCell id="YDuEinJ2u5WotXFXWLW8-3" value="/startStream" style="rounded=1;whiteSpace=wrap;html=1;" vertex="1" parent="YDuEinJ2u5WotXFXWLW8-1">
+          <mxGeometry x="70" y="45" width="120" height="20" as="geometry" />
+        </mxCell>
+        <mxCell id="YDuEinJ2u5WotXFXWLW8-4" value="&lt;font style=&quot;line-height: 70%; font-size: 8px;&quot;&gt;Adds the senders IP and a given port to the receivers list of the main cameras streams.&lt;/font&gt;" style="rounded=1;whiteSpace=wrap;html=1;" vertex="1" parent="YDuEinJ2u5WotXFXWLW8-1">
+          <mxGeometry x="30" y="65" width="160" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="YDuEinJ2u5WotXFXWLW8-5" value="POST" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#dae8fc;strokeColor=#6c8ebf;" vertex="1" parent="YDuEinJ2u5WotXFXWLW8-1">
+          <mxGeometry x="200" y="45" width="40" height="20" as="geometry" />
+        </mxCell>
+        <mxCell id="YDuEinJ2u5WotXFXWLW8-6" value="/stopStream" style="rounded=1;whiteSpace=wrap;html=1;" vertex="1" parent="YDuEinJ2u5WotXFXWLW8-1">
+          <mxGeometry x="240" y="45" width="120" height="20" as="geometry" />
+        </mxCell>
+        <mxCell id="YDuEinJ2u5WotXFXWLW8-7" value="&lt;div style=&quot;line-height: 50%;&quot;&gt;&lt;p&gt;&lt;span style=&quot;font-size: 7px;&quot;&gt;Removes the senders IP from the receivers list of the main cameras streams.&lt;/span&gt;&lt;/p&gt;&lt;/div&gt;" style="rounded=1;whiteSpace=wrap;html=1;" vertex="1" parent="YDuEinJ2u5WotXFXWLW8-1">
+          <mxGeometry x="200" y="65" width="160" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="YDuEinJ2u5WotXFXWLW8-8" value="GET" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#d5e8d4;strokeColor=#82b366;" vertex="1" parent="YDuEinJ2u5WotXFXWLW8-1">
+          <mxGeometry x="370" y="45" width="40" height="20" as="geometry" />
+        </mxCell>
+        <mxCell id="YDuEinJ2u5WotXFXWLW8-9" value="/nextSave" style="rounded=1;whiteSpace=wrap;html=1;" vertex="1" parent="YDuEinJ2u5WotXFXWLW8-1">
+          <mxGeometry x="410" y="45" width="120" height="20" as="geometry" />
+        </mxCell>
+        <mxCell id="YDuEinJ2u5WotXFXWLW8-10" value="&lt;font style=&quot;line-height: 70%; font-size: 9px;&quot;&gt;Returns the next sync save interval in a DateTime &quot;o&quot; format&lt;/font&gt;" style="rounded=1;whiteSpace=wrap;html=1;" vertex="1" parent="YDuEinJ2u5WotXFXWLW8-1">
+          <mxGeometry x="370" y="65" width="160" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="YDuEinJ2u5WotXFXWLW8-38" value="[/display] DisplayController" style="swimlane;whiteSpace=wrap;html=1;fillColor=#fff2cc;strokeColor=#d6b656;" vertex="1" parent="YDuEinJ2u5WotXFXWLW8-75">
+          <mxGeometry x="570" y="100" width="560" height="120" as="geometry" />
+        </mxCell>
+        <mxCell id="YDuEinJ2u5WotXFXWLW8-39" value="GET" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#d5e8d4;strokeColor=#82b366;" vertex="1" parent="YDuEinJ2u5WotXFXWLW8-38">
+          <mxGeometry x="30" y="50" width="40" height="20" as="geometry" />
+        </mxCell>
+        <mxCell id="YDuEinJ2u5WotXFXWLW8-40" value="/isDisplayRegistered" style="rounded=1;whiteSpace=wrap;html=1;" vertex="1" parent="YDuEinJ2u5WotXFXWLW8-38">
+          <mxGeometry x="70" y="50" width="120" height="20" as="geometry" />
+        </mxCell>
+        <mxCell id="YDuEinJ2u5WotXFXWLW8-41" value="&lt;font style=&quot;font-size: 9px;&quot;&gt;Returns a bool of if a certain type of display has been registered.&lt;/font&gt;" style="rounded=1;whiteSpace=wrap;html=1;" vertex="1" parent="YDuEinJ2u5WotXFXWLW8-38">
+          <mxGeometry x="30" y="70" width="160" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="YDuEinJ2u5WotXFXWLW8-42" value="POST" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#dae8fc;strokeColor=#6c8ebf;" vertex="1" parent="YDuEinJ2u5WotXFXWLW8-38">
+          <mxGeometry x="200" y="50" width="40" height="20" as="geometry" />
+        </mxCell>
+        <mxCell id="YDuEinJ2u5WotXFXWLW8-43" value="/startStream" style="rounded=1;whiteSpace=wrap;html=1;" vertex="1" parent="YDuEinJ2u5WotXFXWLW8-38">
+          <mxGeometry x="240" y="50" width="120" height="20" as="geometry" />
+        </mxCell>
+        <mxCell id="YDuEinJ2u5WotXFXWLW8-44" value="&lt;div style=&quot;line-height: 50%;&quot;&gt;&lt;p&gt;&lt;font style=&quot;font-size: 8px;&quot;&gt;Adds the senders IP and a given port to the receivers list of the given display type.&lt;/font&gt;&lt;/p&gt;&lt;/div&gt;" style="rounded=1;whiteSpace=wrap;html=1;" vertex="1" parent="YDuEinJ2u5WotXFXWLW8-38">
+          <mxGeometry x="200" y="70" width="160" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="YDuEinJ2u5WotXFXWLW8-45" value="GET" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#d5e8d4;strokeColor=#82b366;" vertex="1" parent="YDuEinJ2u5WotXFXWLW8-38">
+          <mxGeometry x="370" y="50" width="40" height="20" as="geometry" />
+        </mxCell>
+        <mxCell id="YDuEinJ2u5WotXFXWLW8-46" value="/stopStream" style="rounded=1;whiteSpace=wrap;html=1;" vertex="1" parent="YDuEinJ2u5WotXFXWLW8-38">
+          <mxGeometry x="410" y="50" width="120" height="20" as="geometry" />
+        </mxCell>
+        <mxCell id="YDuEinJ2u5WotXFXWLW8-47" value="&lt;font style=&quot;line-height: 70%; font-size: 9px;&quot;&gt;Removes the senders IP from the receivers list of the given display type.&lt;/font&gt;" style="rounded=1;whiteSpace=wrap;html=1;" vertex="1" parent="YDuEinJ2u5WotXFXWLW8-38">
+          <mxGeometry x="370" y="70" width="160" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="YDuEinJ2u5WotXFXWLW8-76" value="[/information] InformationController" style="swimlane;whiteSpace=wrap;html=1;fillColor=#fff2cc;strokeColor=#d6b656;" vertex="1" parent="YDuEinJ2u5WotXFXWLW8-75">
+          <mxGeometry x="10" y="440" width="1120" height="200" as="geometry" />
+        </mxCell>
+        <mxCell id="YDuEinJ2u5WotXFXWLW8-77" value="GET" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#d5e8d4;strokeColor=#82b366;" vertex="1" parent="YDuEinJ2u5WotXFXWLW8-76">
+          <mxGeometry x="30" y="50" width="40" height="20" as="geometry" />
+        </mxCell>
+        <mxCell id="YDuEinJ2u5WotXFXWLW8-78" value="/serviceState" style="rounded=1;whiteSpace=wrap;html=1;" vertex="1" parent="YDuEinJ2u5WotXFXWLW8-76">
+          <mxGeometry x="70" y="50" width="120" height="20" as="geometry" />
+        </mxCell>
+        <mxCell id="YDuEinJ2u5WotXFXWLW8-79" value="&lt;font style=&quot;font-size: 9px;&quot;&gt;Returns the current service state of the connected bridge. (Master or slave)&lt;/font&gt;" style="rounded=1;whiteSpace=wrap;html=1;" vertex="1" parent="YDuEinJ2u5WotXFXWLW8-76">
+          <mxGeometry x="30" y="70" width="160" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="YDuEinJ2u5WotXFXWLW8-80" value="GET" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#d5e8d4;strokeColor=#82b366;" vertex="1" parent="YDuEinJ2u5WotXFXWLW8-76">
+          <mxGeometry x="200" y="50" width="40" height="20" as="geometry" />
+        </mxCell>
+        <mxCell id="YDuEinJ2u5WotXFXWLW8-81" value="/logDates" style="rounded=1;whiteSpace=wrap;html=1;" vertex="1" parent="YDuEinJ2u5WotXFXWLW8-76">
+          <mxGeometry x="240" y="50" width="120" height="20" as="geometry" />
+        </mxCell>
+        <mxCell id="YDuEinJ2u5WotXFXWLW8-82" value="&lt;div style=&quot;line-height: 50%;&quot;&gt;&lt;p&gt;&lt;font style=&quot;font-size: 8px;&quot;&gt;Returns a list of all dates that the bridge has written logs on.&lt;/font&gt;&lt;/p&gt;&lt;/div&gt;" style="rounded=1;whiteSpace=wrap;html=1;" vertex="1" parent="YDuEinJ2u5WotXFXWLW8-76">
+          <mxGeometry x="200" y="70" width="160" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="YDuEinJ2u5WotXFXWLW8-83" value="GET" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#d5e8d4;strokeColor=#82b366;" vertex="1" parent="YDuEinJ2u5WotXFXWLW8-76">
+          <mxGeometry x="370" y="50" width="40" height="20" as="geometry" />
+        </mxCell>
+        <mxCell id="YDuEinJ2u5WotXFXWLW8-84" value="/logs" style="rounded=1;whiteSpace=wrap;html=1;" vertex="1" parent="YDuEinJ2u5WotXFXWLW8-76">
+          <mxGeometry x="410" y="50" width="120" height="20" as="geometry" />
+        </mxCell>
+        <mxCell id="YDuEinJ2u5WotXFXWLW8-85" value="&lt;font style=&quot;line-height: 70%; font-size: 10px;&quot;&gt;Returns the logs for a given date.&lt;/font&gt;" style="rounded=1;whiteSpace=wrap;html=1;" vertex="1" parent="YDuEinJ2u5WotXFXWLW8-76">
+          <mxGeometry x="370" y="70" width="160" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="YDuEinJ2u5WotXFXWLW8-86" value="GET" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#d5e8d4;strokeColor=#82b366;" vertex="1" parent="YDuEinJ2u5WotXFXWLW8-76">
+          <mxGeometry x="760" y="50" width="40" height="20" as="geometry" />
+        </mxCell>
+        <mxCell id="YDuEinJ2u5WotXFXWLW8-87" value="&lt;font style=&quot;font-size: 11px;&quot;&gt;/trainId&lt;/font&gt;" style="rounded=1;whiteSpace=wrap;html=1;" vertex="1" parent="YDuEinJ2u5WotXFXWLW8-76">
+          <mxGeometry x="800" y="50" width="120" height="20" as="geometry" />
+        </mxCell>
+        <mxCell id="YDuEinJ2u5WotXFXWLW8-88" value="&lt;div style=&quot;line-height: 50%;&quot;&gt;&lt;p&gt;&lt;font style=&quot;font-size: 11px;&quot;&gt;Returns the ID of the train.&lt;/font&gt;&lt;/p&gt;&lt;/div&gt;" style="rounded=1;whiteSpace=wrap;html=1;" vertex="1" parent="YDuEinJ2u5WotXFXWLW8-76">
+          <mxGeometry x="760" y="70" width="160" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="YDuEinJ2u5WotXFXWLW8-89" value="&lt;div style=&quot;line-height: 50%;&quot;&gt;&lt;p&gt;&lt;font style=&quot;font-size: 11px;&quot;&gt;Returns the name of the train.&lt;/font&gt;&lt;/p&gt;&lt;/div&gt;" style="rounded=1;whiteSpace=wrap;html=1;" vertex="1" parent="YDuEinJ2u5WotXFXWLW8-76">
+          <mxGeometry x="930" y="70" width="160" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="YDuEinJ2u5WotXFXWLW8-90" value="&lt;font style=&quot;font-size: 11px;&quot;&gt;/trainName&lt;/font&gt;" style="rounded=1;whiteSpace=wrap;html=1;" vertex="1" parent="YDuEinJ2u5WotXFXWLW8-76">
+          <mxGeometry x="970" y="50" width="120" height="20" as="geometry" />
+        </mxCell>
+        <mxCell id="YDuEinJ2u5WotXFXWLW8-91" value="GET" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#d5e8d4;strokeColor=#82b366;" vertex="1" parent="YDuEinJ2u5WotXFXWLW8-76">
+          <mxGeometry x="930" y="50" width="40" height="20" as="geometry" />
+        </mxCell>
+        <mxCell id="YDuEinJ2u5WotXFXWLW8-92" value="GET" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#d5e8d4;strokeColor=#82b366;" vertex="1" parent="YDuEinJ2u5WotXFXWLW8-76">
+          <mxGeometry x="30" y="130" width="40" height="20" as="geometry" />
+        </mxCell>
+        <mxCell id="YDuEinJ2u5WotXFXWLW8-93" value="&lt;font style=&quot;font-size: 11px;&quot;&gt;/lastSyncTry&lt;/font&gt;" style="rounded=1;whiteSpace=wrap;html=1;" vertex="1" parent="YDuEinJ2u5WotXFXWLW8-76">
+          <mxGeometry x="70" y="130" width="120" height="20" as="geometry" />
+        </mxCell>
+        <mxCell id="YDuEinJ2u5WotXFXWLW8-94" value="&lt;div style=&quot;line-height: 50%;&quot;&gt;&lt;p&gt;&lt;font style=&quot;font-size: 9px;&quot;&gt;Returns the timestamp of when the last sync try happened.&lt;/font&gt;&lt;/p&gt;&lt;/div&gt;" style="rounded=1;whiteSpace=wrap;html=1;" vertex="1" parent="YDuEinJ2u5WotXFXWLW8-76">
+          <mxGeometry x="30" y="150" width="160" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="YDuEinJ2u5WotXFXWLW8-95" value="GET" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#d5e8d4;strokeColor=#82b366;" vertex="1" parent="YDuEinJ2u5WotXFXWLW8-76">
+          <mxGeometry x="200" y="130" width="40" height="20" as="geometry" />
+        </mxCell>
+        <mxCell id="YDuEinJ2u5WotXFXWLW8-96" value="&lt;font style=&quot;font-size: 11px;&quot;&gt;/lastSynced&lt;/font&gt;" style="rounded=1;whiteSpace=wrap;html=1;" vertex="1" parent="YDuEinJ2u5WotXFXWLW8-76">
+          <mxGeometry x="240" y="130" width="120" height="20" as="geometry" />
+        </mxCell>
+        <mxCell id="YDuEinJ2u5WotXFXWLW8-97" value="&lt;div style=&quot;line-height: 50%;&quot;&gt;&lt;p&gt;&lt;font style=&quot;font-size: 9px; line-height: 100%;&quot;&gt;Returns the timestamp of when the last sync happened.&lt;/font&gt;&lt;/p&gt;&lt;/div&gt;" style="rounded=1;whiteSpace=wrap;html=1;" vertex="1" parent="YDuEinJ2u5WotXFXWLW8-76">
+          <mxGeometry x="200" y="150" width="160" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="YDuEinJ2u5WotXFXWLW8-98" value="POST" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#d5e8d4;strokeColor=#82b366;" vertex="1" parent="YDuEinJ2u5WotXFXWLW8-76">
+          <mxGeometry x="370" y="130" width="40" height="20" as="geometry" />
+        </mxCell>
+        <mxCell id="YDuEinJ2u5WotXFXWLW8-99" value="&lt;font style=&quot;font-size: 11px;&quot;&gt;/evuName&lt;/font&gt;" style="rounded=1;whiteSpace=wrap;html=1;" vertex="1" parent="YDuEinJ2u5WotXFXWLW8-76">
+          <mxGeometry x="410" y="130" width="120" height="20" as="geometry" />
+        </mxCell>
+        <mxCell id="YDuEinJ2u5WotXFXWLW8-100" value="&lt;div style=&quot;line-height: 50%;&quot;&gt;&lt;p&gt;&lt;font style=&quot;font-size: 9px; line-height: 90%;&quot;&gt;Returns the name of the evu, that this train belongs to.&lt;/font&gt;&lt;/p&gt;&lt;/div&gt;" style="rounded=1;whiteSpace=wrap;html=1;" vertex="1" parent="YDuEinJ2u5WotXFXWLW8-76">
+          <mxGeometry x="370" y="150" width="160" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="YDuEinJ2u5WotXFXWLW8-101" value="POST" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#d5e8d4;strokeColor=#82b366;" vertex="1" parent="YDuEinJ2u5WotXFXWLW8-76">
+          <mxGeometry x="590" y="130" width="40" height="20" as="geometry" />
+        </mxCell>
+        <mxCell id="YDuEinJ2u5WotXFXWLW8-102" value="&lt;font style=&quot;font-size: 11px;&quot;&gt;/isSimAvailable&lt;/font&gt;" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#f8cecc;strokeColor=#b85450;" vertex="1" parent="YDuEinJ2u5WotXFXWLW8-76">
+          <mxGeometry x="630" y="130" width="120" height="20" as="geometry" />
+        </mxCell>
+        <mxCell id="YDuEinJ2u5WotXFXWLW8-103" value="&lt;div style=&quot;line-height: 50%;&quot;&gt;&lt;p&gt;&lt;font style=&quot;font-size: 10px; line-height: 100%;&quot;&gt;Returns a bool of if a sim (cellular connection) is available.&lt;/font&gt;&lt;/p&gt;&lt;/div&gt;" style="rounded=1;whiteSpace=wrap;html=1;" vertex="1" parent="YDuEinJ2u5WotXFXWLW8-76">
+          <mxGeometry x="590" y="150" width="160" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="YDuEinJ2u5WotXFXWLW8-104" value="GET" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#d5e8d4;strokeColor=#82b366;" vertex="1" parent="YDuEinJ2u5WotXFXWLW8-76">
+          <mxGeometry x="590" y="50" width="40" height="20" as="geometry" />
+        </mxCell>
+        <mxCell id="YDuEinJ2u5WotXFXWLW8-105" value="&lt;span style=&quot;font-size: 11px;&quot;&gt;/version&lt;/span&gt;" style="rounded=1;whiteSpace=wrap;html=1;" vertex="1" parent="YDuEinJ2u5WotXFXWLW8-76">
+          <mxGeometry x="630" y="50" width="120" height="20" as="geometry" />
+        </mxCell>
+        <mxCell id="YDuEinJ2u5WotXFXWLW8-106" value="&lt;div style=&quot;line-height: 50%;&quot;&gt;&lt;p&gt;&lt;font style=&quot;font-size: 10px; line-height: 90%;&quot;&gt;Returns the git version of the central bridge.&lt;/font&gt;&lt;/p&gt;&lt;/div&gt;" style="rounded=1;whiteSpace=wrap;html=1;" vertex="1" parent="YDuEinJ2u5WotXFXWLW8-76">
+          <mxGeometry x="590" y="70" width="160" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="YDuEinJ2u5WotXFXWLW8-107" value="GET" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#d5e8d4;strokeColor=#82b366;" vertex="1" parent="YDuEinJ2u5WotXFXWLW8-76">
+          <mxGeometry x="760" y="130" width="40" height="20" as="geometry" />
+        </mxCell>
+        <mxCell id="YDuEinJ2u5WotXFXWLW8-108" value="&lt;font style=&quot;font-size: 11px;&quot;&gt;/isInternetAvailable&lt;/font&gt;" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#f8cecc;strokeColor=#b85450;" vertex="1" parent="YDuEinJ2u5WotXFXWLW8-76">
+          <mxGeometry x="800" y="130" width="120" height="20" as="geometry" />
+        </mxCell>
+        <mxCell id="YDuEinJ2u5WotXFXWLW8-109" value="&lt;div style=&quot;line-height: 50%;&quot;&gt;&lt;p&gt;&lt;font style=&quot;font-size: 8px;&quot;&gt;Returns a bool of if the bridge has a internet connection. (via ethernet adapter)&lt;/font&gt;&lt;/p&gt;&lt;/div&gt;" style="rounded=1;whiteSpace=wrap;html=1;" vertex="1" parent="YDuEinJ2u5WotXFXWLW8-76">
+          <mxGeometry x="760" y="150" width="160" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="YDuEinJ2u5WotXFXWLW8-168" value="POST" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#dae8fc;strokeColor=#6c8ebf;" vertex="1" parent="YDuEinJ2u5WotXFXWLW8-76">
+          <mxGeometry x="930" y="130" width="40" height="20" as="geometry" />
+        </mxCell>
+        <mxCell id="YDuEinJ2u5WotXFXWLW8-169" value="&lt;font style=&quot;font-size: 11px;&quot;&gt;/login&lt;/font&gt;" style="rounded=1;whiteSpace=wrap;html=1;" vertex="1" parent="YDuEinJ2u5WotXFXWLW8-76">
+          <mxGeometry x="970" y="130" width="120" height="20" as="geometry" />
+        </mxCell>
+        <mxCell id="YDuEinJ2u5WotXFXWLW8-170" value="&lt;div style=&quot;line-height: 50%;&quot;&gt;&lt;p&gt;&lt;font style=&quot;font-size: 10px; line-height: 100%;&quot;&gt;Endpoint for a tablet to login using a address, and a yubikey code.&lt;/font&gt;&lt;/p&gt;&lt;/div&gt;" style="rounded=1;whiteSpace=wrap;html=1;" vertex="1" parent="YDuEinJ2u5WotXFXWLW8-76">
+          <mxGeometry x="930" y="150" width="160" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="YDuEinJ2u5WotXFXWLW8-113" value="[/status] StatusController" style="swimlane;whiteSpace=wrap;html=1;fillColor=#fff2cc;strokeColor=#d6b656;" vertex="1" parent="YDuEinJ2u5WotXFXWLW8-75">
+          <mxGeometry x="10" y="650" width="1120" height="120" as="geometry" />
+        </mxCell>
+        <mxCell id="YDuEinJ2u5WotXFXWLW8-114" value="GET" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#d5e8d4;strokeColor=#82b366;" vertex="1" parent="YDuEinJ2u5WotXFXWLW8-113">
+          <mxGeometry x="30" y="50" width="40" height="20" as="geometry" />
+        </mxCell>
+        <mxCell id="YDuEinJ2u5WotXFXWLW8-115" value="/displays" style="rounded=1;whiteSpace=wrap;html=1;" vertex="1" parent="YDuEinJ2u5WotXFXWLW8-113">
+          <mxGeometry x="70" y="50" width="120" height="20" as="geometry" />
+        </mxCell>
+        <mxCell id="YDuEinJ2u5WotXFXWLW8-116" value="&lt;font style=&quot;font-size: 10px;&quot;&gt;Returns a list of the registered displays, and their status.&lt;/font&gt;" style="rounded=1;whiteSpace=wrap;html=1;" vertex="1" parent="YDuEinJ2u5WotXFXWLW8-113">
+          <mxGeometry x="30" y="70" width="160" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="YDuEinJ2u5WotXFXWLW8-117" value="GET" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#d5e8d4;strokeColor=#82b366;" vertex="1" parent="YDuEinJ2u5WotXFXWLW8-113">
+          <mxGeometry x="200" y="50" width="40" height="20" as="geometry" />
+        </mxCell>
+        <mxCell id="YDuEinJ2u5WotXFXWLW8-118" value="/mainCamera" style="rounded=1;whiteSpace=wrap;html=1;" vertex="1" parent="YDuEinJ2u5WotXFXWLW8-113">
+          <mxGeometry x="240" y="50" width="120" height="20" as="geometry" />
+        </mxCell>
+        <mxCell id="YDuEinJ2u5WotXFXWLW8-119" value="&lt;div style=&quot;line-height: 50%;&quot;&gt;&lt;p&gt;&lt;span style=&quot;font-size: 8px;&quot;&gt;Returns the status of the main camera. (null if it hasn&#39;t been registered yet)&lt;/span&gt;&lt;/p&gt;&lt;/div&gt;" style="rounded=1;whiteSpace=wrap;html=1;" vertex="1" parent="YDuEinJ2u5WotXFXWLW8-113">
+          <mxGeometry x="200" y="70" width="160" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="YDuEinJ2u5WotXFXWLW8-120" value="GET" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#d5e8d4;strokeColor=#82b366;" vertex="1" parent="YDuEinJ2u5WotXFXWLW8-113">
+          <mxGeometry x="370" y="50" width="40" height="20" as="geometry" />
+        </mxCell>
+        <mxCell id="YDuEinJ2u5WotXFXWLW8-121" value="/localise" style="rounded=1;whiteSpace=wrap;html=1;" vertex="1" parent="YDuEinJ2u5WotXFXWLW8-113">
+          <mxGeometry x="410" y="50" width="120" height="20" as="geometry" />
+        </mxCell>
+        <mxCell id="YDuEinJ2u5WotXFXWLW8-122" value="&lt;font style=&quot;line-height: 70%; font-size: 9px;&quot;&gt;Returns a bool of if the LocaliseService has started successfully.&lt;/font&gt;" style="rounded=1;whiteSpace=wrap;html=1;" vertex="1" parent="YDuEinJ2u5WotXFXWLW8-113">
+          <mxGeometry x="370" y="70" width="160" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="YDuEinJ2u5WotXFXWLW8-123" value="GET" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#d5e8d4;strokeColor=#82b366;" vertex="1" parent="YDuEinJ2u5WotXFXWLW8-113">
+          <mxGeometry x="760" y="50" width="40" height="20" as="geometry" />
+        </mxCell>
+        <mxCell id="YDuEinJ2u5WotXFXWLW8-124" value="&lt;font style=&quot;font-size: 11px;&quot;&gt;/gpsConnected&lt;/font&gt;" style="rounded=1;whiteSpace=wrap;html=1;" vertex="1" parent="YDuEinJ2u5WotXFXWLW8-113">
+          <mxGeometry x="800" y="50" width="120" height="20" as="geometry" />
+        </mxCell>
+        <mxCell id="YDuEinJ2u5WotXFXWLW8-125" value="&lt;div style=&quot;line-height: 50%;&quot;&gt;&lt;p&gt;&lt;font style=&quot;font-size: 10px; line-height: 110%;&quot;&gt;Returns a bool of if the gps is currently connected.&lt;/font&gt;&lt;/p&gt;&lt;/div&gt;" style="rounded=1;whiteSpace=wrap;html=1;" vertex="1" parent="YDuEinJ2u5WotXFXWLW8-113">
+          <mxGeometry x="760" y="70" width="160" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="YDuEinJ2u5WotXFXWLW8-141" value="GET" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#d5e8d4;strokeColor=#82b366;" vertex="1" parent="YDuEinJ2u5WotXFXWLW8-113">
+          <mxGeometry x="590" y="50" width="40" height="20" as="geometry" />
+        </mxCell>
+        <mxCell id="YDuEinJ2u5WotXFXWLW8-142" value="&lt;span style=&quot;font-size: 11px;&quot;&gt;/gpsAvailable&lt;/span&gt;" style="rounded=1;whiteSpace=wrap;html=1;" vertex="1" parent="YDuEinJ2u5WotXFXWLW8-113">
+          <mxGeometry x="630" y="50" width="120" height="20" as="geometry" />
+        </mxCell>
+        <mxCell id="YDuEinJ2u5WotXFXWLW8-143" value="&lt;div style=&quot;line-height: 50%;&quot;&gt;&lt;p&gt;&lt;font style=&quot;font-size: 10px; line-height: 90%;&quot;&gt;Returns a bool of if gps is available.&lt;/font&gt;&lt;/p&gt;&lt;/div&gt;" style="rounded=1;whiteSpace=wrap;html=1;" vertex="1" parent="YDuEinJ2u5WotXFXWLW8-113">
+          <mxGeometry x="590" y="70" width="160" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="YDuEinJ2u5WotXFXWLW8-147" value="[/system] SystemController" style="swimlane;whiteSpace=wrap;html=1;fillColor=#fff2cc;strokeColor=#d6b656;" vertex="1" parent="YDuEinJ2u5WotXFXWLW8-75">
+          <mxGeometry x="10" y="780" width="1110" height="120" as="geometry" />
+        </mxCell>
+        <mxCell id="YDuEinJ2u5WotXFXWLW8-148" value="POST" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#dae8fc;strokeColor=#6c8ebf;" vertex="1" parent="YDuEinJ2u5WotXFXWLW8-147">
+          <mxGeometry x="30" y="50" width="40" height="20" as="geometry" />
+        </mxCell>
+        <mxCell id="YDuEinJ2u5WotXFXWLW8-149" value="/setDate" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#f8cecc;strokeColor=#b85450;" vertex="1" parent="YDuEinJ2u5WotXFXWLW8-147">
+          <mxGeometry x="70" y="50" width="120" height="20" as="geometry" />
+        </mxCell>
+        <mxCell id="YDuEinJ2u5WotXFXWLW8-150" value="&lt;font style=&quot;font-size: 7px;&quot;&gt;Endpoint to set the DateTime of the CentralBridge to a given value. (THIS RESTARTS THE BRIDGE)&lt;/font&gt;" style="rounded=1;whiteSpace=wrap;html=1;" vertex="1" parent="YDuEinJ2u5WotXFXWLW8-147">
+          <mxGeometry x="30" y="70" width="160" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="YDuEinJ2u5WotXFXWLW8-151" value="POST" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#dae8fc;strokeColor=#6c8ebf;" vertex="1" parent="YDuEinJ2u5WotXFXWLW8-147">
+          <mxGeometry x="200" y="50" width="40" height="20" as="geometry" />
+        </mxCell>
+        <mxCell id="YDuEinJ2u5WotXFXWLW8-152" value="/update" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#f8cecc;strokeColor=#b85450;" vertex="1" parent="YDuEinJ2u5WotXFXWLW8-147">
+          <mxGeometry x="240" y="50" width="120" height="20" as="geometry" />
+        </mxCell>
+        <mxCell id="YDuEinJ2u5WotXFXWLW8-153" value="&lt;div style=&quot;line-height: 50%;&quot;&gt;&lt;p&gt;&lt;font style=&quot;font-size: 10px; line-height: 100%;&quot;&gt;Endpoint to invoke a git pull and build to get updates.&lt;/font&gt;&lt;/p&gt;&lt;/div&gt;" style="rounded=1;whiteSpace=wrap;html=1;" vertex="1" parent="YDuEinJ2u5WotXFXWLW8-147">
+          <mxGeometry x="200" y="70" width="160" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="YDuEinJ2u5WotXFXWLW8-154" value="POST" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#dae8fc;strokeColor=#6c8ebf;" vertex="1" parent="YDuEinJ2u5WotXFXWLW8-147">
+          <mxGeometry x="370" y="50" width="40" height="20" as="geometry" />
+        </mxCell>
+        <mxCell id="YDuEinJ2u5WotXFXWLW8-155" value="/shutdown" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#f8cecc;strokeColor=#b85450;" vertex="1" parent="YDuEinJ2u5WotXFXWLW8-147">
+          <mxGeometry x="410" y="50" width="120" height="20" as="geometry" />
+        </mxCell>
+        <mxCell id="YDuEinJ2u5WotXFXWLW8-156" value="&lt;font style=&quot;line-height: 70%; font-size: 10px;&quot;&gt;Endpoint to shutdown the bridge.&lt;/font&gt;" style="rounded=1;whiteSpace=wrap;html=1;" vertex="1" parent="YDuEinJ2u5WotXFXWLW8-147">
+          <mxGeometry x="370" y="70" width="160" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="YDuEinJ2u5WotXFXWLW8-160" value="POST" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#dae8fc;strokeColor=#6c8ebf;" vertex="1" parent="YDuEinJ2u5WotXFXWLW8-147">
+          <mxGeometry x="590" y="50" width="40" height="20" as="geometry" />
+        </mxCell>
+        <mxCell id="YDuEinJ2u5WotXFXWLW8-161" value="&lt;span style=&quot;font-size: 11px;&quot;&gt;/restart&lt;/span&gt;" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#f8cecc;strokeColor=#b85450;" vertex="1" parent="YDuEinJ2u5WotXFXWLW8-147">
+          <mxGeometry x="630" y="50" width="120" height="20" as="geometry" />
+        </mxCell>
+        <mxCell id="YDuEinJ2u5WotXFXWLW8-162" value="&lt;div style=&quot;line-height: 50%;&quot;&gt;&lt;p&gt;&lt;font style=&quot;line-height: 90%; font-size: 11px;&quot;&gt;Endpoint to restart the bridge.&lt;/font&gt;&lt;/p&gt;&lt;/div&gt;" style="rounded=1;whiteSpace=wrap;html=1;" vertex="1" parent="YDuEinJ2u5WotXFXWLW8-147">
+          <mxGeometry x="590" y="70" width="160" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="YDuEinJ2u5WotXFXWLW8-163" value="&lt;font style=&quot;font-size: 8px;&quot;&gt;METHOD&lt;/font&gt;" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#d5e8d4;strokeColor=#82b366;" vertex="1" parent="YDuEinJ2u5WotXFXWLW8-75">
+          <mxGeometry x="205" y="40" width="40" height="20" as="geometry" />
+        </mxCell>
+        <mxCell id="YDuEinJ2u5WotXFXWLW8-164" value="ENDPOINT" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#f8cecc;strokeColor=#b85450;" vertex="1" parent="YDuEinJ2u5WotXFXWLW8-75">
+          <mxGeometry x="245" y="40" width="120" height="20" as="geometry" />
+        </mxCell>
+        <mxCell id="YDuEinJ2u5WotXFXWLW8-165" value="&lt;font style=&quot;font-size: 10px;&quot;&gt;DESCRIPTION&lt;/font&gt;" style="rounded=1;whiteSpace=wrap;html=1;" vertex="1" parent="YDuEinJ2u5WotXFXWLW8-75">
+          <mxGeometry x="205" y="60" width="160" height="20" as="geometry" />
+        </mxCell>
+        <mxCell id="YDuEinJ2u5WotXFXWLW8-167" value="&lt;font style=&quot;font-size: 7px; line-height: 30%;&quot;&gt;A red endpoint means it&#39;s protected by mac authorization (requires that you login via the /login endpoint)&lt;/font&gt;" style="text;html=1;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;" vertex="1" parent="YDuEinJ2u5WotXFXWLW8-75">
+          <mxGeometry x="370" y="35" width="110" height="45" as="geometry" />
+        </mxCell>
+        <mxCell id="YDuEinJ2u5WotXFXWLW8-171" value="[/control] TrainController" style="swimlane;whiteSpace=wrap;html=1;fillColor=#fff2cc;strokeColor=#d6b656;" vertex="1" parent="YDuEinJ2u5WotXFXWLW8-75">
+          <mxGeometry x="10" y="910" width="1110" height="240" as="geometry" />
+        </mxCell>
+        <mxCell id="YDuEinJ2u5WotXFXWLW8-172" value="GET" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#d5e8d4;strokeColor=#82b366;" vertex="1" parent="YDuEinJ2u5WotXFXWLW8-171">
+          <mxGeometry x="30" y="50" width="40" height="20" as="geometry" />
+        </mxCell>
+        <mxCell id="YDuEinJ2u5WotXFXWLW8-173" value="/speed" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#f8cecc;strokeColor=#b85450;" vertex="1" parent="YDuEinJ2u5WotXFXWLW8-171">
+          <mxGeometry x="70" y="50" width="120" height="20" as="geometry" />
+        </mxCell>
+        <mxCell id="YDuEinJ2u5WotXFXWLW8-174" value="&lt;font style=&quot;font-size: 9px;&quot;&gt;Returns the current speed of the train. (GPS)&lt;/font&gt;" style="rounded=1;whiteSpace=wrap;html=1;" vertex="1" parent="YDuEinJ2u5WotXFXWLW8-171">
+          <mxGeometry x="30" y="70" width="160" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="YDuEinJ2u5WotXFXWLW8-175" value="GET" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#d5e8d4;strokeColor=#82b366;" vertex="1" parent="YDuEinJ2u5WotXFXWLW8-171">
+          <mxGeometry x="200" y="50" width="40" height="20" as="geometry" />
+        </mxCell>
+        <mxCell id="YDuEinJ2u5WotXFXWLW8-176" value="/lastSpeedTime" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#f8cecc;strokeColor=#b85450;" vertex="1" parent="YDuEinJ2u5WotXFXWLW8-171">
+          <mxGeometry x="240" y="50" width="120" height="20" as="geometry" />
+        </mxCell>
+        <mxCell id="YDuEinJ2u5WotXFXWLW8-177" value="&lt;div style=&quot;line-height: 50%;&quot;&gt;&lt;p&gt;&lt;font style=&quot;line-height: 100%; font-size: 9px;&quot;&gt;Returns the timestamp of when the last time was, that the speed was updated.&lt;/font&gt;&lt;/p&gt;&lt;/div&gt;" style="rounded=1;whiteSpace=wrap;html=1;" vertex="1" parent="YDuEinJ2u5WotXFXWLW8-171">
+          <mxGeometry x="200" y="70" width="160" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="YDuEinJ2u5WotXFXWLW8-178" value="POST" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#dae8fc;strokeColor=#6c8ebf;" vertex="1" parent="YDuEinJ2u5WotXFXWLW8-171">
+          <mxGeometry x="370" y="50" width="40" height="20" as="geometry" />
+        </mxCell>
+        <mxCell id="YDuEinJ2u5WotXFXWLW8-179" value="/emergencybrake" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#f8cecc;strokeColor=#b85450;" vertex="1" parent="YDuEinJ2u5WotXFXWLW8-171">
+          <mxGeometry x="410" y="50" width="120" height="20" as="geometry" />
+        </mxCell>
+        <mxCell id="YDuEinJ2u5WotXFXWLW8-180" value="&lt;font style=&quot;line-height: 70%; font-size: 10px;&quot;&gt;Endpoint to emergency brake the train.&lt;/font&gt;" style="rounded=1;whiteSpace=wrap;html=1;" vertex="1" parent="YDuEinJ2u5WotXFXWLW8-171">
+          <mxGeometry x="370" y="70" width="160" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="YDuEinJ2u5WotXFXWLW8-181" value="POST" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#dae8fc;strokeColor=#6c8ebf;" vertex="1" parent="YDuEinJ2u5WotXFXWLW8-171">
+          <mxGeometry x="590" y="50" width="40" height="20" as="geometry" />
+        </mxCell>
+        <mxCell id="YDuEinJ2u5WotXFXWLW8-182" value="&lt;span style=&quot;font-size: 11px;&quot;&gt;/easyControl&lt;/span&gt;" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#f8cecc;strokeColor=#b85450;" vertex="1" parent="YDuEinJ2u5WotXFXWLW8-171">
+          <mxGeometry x="630" y="50" width="120" height="20" as="geometry" />
+        </mxCell>
+        <mxCell id="YDuEinJ2u5WotXFXWLW8-183" value="&lt;div style=&quot;line-height: 50%;&quot;&gt;&lt;p&gt;&lt;font style=&quot;font-size: 10px; line-height: 90%;&quot;&gt;Sets the trains controls to a certain percentage of power.&lt;/font&gt;&lt;/p&gt;&lt;/div&gt;" style="rounded=1;whiteSpace=wrap;html=1;" vertex="1" parent="YDuEinJ2u5WotXFXWLW8-171">
+          <mxGeometry x="590" y="70" width="160" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="YDuEinJ2u5WotXFXWLW8-184" value="GET" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#d5e8d4;strokeColor=#82b366;" vertex="1" parent="YDuEinJ2u5WotXFXWLW8-171">
+          <mxGeometry x="760" y="50" width="40" height="20" as="geometry" />
+        </mxCell>
+        <mxCell id="YDuEinJ2u5WotXFXWLW8-185" value="&lt;span style=&quot;font-size: 11px;&quot;&gt;/areMotorsReleased&lt;/span&gt;" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#f8cecc;strokeColor=#b85450;" vertex="1" parent="YDuEinJ2u5WotXFXWLW8-171">
+          <mxGeometry x="800" y="50" width="120" height="20" as="geometry" />
+        </mxCell>
+        <mxCell id="YDuEinJ2u5WotXFXWLW8-186" value="&lt;div style=&quot;line-height: 50%;&quot;&gt;&lt;p&gt;&lt;font style=&quot;font-size: 10px; line-height: 90%;&quot;&gt;Returns a bool of if the motors are currently released.&lt;/font&gt;&lt;/p&gt;&lt;/div&gt;" style="rounded=1;whiteSpace=wrap;html=1;" vertex="1" parent="YDuEinJ2u5WotXFXWLW8-171">
+          <mxGeometry x="760" y="70" width="160" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="YDuEinJ2u5WotXFXWLW8-187" value="POST" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#dae8fc;strokeColor=#6c8ebf;" vertex="1" parent="YDuEinJ2u5WotXFXWLW8-171">
+          <mxGeometry x="930" y="50" width="40" height="20" as="geometry" />
+        </mxCell>
+        <mxCell id="YDuEinJ2u5WotXFXWLW8-188" value="&lt;span style=&quot;font-size: 11px;&quot;&gt;/releaseMotor&lt;/span&gt;" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#f8cecc;strokeColor=#b85450;" vertex="1" parent="YDuEinJ2u5WotXFXWLW8-171">
+          <mxGeometry x="970" y="50" width="120" height="20" as="geometry" />
+        </mxCell>
+        <mxCell id="YDuEinJ2u5WotXFXWLW8-189" value="&lt;div style=&quot;line-height: 50%;&quot;&gt;&lt;p&gt;&lt;font style=&quot;font-size: 10px; line-height: 90%;&quot;&gt;Endpoint to release a motor by a given index.&lt;/font&gt;&lt;/p&gt;&lt;/div&gt;" style="rounded=1;whiteSpace=wrap;html=1;" vertex="1" parent="YDuEinJ2u5WotXFXWLW8-171">
+          <mxGeometry x="930" y="70" width="160" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="YDuEinJ2u5WotXFXWLW8-190" value="POST" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#dae8fc;strokeColor=#6c8ebf;" vertex="1" parent="YDuEinJ2u5WotXFXWLW8-171">
+          <mxGeometry x="30" y="110" width="40" height="20" as="geometry" />
+        </mxCell>
+        <mxCell id="YDuEinJ2u5WotXFXWLW8-191" value="/releaseMotors" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#f8cecc;strokeColor=#b85450;" vertex="1" parent="YDuEinJ2u5WotXFXWLW8-171">
+          <mxGeometry x="70" y="110" width="120" height="20" as="geometry" />
+        </mxCell>
+        <mxCell id="YDuEinJ2u5WotXFXWLW8-192" value="&lt;font style=&quot;font-size: 11px;&quot;&gt;Endpoint to release all motors.&lt;/font&gt;" style="rounded=1;whiteSpace=wrap;html=1;" vertex="1" parent="YDuEinJ2u5WotXFXWLW8-171">
+          <mxGeometry x="30" y="130" width="160" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="YDuEinJ2u5WotXFXWLW8-193" value="POST" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#dae8fc;strokeColor=#6c8ebf;" vertex="1" parent="YDuEinJ2u5WotXFXWLW8-171">
+          <mxGeometry x="200" y="110" width="40" height="20" as="geometry" />
+        </mxCell>
+        <mxCell id="YDuEinJ2u5WotXFXWLW8-194" value="/engageMotor" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#f8cecc;strokeColor=#b85450;" vertex="1" parent="YDuEinJ2u5WotXFXWLW8-171">
+          <mxGeometry x="240" y="110" width="120" height="20" as="geometry" />
+        </mxCell>
+        <mxCell id="YDuEinJ2u5WotXFXWLW8-195" value="&lt;div style=&quot;line-height: 50%;&quot;&gt;&lt;p&gt;&lt;font style=&quot;line-height: 100%; font-size: 9px;&quot;&gt;Endpoint to engage a motor by a given index.&lt;/font&gt;&lt;/p&gt;&lt;/div&gt;" style="rounded=1;whiteSpace=wrap;html=1;" vertex="1" parent="YDuEinJ2u5WotXFXWLW8-171">
+          <mxGeometry x="200" y="130" width="160" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="YDuEinJ2u5WotXFXWLW8-196" value="POST" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#dae8fc;strokeColor=#6c8ebf;" vertex="1" parent="YDuEinJ2u5WotXFXWLW8-171">
+          <mxGeometry x="370" y="110" width="40" height="20" as="geometry" />
+        </mxCell>
+        <mxCell id="YDuEinJ2u5WotXFXWLW8-197" value="/engageMotors" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#f8cecc;strokeColor=#b85450;" vertex="1" parent="YDuEinJ2u5WotXFXWLW8-171">
+          <mxGeometry x="410" y="110" width="120" height="20" as="geometry" />
+        </mxCell>
+        <mxCell id="YDuEinJ2u5WotXFXWLW8-198" value="&lt;font style=&quot;line-height: 70%; font-size: 10px;&quot;&gt;Endpoint to engage all motors.&lt;/font&gt;" style="rounded=1;whiteSpace=wrap;html=1;" vertex="1" parent="YDuEinJ2u5WotXFXWLW8-171">
+          <mxGeometry x="370" y="130" width="160" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="YDuEinJ2u5WotXFXWLW8-199" value="GET" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#d5e8d4;strokeColor=#82b366;" vertex="1" parent="YDuEinJ2u5WotXFXWLW8-171">
+          <mxGeometry x="590" y="110" width="40" height="20" as="geometry" />
+        </mxCell>
+        <mxCell id="YDuEinJ2u5WotXFXWLW8-200" value="/leverCount" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#f8cecc;strokeColor=#b85450;" vertex="1" parent="YDuEinJ2u5WotXFXWLW8-171">
+          <mxGeometry x="630" y="110" width="120" height="20" as="geometry" />
+        </mxCell>
+        <mxCell id="YDuEinJ2u5WotXFXWLW8-201" value="&lt;font style=&quot;line-height: 70%; font-size: 10px;&quot;&gt;Returns a integer representing the count of levers of the train.&lt;/font&gt;" style="rounded=1;whiteSpace=wrap;html=1;" vertex="1" parent="YDuEinJ2u5WotXFXWLW8-171">
+          <mxGeometry x="590" y="130" width="160" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="YDuEinJ2u5WotXFXWLW8-202" value="GET" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#d5e8d4;strokeColor=#82b366;" vertex="1" parent="YDuEinJ2u5WotXFXWLW8-171">
+          <mxGeometry x="760" y="110" width="40" height="20" as="geometry" />
+        </mxCell>
+        <mxCell id="YDuEinJ2u5WotXFXWLW8-203" value="/leverPosition" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#f8cecc;strokeColor=#b85450;" vertex="1" parent="YDuEinJ2u5WotXFXWLW8-171">
+          <mxGeometry x="800" y="110" width="120" height="20" as="geometry" />
+        </mxCell>
+        <mxCell id="YDuEinJ2u5WotXFXWLW8-204" value="&lt;font style=&quot;line-height: 70%; font-size: 10px;&quot;&gt;Returns a percentage of the position of a given lever index.&lt;/font&gt;" style="rounded=1;whiteSpace=wrap;html=1;" vertex="1" parent="YDuEinJ2u5WotXFXWLW8-171">
+          <mxGeometry x="760" y="130" width="160" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="YDuEinJ2u5WotXFXWLW8-205" value="GET" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#d5e8d4;strokeColor=#82b366;" vertex="1" parent="YDuEinJ2u5WotXFXWLW8-171">
+          <mxGeometry x="930" y="110" width="40" height="20" as="geometry" />
+        </mxCell>
+        <mxCell id="YDuEinJ2u5WotXFXWLW8-206" value="/leverType" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#f8cecc;strokeColor=#b85450;" vertex="1" parent="YDuEinJ2u5WotXFXWLW8-171">
+          <mxGeometry x="970" y="110" width="120" height="20" as="geometry" />
+        </mxCell>
+        <mxCell id="YDuEinJ2u5WotXFXWLW8-207" value="&lt;font style=&quot;line-height: 70%; font-size: 11px;&quot;&gt;Returns the type of lever by a given index.&lt;/font&gt;" style="rounded=1;whiteSpace=wrap;html=1;" vertex="1" parent="YDuEinJ2u5WotXFXWLW8-171">
+          <mxGeometry x="930" y="130" width="160" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="YDuEinJ2u5WotXFXWLW8-216" value="POST" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#dae8fc;strokeColor=#6c8ebf;" vertex="1" parent="YDuEinJ2u5WotXFXWLW8-171">
+          <mxGeometry x="30" y="170" width="40" height="20" as="geometry" />
+        </mxCell>
+        <mxCell id="YDuEinJ2u5WotXFXWLW8-217" value="/setLever" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#f8cecc;strokeColor=#b85450;" vertex="1" parent="YDuEinJ2u5WotXFXWLW8-171">
+          <mxGeometry x="70" y="170" width="120" height="20" as="geometry" />
+        </mxCell>
+        <mxCell id="YDuEinJ2u5WotXFXWLW8-218" value="&lt;font style=&quot;font-size: 11px;&quot;&gt;Sets a given lever to a given percentage.&lt;/font&gt;" style="rounded=1;whiteSpace=wrap;html=1;" vertex="1" parent="YDuEinJ2u5WotXFXWLW8-171">
+          <mxGeometry x="30" y="190" width="160" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="YDuEinJ2u5WotXFXWLW8-219" value="The WiFi hotspot for tablets is hosted on network 192.168.1.1" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="1250" y="90" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="YDuEinJ2u5WotXFXWLW8-220" value="The local lan network is on 192.168.0.1" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="1380" y="90" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="YDuEinJ2u5WotXFXWLW8-221" value="The master central bridge is always 192.168.0.1 and the slave is 192.168.0.2" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="1510" y="90" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="YDuEinJ2u5WotXFXWLW8-222" value="&lt;font style=&quot;line-height: 100%; font-size: 10px;&quot;&gt;A tablet can log in into the hotspot using its macaddress and the current code of a yubikey.&lt;/font&gt;" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="1250" y="210" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="YDuEinJ2u5WotXFXWLW8-226" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0;entryY=0.5;entryDx=0;entryDy=0;" edge="1" parent="1" source="YDuEinJ2u5WotXFXWLW8-223" target="YDuEinJ2u5WotXFXWLW8-225">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="YDuEinJ2u5WotXFXWLW8-227" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0;entryY=0.5;entryDx=0;entryDy=0;" edge="1" parent="1" source="YDuEinJ2u5WotXFXWLW8-223" target="YDuEinJ2u5WotXFXWLW8-224">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="YDuEinJ2u5WotXFXWLW8-223" value="&lt;font style=&quot;line-height: 80%; font-size: 8px;&quot;&gt;Both the yubikey serial number(and secret) and mac address of the tablet need to be registered on the central server.&lt;/font&gt;" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="1380" y="210" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="YDuEinJ2u5WotXFXWLW8-224" value="&lt;font style=&quot;line-height: 80%; font-size: 8px;&quot;&gt;This can be done using the Manager app.&lt;/font&gt;" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="1550" y="210" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="YDuEinJ2u5WotXFXWLW8-225" value="&lt;font style=&quot;line-height: 80%; font-size: 8px;&quot;&gt;These infos are automatically synced by the central bridge in regular intervals when internet is available.&lt;/font&gt;" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="1550" y="280" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="YDuEinJ2u5WotXFXWLW8-228" value="TODO: Rewrite (This contains valid infos" style="text;html=1;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;fillColor=#dae8fc;strokeColor=#6c8ebf;" vertex="1" parent="1">
+          <mxGeometry x="1380" y="740" width="510" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="YDuEinJ2u5WotXFXWLW8-230" value="Relevant informations to the API" style="text;html=1;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;fillColor=#f5f5f5;fontColor=#333333;strokeColor=#666666;" vertex="1" parent="1">
+          <mxGeometry x="1240" y="30" width="440" height="30" as="geometry" />
         </mxCell>
       </root>
     </mxGraphModel>
