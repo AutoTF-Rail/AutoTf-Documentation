@@ -5,19 +5,19 @@
         <mxCell id="0" />
         <mxCell id="1" parent="0" />
         <mxCell id="RrzdnQDn-9nG9QoV303n-27" value="Rangierbegleiter müssen im zug einstellen, welche seiten tatsächlich genutzt werden müssen, wenn zug teile getrennt/dran getan werden, um mehrere meshes zu unterstützen" style="rounded=0;whiteSpace=wrap;html=1;" parent="1" vertex="1">
-          <mxGeometry x="1380" y="790" width="250" height="70" as="geometry" />
+          <mxGeometry x="1240" y="740" width="250" height="70" as="geometry" />
         </mxCell>
         <mxCell id="RrzdnQDn-9nG9QoV303n-28" value="Rangier begleiter können &quot;2 züge zu einem machen&quot;&lt;div&gt;Und den zügen sagen dass sie sich mit einander verbinden sollen&lt;/div&gt;" style="rounded=0;whiteSpace=wrap;html=1;" parent="1" vertex="1">
-          <mxGeometry x="1380" y="870" width="250" height="70" as="geometry" />
+          <mxGeometry x="1240" y="820" width="250" height="70" as="geometry" />
         </mxCell>
         <mxCell id="RrzdnQDn-9nG9QoV303n-29" value="Die seiten verbinden sich dann untereinander über wlan an den enden (wlan0)&lt;br&gt;Beide seiten müssen in den &quot;kupplungs modus&quot; getan werden vom rangier begleiter" style="rounded=0;whiteSpace=wrap;html=1;" parent="1" vertex="1">
-          <mxGeometry x="1640" y="870" width="250" height="70" as="geometry" />
+          <mxGeometry x="1500" y="820" width="250" height="70" as="geometry" />
         </mxCell>
         <mxCell id="fbIB9J7qFFFKaNbtSgQg-2" value="Danach suchen die seiten nach sich (mby über bluetooth?)" style="rounded=0;whiteSpace=wrap;html=1;" parent="1" vertex="1">
-          <mxGeometry x="1640" y="950" width="250" height="70" as="geometry" />
+          <mxGeometry x="1500" y="900" width="250" height="70" as="geometry" />
         </mxCell>
         <mxCell id="fbIB9J7qFFFKaNbtSgQg-3" value="Dadurch dass die beiden seiten die sich suchen so nah an einander sind, deaktivieren sie ihre eigene steuerung danach selbst" style="rounded=0;whiteSpace=wrap;html=1;" parent="1" vertex="1">
-          <mxGeometry x="1640" y="1030" width="250" height="70" as="geometry" />
+          <mxGeometry x="1500" y="980" width="250" height="70" as="geometry" />
         </mxCell>
         <mxCell id="YDuEinJ2u5WotXFXWLW8-75" value="Controller Documentation" style="swimlane;whiteSpace=wrap;html=1;fillColor=#ffe6cc;strokeColor=#d79b00;" parent="1" vertex="1">
           <mxGeometry x="40" y="30" width="1150" height="1230" as="geometry" />
@@ -133,22 +133,22 @@
         <mxCell id="RWCcXeoH5vesJ5peBKe--47" value="&lt;div style=&quot;line-height: 50%;&quot;&gt;&lt;p&gt;&lt;span style=&quot;font-size: 7px;&quot;&gt;Turns on the localisation using the location marker on the Ebula. This invokes a jump to the current page on the EbuLa.&lt;/span&gt;&lt;/p&gt;&lt;/div&gt;" style="rounded=1;whiteSpace=wrap;html=1;" parent="RWCcXeoH5vesJ5peBKe--1" vertex="1">
           <mxGeometry x="930" y="150" width="160" height="30" as="geometry" />
         </mxCell>
-        <mxCell id="9KYoRv8-Hd3a2lFf2xgW-1" value="GET" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#d5e8d4;strokeColor=#82b366;" vertex="1" parent="RWCcXeoH5vesJ5peBKe--1">
+        <mxCell id="9KYoRv8-Hd3a2lFf2xgW-1" value="GET" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#d5e8d4;strokeColor=#82b366;" parent="RWCcXeoH5vesJ5peBKe--1" vertex="1">
           <mxGeometry x="30" y="190" width="40" height="20" as="geometry" />
         </mxCell>
-        <mxCell id="9KYoRv8-Hd3a2lFf2xgW-2" value="/localisationState" style="rounded=1;whiteSpace=wrap;html=1;" vertex="1" parent="RWCcXeoH5vesJ5peBKe--1">
+        <mxCell id="9KYoRv8-Hd3a2lFf2xgW-2" value="/localisationState" style="rounded=1;whiteSpace=wrap;html=1;" parent="RWCcXeoH5vesJ5peBKe--1" vertex="1">
           <mxGeometry x="70" y="190" width="120" height="20" as="geometry" />
         </mxCell>
-        <mxCell id="9KYoRv8-Hd3a2lFf2xgW-3" value="&lt;font style=&quot;font-size: 6px; line-height: 0%;&quot;&gt;Returns the state of the localisation. (Enum: AlwaysOn, TemporaryOn, TemporaryOff, AlwaysOff)&lt;/font&gt;" style="rounded=1;whiteSpace=wrap;html=1;" vertex="1" parent="RWCcXeoH5vesJ5peBKe--1">
+        <mxCell id="9KYoRv8-Hd3a2lFf2xgW-3" value="&lt;font style=&quot;font-size: 6px; line-height: 0%;&quot;&gt;Returns the state of the localisation. (Enum: AlwaysOn, TemporaryOn, TemporaryOff, AlwaysOff)&lt;/font&gt;" style="rounded=1;whiteSpace=wrap;html=1;" parent="RWCcXeoH5vesJ5peBKe--1" vertex="1">
           <mxGeometry x="30" y="210" width="160" height="30" as="geometry" />
         </mxCell>
-        <mxCell id="9KYoRv8-Hd3a2lFf2xgW-4" value="GET" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#d5e8d4;strokeColor=#82b366;" vertex="1" parent="RWCcXeoH5vesJ5peBKe--1">
+        <mxCell id="9KYoRv8-Hd3a2lFf2xgW-4" value="GET" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#d5e8d4;strokeColor=#82b366;" parent="RWCcXeoH5vesJ5peBKe--1" vertex="1">
           <mxGeometry x="200" y="190" width="40" height="20" as="geometry" />
         </mxCell>
-        <mxCell id="9KYoRv8-Hd3a2lFf2xgW-5" value="/autoDetectionState" style="rounded=1;whiteSpace=wrap;html=1;" vertex="1" parent="RWCcXeoH5vesJ5peBKe--1">
+        <mxCell id="9KYoRv8-Hd3a2lFf2xgW-5" value="/autoDetectionState" style="rounded=1;whiteSpace=wrap;html=1;" parent="RWCcXeoH5vesJ5peBKe--1" vertex="1">
           <mxGeometry x="240" y="190" width="120" height="20" as="geometry" />
         </mxCell>
-        <mxCell id="9KYoRv8-Hd3a2lFf2xgW-6" value="&lt;font style=&quot;font-size: 6px; line-height: 0%;&quot;&gt;Returns the state of the auto detection. (Enum: AlwaysOn, TemporaryOn, TemporaryOff, AlwaysOff)&lt;/font&gt;" style="rounded=1;whiteSpace=wrap;html=1;" vertex="1" parent="RWCcXeoH5vesJ5peBKe--1">
+        <mxCell id="9KYoRv8-Hd3a2lFf2xgW-6" value="&lt;font style=&quot;font-size: 6px; line-height: 0%;&quot;&gt;Returns the state of the auto detection. (Enum: AlwaysOn, TemporaryOn, TemporaryOff, AlwaysOff)&lt;/font&gt;" style="rounded=1;whiteSpace=wrap;html=1;" parent="RWCcXeoH5vesJ5peBKe--1" vertex="1">
           <mxGeometry x="200" y="210" width="160" height="30" as="geometry" />
         </mxCell>
         <mxCell id="RWCcXeoH5vesJ5peBKe--12" value="&lt;font style=&quot;font-size: 8px;&quot;&gt;METHOD&lt;/font&gt;" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#d5e8d4;strokeColor=#82b366;" parent="YDuEinJ2u5WotXFXWLW8-75" vertex="1">
@@ -578,7 +578,7 @@
           <mxGeometry x="1550" y="280" width="120" height="60" as="geometry" />
         </mxCell>
         <mxCell id="YDuEinJ2u5WotXFXWLW8-228" value="TODO: Rewrite (This contains valid infos" style="text;html=1;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;fillColor=#dae8fc;strokeColor=#6c8ebf;" parent="1" vertex="1">
-          <mxGeometry x="1380" y="740" width="510" height="30" as="geometry" />
+          <mxGeometry x="1240" y="690" width="510" height="30" as="geometry" />
         </mxCell>
         <mxCell id="YDuEinJ2u5WotXFXWLW8-230" value="Relevant informations to the API" style="text;html=1;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;fillColor=#f5f5f5;fontColor=#333333;strokeColor=#666666;" parent="1" vertex="1">
           <mxGeometry x="1240" y="30" width="440" height="30" as="geometry" />
