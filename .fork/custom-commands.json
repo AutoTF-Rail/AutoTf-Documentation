@@ -1,0 +1,37 @@
+[
+  {
+    "version" : 2
+  },
+  {
+    "name" : "Export documentation on current branch",
+    "os" : "macOS",
+    "target" : "repository",
+    "ui" : {
+      "buttons" : [
+        {
+          "action" : {
+            "script" : "cd ${repo:path}\ngit stash push -u -m \"Pre-export auto stash.\"\ncd DrawIODOC\nchmod +x .\/exportMacos.sh\n.\/exportMacos.sh\ngit add .\ngit commit -am \"Auto export of documentation.\"\ngit push\ngit stash pop",
+            "showOutput" : true,
+            "type" : "sh",
+            "waitForExit" : true
+          },
+          "title" : "Yes"
+        },
+        {
+          "action" : {
+            "script" : "cd ${repo:path}\/DrawIODOC\nchmod +x .\/exportMacos.sh\n.\/exportMacos.sh",
+            "showOutput" : true,
+            "type" : "sh",
+            "waitForExit" : true
+          },
+          "title" : "No"
+        }
+      ],
+      "controls" : [
+
+      ],
+      "description" : "Would you like to commit and push the export?",
+      "title" : "Export documentation"
+    }
+  }
+]
