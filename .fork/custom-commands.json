@@ -10,7 +10,7 @@
       "buttons" : [
         {
           "action" : {
-            "script" : "cd ${repo:path}\ngit stash push -u -m \"Pre-export auto stash.\"\ncd DrawIODOC\nchmod +x .\/exportMacos.sh\n.\/exportMacos.sh\ngit add .\ngit commit -am \"Auto export of documentation.\"\ngit push\ngit stash pop",
+            "script" : "cd ${repo:path}\n(git diff --quiet && git diff --cached --quiet && [ -z \"$(git ls-files --others --exclude-standard)\" ]) || git stash push -u -m \"Auto stash\"\n\ncd DrawIODOC\nchmod +x .\/exportMacos.sh\n.\/exportMacos.sh\ncd ..\n\ngit add .\ngit commit -am \"Auto export of documentation.\"\ngit push\n\ngit stash list | grep -q \"Auto stash\" && git stash pop",
             "showOutput" : true,
             "type" : "sh",
             "waitForExit" : true
