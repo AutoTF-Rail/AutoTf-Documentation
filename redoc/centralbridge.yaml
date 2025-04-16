@@ -1,0 +1,31 @@
+swagger: '2.0'
+info:
+  description: 'Documentation of the CentralBridge API by AutoTF'
+  version: 1.0.0
+  title: CentralBridge API
+  contact:
+    email: contact@autotf.de
+host: "192.168.0.1"
+tags:
+  - name: TBA
+    description: TBA
+schemes:
+  - https
+paths:
+  /token:
+    get:
+      tags:
+        - TBA
+      summary: TBA
+      description: TBA
+      produces:
+        - text/html
+      responses:
+        '200':
+          description: TBA
+          schema:
+            type: string
+            example: "TBA"
+externalDocs:
+  description: Find out more about AutoTF
+  url: https://autotf.de
