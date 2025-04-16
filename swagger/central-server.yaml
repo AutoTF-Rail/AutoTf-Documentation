@@ -5,19 +5,37 @@ info:
   title: Central Server API
   contact:
     email: contact@autotf.de
+
 host: "<evuName>.server.autotf.de"
+basePath: /
+
+externalDocs:
+  description: Find out more about AutoTF
+  url: https://autotf.de
+
+
 tags:
-  - name: Tokens
+  - name: RootController
     description: Endpoints to get the authentik tokens
-  - name: Mac Address
+  - name: LogsController
+    description: Endpoints to get and upload logs.
+  - name: VideoController
+    description: Endpoints to get and upload videos.
+  - name: DeviceController
+    description: Endpoints to get, edit, and add devices.
+  - name: KeysController
     description: Endpoints to get and add mac addresses to the database.
+  - name: MacAddrsController
+    description: Endpoints to get and add mac addresses to the database.
+
 schemes:
   - https
+
 paths:
   /token:
     get:
       tags:
-        - Tokens
+        - RootController
       summary: Returns the token HTML page
       description: Serves a static HTML page used for token handling.
       produces:
@@ -31,7 +49,7 @@ paths:
   /tokenStep:
     get:
       tags:
-        - Tokens
+        - RootController
       summary: Redirects to token endpoint with query and cookie-based tokens
       description: |
         Reads the `csrf_token` from the query string and a proxy token from cookies.
@@ -53,13 +71,434 @@ paths:
           schema:
             type: string
             example: Tokens not found.
+  
+
+
+  /sync/device/logs/index:
+    get:
+      tags:
+        - LogsController
+      summary: List log files for a device
+      parameters:
+        - name: deviceName
+          in: query
+          required: true
+          type: string
+      responses:
+        200:
+          description: Array of log filenames (without extension)
+          schema:
+            type: array
+            items:
+              type: string
+        400:
+          description: Could not supply log index
+        404:
+          description: Device not found
+      security:
+        - authentikHeader: []
+
+  /sync/device/logs/download:
+    get:
+      tags:
+        - LogsController
+      summary: Download logs for a device on a given date
+      parameters:
+        - name: deviceName
+          in: query
+          required: true
+          type: string
+        - name: date
+          in: query
+          required: true
+          type: string
+      responses:
+        200:
+          description: Array of log lines
+          schema:
+            type: array
+            items:
+              type: string
+        400:
+          description: Could not supply logs
+        404:
+          description: Log file not found
+      security:
+        - authentikHeader: []
+
+  /sync/device/logs/upload:
+    post:
+      tags:
+        - LogsController
+      summary: Upload logs for a device
+      consumes:
+        - application/json
+      parameters:
+        - name: logs
+          in: body
+          required: true
+          schema:
+            type: array
+            items:
+              type: string
+      responses:
+        200:
+          description: Logs uploaded successfully
+        400:
+          description: Failed to upload logs
+      security:
+        - authentikHeader: []
+
+
+
+  /sync/device/video/index:
+    get:
+      tags:
+        - VideoController
+      summary: List video files for a device
+      parameters:
+        - name: deviceName
+          in: query
+          required: true
+          type: string
+      responses:
+        200:
+          description: Array of video filenames (without extension)
+          schema:
+            type: array
+            items:
+              type: string
+        400:
+          description: Could not supply video index
+        404:
+          description: Device not found
+      security:
+        - authentikHeader: []
+
+  /sync/device/video/download:
+    get:
+      tags:
+        - VideoController
+      summary: Download a specific video
+      produces:
+        - video/mp4
+      parameters:
+        - name: deviceName
+          in: query
+          required: true
+          type: string
+        - name: date
+          in: query
+          required: true
+          type: string
+      responses:
+        200:
+          description: MP4 video file
+          schema:
+            type: file
+        400:
+          description: Could not supply video
+        404:
+          description: Video file not found
+      security:
+        - authentikHeader: []
+
+  /sync/device/video/upload:
+    post:
+      tags:
+        - VideoController
+      summary: Upload a video file
+      consumes:
+        - multipart/form-data
+      parameters:
+        - name: file
+          in: formData
+          required: true
+          type: file
+      responses:
+        200:
+          description: Video uploaded successfully
+        400:
+          description: Failed to upload video
+      security:
+        - authentikHeader: []
+
+
+
+  /sync/device/lastsynced:
+    get:
+      tags:
+        - DeviceController
+      summary: Get the last sync time of a device
+      parameters:
+        - name: deviceName
+          in: query
+          required: true
+          type: string
+      responses:
+        200:
+          description: Last synced timestamp
+          schema:
+            type: string
+            example: "16.04.2025 14:32:10"
+        400:
+          description: Device not found
+      security:
+        - authentikHeader: []
+
+  /sync/device/status:
+    get:
+      tags:
+        - DeviceController
+      summary: Get the current status of a device
+      parameters:
+        - name: deviceName
+          in: query
+          required: true
+          type: string
+      responses:
+        200:
+          description: Device status (Online/Offline)
+          schema:
+            type: string
+        400:
+          description: Device not found
+      security:
+        - authentikHeader: []
+
+  /sync/device/devices:
+    get:
+      tags:
+        - DeviceController
+      summary: Get list of known device directories
+      responses:
+        200:
+          description: JSON array of directory names
+          schema:
+            type: array
+            items:
+              type: string
+      security:
+        - authentikHeader: []
+
+  /sync/device/getAllTrains:
+    get:
+      tags:
+        - DeviceController
+      summary: Get all trains
+      responses:
+        200:
+          description: JSON array of all trains
+          schema:
+            type: array
+            items:
+              type: object
+      security:
+        - authentikHeader: []
+
+  /sync/device/addTrain:
+    post:
+      tags:
+        - DeviceController
+      summary: Add a new train entry
+      parameters:
+        - name: trainName
+          in: query
+          required: true
+          type: string
+        - name: authentikUsername
+          in: query
+          required: true
+          type: string
+        - name: trainId
+          in: query
+          required: true
+          type: string
+      responses:
+        200:
+          description: Train created successfully
+      security:
+        - authentikHeader: []
+
+  /sync/device/editTrain:
+    post:
+      tags:
+        - DeviceController
+      summary: Edit an existing train
+      parameters:
+        - name: id
+          in: query
+          required: true
+          type: string
+          format: uuid
+        - name: newTrainName
+          in: query
+          required: true
+          type: string
+        - name: newAuthUsername
+          in: query
+          required: true
+          type: string
+        - name: newTrainId
+          in: query
+          required: true
+          type: string
+      responses:
+        200:
+          description: Train edited successfully
+        404:
+          description: Train not found
+      security:
+        - authentikHeader: []
+
+  /sync/device/deleteTrain:
+    post:
+      tags:
+        - DeviceController
+      summary: Delete a train
+      parameters:
+        - name: id
+          in: query
+          required: true
+          type: string
+          format: uuid
+      responses:
+        200:
+          description: Train deleted successfully
+      security:
+        - authentikHeader: []
+
+  /sync/device/updatestatus:
+    post:
+      tags:
+        - DeviceController
+      summary: Update the current status of the device
+      consumes:
+        - application/json
+      parameters:
+        - name: deviceStatus
+          in: body
+          required: true
+          schema:
+            type: string
+      responses:
+        200:
+          description: Status updated
+      security:
+        - authentikHeader: []
+
+
             
-            
+  /sync/keys/validate:
+    get:
+      tags:
+        - KeysController
+      summary: Validate a key
+      description: Validates a key based on serial number, code, and timestamp.
+      parameters:
+        - name: serialNumber
+          in: query
+          required: true
+          type: string
+          description: The serial number of the yubikey.
+        - name: code
+          in: query
+          required: true
+          type: string
+          description: The generated code according to the given timestamp.
+        - name: timestamp
+          in: query
+          required: true
+          type: string
+          format: date-time
+          description: The timestamp of the generated code.
+      responses:
+        200:
+          description: Key validated successfully
+        400:
+          description: Bad request
+        401:
+          description: Unauthorized
+        404:
+          description: Key not found  
+  /sync/keys/lastkeysupdate:
+    get:
+      tags:
+        - KeysController
+      summary: Get the timestamp of the last keys update
+      produces:
+        - text/plain
+      responses:
+        200:
+          description: Last updated timestamp
+          schema:
+            type: string
+            example: "16.04.2025 14:32:10"
+  /sync/keys/newkeys:
+    get:
+      tags:
+        - KeysController
+      summary: Get newly updated keys since last sync
+      parameters:
+        - name: lastSynced
+          in: query
+          required: true
+          type: string
+          description: ISO or formatted datetime string of the last sync.
+      produces:
+        - application/json
+      responses:
+        200:
+          description: List of new keys
+          schema:
+            type: array
+            items:
+              type: object
+        400:
+          description: Bad request (e.g., invalid datetime)
+  /sync/keys/allkeys:
+    get:
+      tags:
+        - KeysController
+      summary: Get all keys
+      produces:
+        - application/json
+      responses:
+        200:
+          description: All keys
+          schema:
+            type: array
+            items:
+              type: object
+        400:
+          description: Bad request
+  /sync/keys/addkey:
+    post:
+      tags:
+        - KeysController
+      summary: Add a new key
+      description: Creates a new key using serial number and secret.
+      parameters:
+        - name: serialNumber
+          in: query
+          required: true
+          type: string
+          description: The serial number of the yubikey.
+        - name: secret
+          in: query
+          required: true
+          type: string
+          description: The secret of the yubikey.
+      responses:
+        200:
+          description: Key added successfully
+        400:
+          description: Failed to add key
             
   /lastmacaddrsupdate:
     get:
       tags:
-        - Mac Address
+        - MacAddrsController
       summary: Get the timestamp of the last MAC address update
       description: Returns the last updated timestamp in `dd.MM.yyyy HH:mm:ss` format.
       produces:
@@ -73,7 +512,7 @@ paths:
   /macAddress:
     get:
       tags:
-        - Mac Address
+        - MacAddrsController
       summary: Get all MAC addresses
       description: Returns a list of all known MAC addresses.
       produces:
@@ -89,7 +528,7 @@ paths:
   /addAddress:
     post:
       tags:
-        - Mac Address
+        - MacAddrsController
       summary: Add a new MAC address
       description: Adds a new MAC address to the system.
       consumes:
@@ -109,6 +548,13 @@ paths:
           schema:
             type: string
             example: "An error occurred while adding the mac address."
-externalDocs:
-  description: Find out more about AutoTF
-  url: https://autotf.de
+
+securityDefinitions:
+  authentikHeader:
+    type: apiKey
+    name: X-Authentik-Username
+    in: header
+    description: |
+      Authentik sets this header automatically after user authentication.
+      This API must be accessed through the Authentik proxy (e.g. auth.autotf.de).
+      This is mainly due to some code using the auth username to save/log data.
