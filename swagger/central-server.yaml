@@ -422,7 +422,8 @@ paths:
           description: Unauthorized
         404:
           description: Key not found  
-  /sync/keys/lastkeysupdate:
+
+  /sync/keys/lastupdate:
     get:
       tags:
         - KeysController
@@ -435,7 +436,8 @@ paths:
           schema:
             type: string
             example: "16.04.2025 14:32:10"
-  /sync/keys/newkeys:
+
+  /sync/keys/new:
     get:
       tags:
         - KeysController
@@ -457,7 +459,8 @@ paths:
               type: object
         400:
           description: Bad request (e.g., invalid datetime)
-  /sync/keys/allkeys:
+
+  /sync/keys/all:
     get:
       tags:
         - KeysController
@@ -473,7 +476,8 @@ paths:
               type: object
         400:
           description: Bad request
-  /sync/keys/addkey:
+
+  /sync/keys/add:
     post:
       tags:
         - KeysController
@@ -496,7 +500,7 @@ paths:
         400:
           description: Failed to add key
             
-  /lastmacaddrsupdate:
+  /sync/mac/lastUpdate:
     get:
       tags:
         - MacAddrsController
@@ -510,7 +514,8 @@ paths:
           schema:
             type: string
             example: "16.04.2025 14:32:10"
-  /macAddress:
+
+  /sync/mac/all:
     get:
       tags:
         - MacAddrsController
@@ -526,7 +531,8 @@ paths:
             items:
               type: string
               example: "00:1A:2B:3C:4D:5E"
-  /addAddress:
+
+  /sync/mac/add:
     post:
       tags:
         - MacAddrsController
