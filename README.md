@@ -35,6 +35,10 @@ Active repositories of AutoTF, that contain code that is used in prod are:
 
 Please keep in mind that some repositories might not be public yet due to their active development.
 
+## API documentation
+
+Links to the api documentations can be found in [/swagger](https://github.com/AutoTF-Rail/AutoTf-Documentation/tree/main/swagger/)
+
 ## Drawn Documentation
 
 Documentation is made using Draw.IO and saved in [DrawIODOC](https://github.com/AutoTF-Rail/AutoTf-Documentation/tree/main/DrawIODOC/)
