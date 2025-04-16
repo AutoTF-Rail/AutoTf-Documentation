@@ -37,7 +37,7 @@ Please keep in mind that some repositories might not be public yet due to their 
 
 ## API documentation
 
-Links to the api documentations can be found in [/swagger](https://github.com/AutoTF-Rail/AutoTf-Documentation/tree/main/swagger/swagger.md)
+Links to the api documentations can be found in [/swagger](https://github.com/AutoTF-Rail/AutoTf-Documentation/tree/main/swagger)
 
 ## Drawn Documentation
 
