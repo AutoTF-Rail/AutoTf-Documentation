@@ -1,23 +1,189 @@
-extends:
-  - recommended
-
-apis:
-  core@v2:
-    root: ./openapi/openapi.yaml
-    rules:
-      no-ambiguous-paths: error
-  external@v1:
-    root: ./openapi/external.yaml
-    labels:
-      - external
-    theme:
-      openapi:
-        hideLogo: true
-
-theme:
-  openapi:
-    schemaExpansionLevel: 2
-    generateCodeSamples:
-      languages:
-        - lang: curl
-        - lang: Python
+swagger: '2.0'
+info:
+  description: 'Test'
+  version: 1.0.7
+  title: Test
+  contact:
+    email: contact@autotf.de
+host: autotf.de
+tags:
+  - name: test
+    description: tester
+    externalDocs:
+      description: Find out more
+      url: http://swagger.io
+schemes:
+  - https
+paths:
+  /test/{petId}/uploadImage:
+    post:
+      tags:
+        - pet
+      summary: uploads an image
+      description: ''
+      operationId: uploadFile
+      consumes:
+        - multipart/form-data
+      produces:
+        - application/json
+      parameters:
+        - name: test
+          in: path
+          description: ID of pet to update
+          required: true
+          type: integer
+          format: int64
+        - name: additionalMetadata
+          in: formData
+          description: Additional data to pass to server
+          required: false
+          type: string
+        - name: file
+          in: formData
+          description: file to upload
+          required: false
+          type: file
+      responses:
+        '200':
+          description: successful operation
+          schema:
+            $ref: '#/definitions/ApiResponse'
+      security:
+        - petstore_auth:
+            - write:pets
+            - read:pets
+securityDefinitions:
+  api_key:
+    type: apiKey
+    name: api_key
+    in: header
+  petstore_auth:
+    type: oauth2
+    authorizationUrl: https://autotf.de
+    flow: implicit
+    scopes:
+      read:pets: test
+      write:pets: test
+definitions:
+  ApiResponse:
+    type: object
+    properties:
+      code:
+        type: integer
+        format: int32
+      type:
+        type: string
+      message:
+        type: string
+  Category:
+    type: object
+    properties:
+      id:
+        type: integer
+        format: int64
+      name:
+        type: string
+    xml:
+      name: Category
+  Test:
+    type: object
+    required:
+      - name
+      - photoUrls
+    properties:
+      id:
+        type: integer
+        format: int64
+      category:
+        $ref: '#/definitions/Category'
+      name:
+        type: string
+        example: doggie
+      photoUrls:
+        type: array
+        xml:
+          wrapped: true
+        items:
+          type: string
+          xml:
+            name: photoUrl
+      tags:
+        type: array
+        xml:
+          wrapped: true
+        items:
+          xml:
+            name: tag
+          $ref: '#/definitions/Tag'
+      status:
+        type: string
+        description: test
+        enum:
+          - available
+          - pending
+          - sold
+    xml:
+      name: Pet
+  Tag:
+    type: object
+    properties:
+      id:
+        type: integer
+        format: int64
+      name:
+        type: string
+    xml:
+      name: Tag
+  Order:
+    type: object
+    properties:
+      id:
+        type: integer
+        format: int64
+      petId:
+        type: integer
+        format: int64
+      quantity:
+        type: integer
+        format: int32
+      shipDate:
+        type: string
+        format: date-time
+      status:
+        type: string
+        description: Order Status
+        enum:
+          - placed
+          - approved
+          - delivered
+      complete:
+        type: boolean
+    xml:
+      name: Order
+  User:
+    type: object
+    properties:
+      id:
+        type: integer
+        format: int64
+      username:
+        type: string
+      firstName:
+        type: string
+      lastName:
+        type: string
+      email:
+        type: string
+      password:
+        type: string
+      phone:
+        type: string
+      userStatus:
+        type: integer
+        format: int32
+        description: User Status
+    xml:
+      name: User
+externalDocs:
+  description: Find out more about Swagger
+  url: http://swagger.io
