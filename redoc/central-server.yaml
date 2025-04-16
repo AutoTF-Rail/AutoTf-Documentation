@@ -1,0 +1,138 @@
+{
+  "openapi": "3.0.4",
+  "info": {
+    "title": "Central server API",
+    "description": "TBA\n\nSome useful links:\n- [Homepage](https://autotf.de)",
+    "contact": {
+      "email": "contact@autotf.de"
+    },
+    "version": "1.0.0"
+  },
+  "servers": [
+    {
+      "url": "https://exampleevu.server.autotf.de"
+    }
+  ],
+  "tags": [
+    {
+      "name": "test",
+      "description": "tester"
+    }
+  ],
+  "paths": {
+    "/test": {
+      "put": {
+        "tags": [
+          "test"
+        ],
+        "summary": "Test",
+        "description": "test",
+        "operationId": "test",
+        "requestBody": {
+          "description": "test",
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/Test"
+              }
+            }
+          },
+          "required": true
+        },
+        "responses": {
+          "200": {
+            "description": "Successful operation",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Test"
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  },
+  "components": {
+    "schemas": {
+      "Test": {
+        "required": [
+          "name",
+          "photoUrls"
+        ],
+        "type": "object",
+        "properties": {
+          "id": {
+            "type": "integer",
+            "format": "int64",
+            "example": 10
+          },
+          "name": {
+            "type": "string",
+            "example": "doggie"
+          },
+          "photoUrls": {
+            "type": "array",
+            "xml": {
+              "wrapped": true
+            },
+            "items": {
+              "type": "string",
+              "xml": {
+                "name": "photoUrl"
+              }
+            }
+          }
+        }
+      },
+      "ApiResponse": {
+        "type": "object",
+        "properties": {
+          "code": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "type": {
+            "type": "string"
+          },
+          "message": {
+            "type": "string"
+          }
+        },
+        "xml": {
+          "name": "##default"
+        }
+      },
+      "Error": {
+        "type": "object",
+        "properties": {
+          "code": {
+            "type": "string"
+          },
+          "message": {
+            "type": "string"
+          }
+        },
+        "required": [
+          "code",
+          "message"
+        ]
+      }
+    },
+    "securitySchemes": {
+      "test_auth": {
+        "type": "oauth2",
+        "flows": {
+          "implicit": {
+            "authorizationUrl": "test",
+            "scopes": {
+              "write:test": "test",
+              "read:test": "test"
+            }
+          }
+        }
+      }
+    }
+  }
+}

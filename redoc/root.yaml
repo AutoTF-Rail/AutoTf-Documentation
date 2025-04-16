@@ -1,0 +1,20 @@
+apis:
+  Central-Server:
+    root: https://raw.githubusercontent.com/AutoTF-Rail/AutoTf-Documentation/refs/heads/main/redoc/central-server.yaml
+    rules:
+      no-ambiguous-paths: error
+  external@v1:
+    root: ./openapi/external.yaml
+    labels:
+      - external
+    theme:
+      openapi:
+        hideLogo: true
+
+theme:
+  openapi:
+    schemaExpansionLevel: 2
+    generateCodeSamples:
+      languages:
+        - lang: curl
+        - lang: Python
