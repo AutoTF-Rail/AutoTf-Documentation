@@ -1,12 +1,13 @@
 swagger: '2.0'
 info:
-  description: 'Documentation of the Central Server API by AutoTF'
+  description: "Documentation of the Central Server API by AutoTF. More documentation can be found at [github@AutoTf-Rail/AutoTf-Documentation](https://github.com/AutoTF-Rail/AutoTf-Documentation)."
   version: 1.0.0
   title: Central Server API
   contact:
     email: contact@autotf.de
 
 host: "<evuName>.server.autotf.de"
+
 basePath: /
 
 externalDocs:
