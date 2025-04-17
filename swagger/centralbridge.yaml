@@ -1,31 +1,986 @@
 swagger: '2.0'
 info:
-  description: 'Documentation of the CentralBridge API by AutoTF'
+  description: |
+    Documentation of the CentralBridge API by AutoTF. 
+    More documentation can be found at [github@AutoTf-Rail/AutoTf-Documentation](https://github.com/AutoTF-Rail/AutoTf-Documentation).
+
   version: 1.0.0
   title: CentralBridge API
   contact:
     email: contact@autotf.de
+
 host: "192.168.0.1"
-tags:
-  - name: TBA
-    description: TBA
-schemes:
-  - https
-paths:
-  /token:
-    get:
-      tags:
-        - TBA
-      summary: TBA
-      description: TBA
-      produces:
-        - text/html
-      responses:
-        '200':
-          description: TBA
-          schema:
-            type: string
-            example: "TBA"
+
+basePath: /
+            
 externalDocs:
   description: Find out more about AutoTF
   url: https://autotf.de
+
+schemes:
+  - http
+consumes:
+  - application/json
+produces:
+  - application/json
+
+tags:
+  - name: EbuLa - LocalisationController
+    description: Controls localisation for EbuLa devices
+  - name: EbuLa - TimetableController
+    description: Handles reading and editing of timetable data from the EbuLa system
+  - name: CameraController
+    description: Manages camera streaming endpoints and sync intervals
+  - name: DisplayController
+    description: Manages stream connections for display clients like CCD monitors or EbuLa displays
+  - name: InformationController
+    description: Provides diagnostic, identification, and sync-related information about the system.
+  - name: StatusController
+    description: Provides system status information such as display status, camera status, localization, and GPS connectivity.
+  - name: SystemController
+    description: Provides system-level control operations like setting the date, updating the system, shutting down, and restarting.
+  - name: "TrainController"
+    description: Provides control for train operations like speed, emergency brakes, motor control, and lever adjustments.
+
+
+
+
+paths:
+  /ebula/localisation/disable:
+    post:
+      tags:
+        - "EbuLa - LocalisationController"
+      summary: Disable localisation
+      description: Temporarily disables localisation via EbuLa location marker.
+      responses:
+        '200':
+          description: Localisation disabled
+        '400':
+          description: Failed to disable localisation
+
+  /ebula/localisation/enable:
+    post:
+      tags:
+        - "EbuLa - LocalisationController"
+      summary: Enable localisation
+      description: Enables localisation via EbuLa and notifies related services.
+      responses:
+        '200':
+          description: Localisation enabled
+        '400':
+          description: Failed to enable localisation
+
+  /ebula/localisation/turnOff:
+    post:
+      tags:
+        - "EbuLa - LocalisationController"
+      summary: Turn off localisation
+      description: Turns off localisation and notifies the relevant systems.
+      responses:
+        '200':
+          description: Localisation turned off
+        '400':
+          description: Failed to turn off localisation
+
+  /ebula/localisation/turnOn:
+    post:
+      tags:
+        - "EbuLa - LocalisationController"
+      summary: Turn on localisation
+      description: Turns on localisation and scans the current EbuLa marker.
+      responses:
+        '200':
+          description: Localisation turned on
+        '400':
+          description: Failed to turn on localisation
+
+  /ebula/localisation/state:
+    get:
+      tags:
+        - "EbuLa - LocalisationController"
+      summary: Get localisation state
+      description: Returns the current state of the localisation service.
+      responses:
+        '200':
+          description: Localisation state
+          schema:
+            $ref: '#/definitions/ServiceState'
+        '400':
+          description: Failed to retrieve localisation state
+
+
+
+  /ebula/timetable/currentTable:
+    get:
+      tags:
+        - "EbuLa - TimetableController"
+      summary: Get current timetable
+      description: Returns the current timetable rows from the EbuLa system.
+      responses:
+        '200':
+          description: List of timetable rows
+        '400':
+          description: Error retrieving timetable
+
+  /ebula/timetable/currentConditions:
+    get:
+      tags:
+        - "EbuLa - TimetableController"
+      summary: Get current conditions
+      description: Returns the current EbuLa row conditions (e.g., speed limits).
+      responses:
+        '200':
+          description: List of conditions
+        '400':
+          description: Error retrieving conditions
+
+  /ebula/timetable/edit:
+    post:
+      tags:
+        - "EbuLa - TimetableController"
+      summary: Overwrite timetable
+      description: Replaces the current EbuLa timetable with a new one.
+      parameters:
+        - in: body
+          name: newTable
+          required: true
+          schema:
+            type: array
+            items:
+              type: object
+      responses:
+        '200':
+          description: Timetable updated
+        '400':
+          description: Error updating timetable
+
+  /ebula/timetable/disable:
+    post:
+      tags:
+        - "EbuLa - TimetableController"
+      summary: Disable timetable auto detection
+      description: Temporarily disables timetable auto-detection from EbuLa.
+      responses:
+        '200':
+          description: Auto detection disabled
+        '400':
+          description: Error disabling detection
+
+  /ebula/timetable/enable:
+    post:
+      tags:
+        - "EbuLa - TimetableController"
+      summary: Enable timetable auto detection
+      description: Enables timetable auto-detection and triggers a rescan.
+      responses:
+        '200':
+          description: Auto detection enabled
+        '400':
+          description: Error enabling detection
+
+  /ebula/timetable/turnOff:
+    post:
+      tags:
+        - "EbuLa - TimetableController"
+      summary: Permanently turn off auto detection
+      description: Permanently disables timetable auto-detection from EbuLa.
+      responses:
+        '200':
+          description: Auto detection turned off
+        '400':
+          description: Error turning off detection
+
+  /ebula/timetable/turnOn:
+    post:
+      tags:
+        - "EbuLa - TimetableController"
+      summary: Permanently turn on auto detection
+      description: Permanently enables timetable auto-detection.
+      responses:
+        '200':
+          description: Auto detection turned on
+        '400':
+          description: Error turning on detection
+
+  /ebula/timetable/autoDetectionState:
+    post:
+      tags:
+        - "EbuLa - TimetableController"
+      summary: Get auto detection state
+      description: Returns the current auto-detection state of the timetable.
+      responses:
+        '200':
+          description: Auto detection state
+          schema:
+            $ref: '#/definitions/ServiceState'
+        '400':
+          description: Error retrieving state
+
+  /ebula/timetable/scan:
+    post:
+      tags:
+        - "EbuLa - TimetableController"
+      summary: Scan current EbuLa page
+      description: Scans the current page and adds it to the timetable.
+      responses:
+        '200':
+          description: Scan successful
+        '400':
+          description: Scan failed
+
+  /ebula/timetable/lock:
+    post:
+      tags:
+        - "EbuLa - TimetableController"
+      summary: Lock EbuLa scanning
+      description: Locks the EbuLa from being scanned by other services.
+      responses:
+        '200':
+          description: Locked successfully
+        '400':
+          description: Lock failed
+
+  /ebula/timetable/unlock:
+    post:
+      tags:
+        - "EbuLa - TimetableController"
+      summary: Unlock EbuLa scanning
+      description: Unlocks the EbuLa to allow scanning again.
+      responses:
+        '200':
+          description: Unlocked successfully
+        '400':
+          description: Unlock failed
+
+  /ebula/timetable/lockState:
+    post:
+      tags:
+        - "EbuLa - TimetableController"
+      summary: Get lock state
+      description: Returns whether the EbuLa is currently locked for scanning.
+      responses:
+        '200':
+          description: Lock state
+          schema:
+            type: boolean
+        '400':
+          description: Error getting lock state
+
+  /ebula/timetable/rescan:
+    post:
+      tags:
+        - "EbuLa - TimetableController"
+      summary: Rescan timetable
+      description: Triggers a full timetable rescan (if the train is not moving).
+      responses:
+        '200':
+          description: Rescan complete
+        '400':
+          description: Rescan failed
+
+
+
+  /camera/startStream:
+    post:
+      tags:
+        - "CameraController"
+      summary: Start camera stream
+      description: Adds the calling client as a camera stream receiver using their IP and the given port.
+      parameters:
+        - name: port
+          in: query
+          required: true
+          type: integer
+          format: int32
+      responses:
+        '200':
+          description: Receiver added successfully
+        '400':
+          description: Failed to add receiver
+
+  /camera/stopStream:
+    post:
+      tags:
+        - "CameraController"
+      summary: Stop camera stream
+      description: Removes the calling client from the stream receiver list based on their IP address.
+      responses:
+        '200':
+          description: Receiver removed successfully
+        '400':
+          description: Failed to remove receiver
+
+  /camera/nextSave:
+    get:
+      tags:
+        - "CameraController"
+      summary: Get next camera save interval
+      description: Returns the next scheduled sync/save interval timestamp in ISO 8601 format.
+      produces:
+        - text/plain
+      responses:
+        '200':
+          description: ISO 8601 datetime string of next save
+        '400':
+          description: Could not retrieve next save
+
+
+
+  /display/isDisplayRegistered:
+    get:
+      tags:
+        - "DisplayController"
+      summary: Check if display is registered
+      description: Returns whether a display of the specified type is registered and active.
+      parameters:
+        - name: type
+          in: query
+          required: true
+          type: string
+          enum: [CCD, EbuLa, Unknown]
+      responses:
+        '200':
+          description: Boolean result indicating registration state
+        '400':
+          description: Could not retrieve registration state
+
+  /display/startStream:
+    post:
+      tags:
+        - "DisplayController"
+      summary: Start display stream
+      description: Starts sending a display stream to the calling client based on display type and port.
+      parameters:
+        - name: type
+          in: query
+          required: true
+          type: string
+          enum: [CCD, EbuLa, Unknown]
+        - name: port
+          in: query
+          required: true
+          type: integer
+          format: int32
+      responses:
+        '200':
+          description: Receiver added successfully
+        '400':
+          description: Failed to add receiver
+
+  /display/stopStream:
+    post:
+      tags:
+        - "DisplayController"
+      summary: Stop display stream
+      description: Stops sending the stream to the calling client for the specified display type.
+      parameters:
+        - name: type
+          in: query
+          required: true
+          type: string
+          enum: [CCD, EbuLa, Unknown]
+      responses:
+        '200':
+          description: Receiver removed successfully
+        '400':
+          description: Failed to remove receiver
+
+
+
+  /information/serviceState:
+    get:
+      tags:
+        - "InformationController"
+      summary: Get service state of the system
+      description: Returns the current service state (Master, Slave, or Unknown) based on system configuration.
+      responses:
+        '200':
+          description: Returns the service state (Master, Slave, or Unknown)
+          schema:
+            $ref: '#/definitions/DisplayType'
+        '400':
+          description: Failed to retrieve service state
+
+  /information/logdates:
+    get:
+      tags:
+        - "InformationController"
+      summary: Get available log dates
+      description: Returns a list of available log dates (filenames) from the server.
+      responses:
+        '200':
+          description: A list of available log dates (filenames)
+          schema:
+            type: array
+            items:
+              type: string
+        '400':
+          description: Failed to retrieve log dates
+
+  /information/logs:
+    get:
+      tags:
+        - "InformationController"
+      summary: Get logs for a specific date
+      description: Returns the logs for the specified date.
+      parameters:
+        - name: date
+          in: query
+          required: true
+          type: string
+          description: The date for which logs should be retrieved (in format YYYY-MM-DD).
+      responses:
+        '200':
+          description: A list of log entries for the given date
+          schema:
+            type: array
+            items:
+              type: string
+        '400':
+          description: Failed to retrieve logs for the specified date
+
+  /information/version:
+    get:
+      tags:
+        - "InformationController"
+      summary: Get the version of the system
+      description: Returns the current version of the system.
+      responses:
+        '200':
+          description: The current system version
+          schema:
+            type: string
+        '400':
+          description: Failed to retrieve version
+
+  /information/trainId:
+    get:
+      tags:
+        - "InformationController"
+      summary: Get the current train ID
+      description: Returns the current train ID from the file.
+      responses:
+        '200':
+          description: The current train ID
+          schema:
+            type: string
+        '400':
+          description: Failed to retrieve train ID
+
+  /information/trainName:
+    get:
+      tags:
+        - "InformationController"
+      summary: Get the current train name
+      description: Returns the current train name from the file.
+      responses:
+        '200':
+          description: The current train name
+          schema:
+            type: string
+        '400':
+          description: Failed to retrieve train name
+
+  /information/lastsynctry:
+    get:
+      tags:
+        - "InformationController"
+      summary: Get the last sync attempt time
+      description: Returns the timestamp of the last sync attempt.
+      responses:
+        '200':
+          description: The timestamp of the last sync attempt
+          schema:
+            type: string
+            format: date-time
+        '400':
+          description: Failed to retrieve last sync attempt
+
+  /information/lastsynced:
+    get:
+      tags:
+        - "InformationController"
+      summary: Get the last successful sync time
+      description: Returns the timestamp of the last successful sync.
+      responses:
+        '200':
+          description: The timestamp of the last successful sync
+          schema:
+            type: string
+            format: date-time
+        '400':
+          description: Failed to retrieve last sync time
+
+  /information/evuname:
+    get:
+      tags:
+        - "InformationController"
+      summary: Get the EVU name
+      description: Returns the current EVU name for the session.
+      responses:
+        '200':
+          description: The EVU name for the current session
+          schema:
+            type: string
+        '400':
+          description: Failed to retrieve EVU name
+
+  /information/issimavailable:
+    get:
+      tags:
+        - "InformationController"
+      summary: Check if simulation is available
+      description: Returns whether the simulation feature is available. (This is a placeholder for future implementation.)
+      responses:
+        '200':
+          description: "False"  # Placeholder for future implementation
+          schema:
+            type: string
+        '400':
+          description: Failed to check simulation availability
+
+  /information/isinternetavailable:
+    get:
+      tags:
+        - "InformationController"
+      summary: Check if the internet is available
+      description: Returns whether the system has internet connectivity.
+      responses:
+        '200':
+          description: True or false based on internet availability
+          schema:
+            type: string
+        '400':
+          description: Failed to check internet availability
+
+  /information/login:
+    post:
+      tags:
+        - "InformationController"
+      summary: Login a device using a MAC address, serial number, code, and timestamp
+      description: Validates the device login credentials and logs the device in if the credentials are valid.
+      parameters:
+        - name: macAddr
+          in: query
+          required: true
+          type: string
+          description: The MAC address of the device.
+        - name: serialNumber
+          in: query
+          required: true
+          type: string
+          description: The serial number of the device.
+        - name: code
+          in: query
+          required: true
+          type: string
+          description: The validation code.
+        - name: timestamp
+          in: query
+          required: true
+          type: string
+          format: date-time
+          description: The timestamp of the login request.
+      responses:
+        '200':
+          description: Device logged in successfully
+        '400':
+          description: Invalid login credentials
+        '404':
+          description: Device login failed due to invalid code
+
+
+
+  /status/displays:
+    get:
+      tags:
+        - "StatusController"
+      summary: Get the status of all displays
+      description: Returns the status (registered or not) of all displays in the system.
+      responses:
+        '200':
+          description: A list of displays and their registration status
+          schema:
+            $ref: '#/definitions/DisplayType'
+        '400':
+          description: Failed to retrieve display status.
+
+  /status/mainCamera:
+    get:
+      tags:
+        - "StatusController"
+      summary: Get the status of the main camera
+      description: Returns the status of the main camera (whether it is active or not).
+      responses:
+        '200':
+          description: The status of the main camera (true if active, false if inactive).
+          schema:
+            type: boolean
+        '400':
+          description: Failed to retrieve main camera status.
+
+  /status/localise:
+    get:
+      tags:
+        - "StatusController"
+      summary: Get the localisation status
+      description: Returns whether the localisation process has successfully started.
+      responses:
+        '200':
+          description: The localisation status (true if successful, false otherwise).
+          schema:
+            type: boolean
+        '400':
+          description: Failed to retrieve localisation status.
+
+  /status/gpsAvailable:
+    get:
+      tags:
+        - "StatusController"
+      summary: Check if GPS is available
+      description: Returns whether GPS functionality is available on the system.
+      responses:
+        '200':
+          description: The GPS availability status (true if available, false otherwise).
+          schema:
+            type: boolean
+        '400':
+          description: Failed to check GPS availability.
+
+  /status/gpsConnected:
+    get:
+      tags:
+        - "StatusController"
+      summary: Check if GPS is connected
+      description: Returns whether the GPS is currently connected to the system.
+      responses:
+        '200':
+          description: The GPS connection status (true if connected, false otherwise).
+          schema:
+            type: boolean
+        '400':
+          description: Failed to check GPS connection status.
+
+
+
+  /system/setdate:
+    post:
+      tags:
+        - "SystemController"
+      summary: Set the system date and time
+      description: Allows setting the system date and time. The application will restart after setting the date.
+      parameters:
+        - name: "date"
+          in: "body"
+          required: true
+          description: The date and time to set on the system.
+          schema:
+            type: object
+            properties:
+              date:
+                type: string
+                format: date-time
+                example: "2025-04-17T15:30:00Z"
+      responses:
+        '200':
+          description: The system date was set successfully and the system is restarting.
+        '400':
+          description: Failed to set the system date.
+
+  /system/update:
+    post:
+      tags:
+        - "SystemController"
+      summary: Update the system
+      description: Performs a `git pull` and rebuilds the system. The system will be updated and restarted.
+      responses:
+        '200':
+          description: The system was successfully updated and is pending a restart.
+        '400':
+          description: Failed to update the system.
+
+  /system/shutdown:
+    post:
+      tags:
+        - "SystemController"
+      summary: Shut down the system
+      description: Initiates a system shutdown.
+      responses:
+        '200':
+          description: The system is shutting down.
+        '400':
+          description: Failed to shut down the system.
+
+  /system/restart:
+    post:
+      tags:
+        - "SystemController"
+      summary: Restart the system
+      description: Initiates a system restart.
+      responses:
+        '200':
+          description: The system is restarting.
+        '400':
+          description: Failed to restart the system.
+
+
+
+  /control/speed:
+    get:
+      tags:
+        - "TrainController"
+      summary: Get the current speed of the train
+      description: Returns the current speed of the train.
+      responses:
+        '200':
+          description: The current speed of the train.
+          schema:
+            type: string
+            format: date-time
+        '400':
+          description: Failed to retrieve the speed.
+
+  /control/lastspeedtime:
+    get:
+      tags:
+        - "TrainController"
+      summary: Get the last recorded time for the speed
+      description: Returns the timestamp when the last speed update occurred.
+      responses:
+        '200':
+          description: The timestamp of the last speed recorded.
+          schema:
+            type: string
+            format: date-time
+            example: "2025-04-17T15:30:00Z"
+        '400':
+          description: Failed to retrieve the last speed time.
+
+  /control/areMotorsReleased:
+    get:
+      tags:
+        - "TrainController"
+      summary: Check if motors are released
+      description: Returns a boolean indicating whether the motors are released.
+      responses:
+        '200':
+          description: The status of the motor release.
+          schema:
+            type: string
+            example: "true"
+        '400':
+          description: Failed to retrieve motor release status.
+
+  /control/leverCount:
+    get:
+      tags:
+        - "TrainController"
+      summary: Get the number of levers available
+      description: Returns the count of available levers.
+      responses:
+        '200':
+          description: The number of available levers.
+          schema:
+            type: string
+            example: "3"
+        '400':
+          description: Failed to retrieve the lever count.
+
+  /control/leverPosition:
+    get:
+      tags:
+        - "TrainController"
+      summary: Get the position of a specific lever
+      description: Returns the current position of the lever identified by `leverIndex`.
+      parameters:
+        - name: leverIndex
+          in: query
+          required: true
+          type: integer
+          description: The index of the lever whose position to retrieve.
+      responses:
+        '200':
+          description: The position of the specified lever.
+          schema:
+            type: string
+            example: "50"
+        '400':
+          description: Failed to retrieve the lever position.
+
+  /control/leverType:
+    get:
+      tags:
+        - "TrainController"
+      summary: Get the type of a specific lever
+      description: Returns the type of the lever identified by `leverIndex`.
+      parameters:
+        - name: "leverIndex"
+          in: query
+          required: true
+          description: The index of the lever whose type to retrieve.
+          type: integer
+      responses:
+        '200':
+          description: The type of the specified lever.
+          schema:
+            $ref: '#/definitions/LeverType'
+        '400':
+          description: Failed to retrieve the lever type.
+
+  /control/emergencybrake:
+    post:
+      tags:
+        - "TrainController"
+      summary: Activate the emergency brake
+      description: Activates the emergency brake for the train.
+      responses:
+        '200':
+          description: Emergency brake successfully activated.
+        '400':
+          description: Failed to activate the emergency brake.
+
+  /control/easyControl:
+    post:
+      tags:
+        - "TrainController"
+      summary: Set the easy control power for the train
+      description: Adjust the easy control power of the train. A negative value triggers braking.
+      parameters:
+        - name: "power"
+          in: "body"
+          required: true
+          description: The power level to set for easy control. Negative values trigger braking.
+          schema:
+            type: integer
+            example: -100
+      responses:
+        '200':
+          description: Easy control power set successfully.
+        '400':
+          description: Failed to set easy control power.
+
+  /control/releaseMotor:
+    post:
+      tags:
+        - "TrainController"
+      summary: Release a specific motor
+      description: Releases a specific motor identified by the `motorIndex`.
+      parameters:
+        - name: "motorIndex"
+          in: "body"
+          required: true
+          description: The index of the motor to release.
+          schema:
+            type: integer
+            example: 1
+      responses:
+        '200':
+          description: Motor released successfully.
+        '400':
+          description: Failed to release the motor.
+
+  /control/releaseMotors:
+    post:
+      tags:
+        - "TrainController"
+      summary: Release all motors
+      description: Releases all motors of the train.
+      responses:
+        '200':
+          description: All motors released successfully.
+        '400':
+          description: Failed to release the motors.
+
+  /control/engageMotor:
+    post:
+      tags:
+        - "TrainController"
+      summary: Engage a specific motor
+      description: Engage a specific motor identified by the `motorIndex`.
+      parameters:
+        - name: "motorIndex"
+          in: "body"
+          required: true
+          description: The index of the motor to engage.
+          schema:
+            type: integer
+            example: 1
+      responses:
+        '200':
+          description: Motor engaged successfully.
+        '400':
+          description: Failed to engage the motor.
+
+  /control/engageMotors:
+    post:
+      tags:
+        - "TrainController"
+      summary: Engage all motors
+      description: Engage all motors of the train.
+      responses:
+        '200':
+          description: All motors engaged successfully.
+        '400':
+          description: Failed to engage the motors.
+
+  /control/setLever:
+    post:
+      tags:
+        - "TrainController"
+      summary: Set the position of a specific lever
+      description: Sets the position of the lever identified by `leverIndex` to the specified percentage.
+      parameters:
+        - name: "data"
+          in: "body"
+          required: true
+          description: The data object containing `leverIndex` and `percentage`.
+          schema:
+            type: object
+            properties:
+              leverIndex:
+                type: integer
+                example: 1
+              percentage:
+                type: integer
+                example: 50
+      responses:
+        '200':
+          description: Lever position set successfully.
+        '400':
+          description: Failed to set lever position.
+
+
+
+definitions:
+  ServiceState:
+    type: string
+    enum:
+      - AlwaysOn
+      - AlwaysOff
+      - TemporaryOn
+      - TemporaryOff
+    example: TemporaryOn
+    
+  DisplayType:
+    type: string
+    enum:
+      - CCD
+      - EbuLa
+      - Unknown
+    example: EbuLa
+    
+  BridgeServiceState:
+    type: string
+    enum:
+      - Master
+      - Slave
+      - Unknown
+    example: Master
+    
+  LeverType:
+    type: string
+    enum:
+      - CombinedLever
+      - RangedLever
+      - TwoStageLever
+    example: CombinedLever
