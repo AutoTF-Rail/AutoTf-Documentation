@@ -4,6 +4,12 @@ info:
     Documentation of the CentralBridge API by AutoTF. 
     More documentation can be found at [github@AutoTf-Rail/AutoTf-Documentation](https://github.com/AutoTF-Rail/AutoTf-Documentation).
 
+    The master central bridge is always at 192.168.0.1
+    The slave will register itself automatically at 192.168.0.2
+    The AIC will register itself automatically at 192.168.0.3
+
+    The first 5 IPs are always reserved for system stuff.
+
   version: 1.0.0
   title: CentralBridge API
   contact:
@@ -31,6 +37,8 @@ tags:
     description: Handles reading and editing of timetable data from the EbuLa system
   - name: CameraController
     description: Manages camera streaming endpoints and sync intervals
+  - name: "ControlController"
+    description: Provides control for train operations like speed, emergency brakes, motor control, and lever adjustments.
   - name: DisplayController
     description: Manages stream connections for display clients like CCD monitors or EbuLa displays
   - name: InformationController
@@ -39,8 +47,6 @@ tags:
     description: Provides system status information such as display status, camera status, localization, and GPS connectivity.
   - name: SystemController
     description: Provides system-level control operations like setting the date, updating the system, shutting down, and restarting.
-  - name: "TrainController"
-    description: Provides control for train operations like speed, emergency brakes, motor control, and lever adjustments.
 
 
 
@@ -57,6 +63,8 @@ paths:
           description: Localisation disabled
         '400':
           description: Failed to disable localisation
+      security:
+        - MacAuth: []
 
   /ebula/localisation/enable:
     post:
@@ -69,6 +77,8 @@ paths:
           description: Localisation enabled
         '400':
           description: Failed to enable localisation
+      security:
+        - MacAuth: []
 
   /ebula/localisation/turnOff:
     post:
@@ -81,6 +91,8 @@ paths:
           description: Localisation turned off
         '400':
           description: Failed to turn off localisation
+      security:
+        - MacAuth: []
 
   /ebula/localisation/turnOn:
     post:
@@ -93,6 +105,8 @@ paths:
           description: Localisation turned on
         '400':
           description: Failed to turn on localisation
+      security:
+        - MacAuth: []
 
   /ebula/localisation/state:
     get:
@@ -153,6 +167,8 @@ paths:
           description: Timetable updated
         '400':
           description: Error updating timetable
+      security:
+        - MacAuth: []
 
   /ebula/timetable/disable:
     post:
@@ -165,6 +181,8 @@ paths:
           description: Auto detection disabled
         '400':
           description: Error disabling detection
+      security:
+        - MacAuth: []
 
   /ebula/timetable/enable:
     post:
@@ -177,6 +195,8 @@ paths:
           description: Auto detection enabled
         '400':
           description: Error enabling detection
+      security:
+        - MacAuth: []
 
   /ebula/timetable/turnOff:
     post:
@@ -189,6 +209,8 @@ paths:
           description: Auto detection turned off
         '400':
           description: Error turning off detection
+      security:
+        - MacAuth: []
 
   /ebula/timetable/turnOn:
     post:
@@ -201,6 +223,8 @@ paths:
           description: Auto detection turned on
         '400':
           description: Error turning on detection
+      security:
+        - MacAuth: []
 
   /ebula/timetable/autoDetectionState:
     post:
@@ -215,6 +239,8 @@ paths:
             $ref: '#/definitions/ServiceState'
         '400':
           description: Error retrieving state
+      security:
+        - MacAuth: []
 
   /ebula/timetable/scan:
     post:
@@ -227,6 +253,8 @@ paths:
           description: Scan successful
         '400':
           description: Scan failed
+      security:
+        - MacAuth: []
 
   /ebula/timetable/lock:
     post:
@@ -239,6 +267,8 @@ paths:
           description: Locked successfully
         '400':
           description: Lock failed
+      security:
+        - MacAuth: []
 
   /ebula/timetable/unlock:
     post:
@@ -251,6 +281,8 @@ paths:
           description: Unlocked successfully
         '400':
           description: Unlock failed
+      security:
+        - MacAuth: []
 
   /ebula/timetable/lockState:
     post:
@@ -265,6 +297,8 @@ paths:
             type: boolean
         '400':
           description: Error getting lock state
+      security:
+        - MacAuth: []
 
   /ebula/timetable/rescan:
     post:
@@ -277,6 +311,8 @@ paths:
           description: Rescan complete
         '400':
           description: Rescan failed
+      security:
+        - MacAuth: []
 
 
 
@@ -323,6 +359,258 @@ paths:
           description: ISO 8601 datetime string of next save
         '400':
           description: Could not retrieve next save
+
+
+
+  /control/speed:
+    get:
+      tags:
+        - "ControlController"
+      summary: Get the current speed of the train
+      description: Returns the current speed of the train.
+      responses:
+        '200':
+          description: The current speed of the train.
+          schema:
+            type: string
+            format: date-time
+        '400':
+          description: Failed to retrieve the speed.
+      security:
+        - MacAuth: []
+
+  /control/lastspeedtime:
+    get:
+      tags:
+        - "ControlController"
+      summary: Get the last recorded time for the speed
+      description: Returns the timestamp when the last speed update occurred.
+      responses:
+        '200':
+          description: The timestamp of the last speed recorded.
+          schema:
+            type: string
+            format: date-time
+            example: "2025-04-17T15:30:00Z"
+        '400':
+          description: Failed to retrieve the last speed time.
+      security:
+        - MacAuth: []
+
+  /control/areMotorsReleased:
+    get:
+      tags:
+        - "ControlController"
+      summary: Check if motors are released
+      description: Returns a boolean indicating whether the motors are released.
+      responses:
+        '200':
+          description: The status of the motor release.
+          schema:
+            type: string
+            example: "true"
+        '400':
+          description: Failed to retrieve motor release status.
+      security:
+        - MacAuth: []
+
+  /control/leverCount:
+    get:
+      tags:
+        - "ControlController"
+      summary: Get the number of levers available
+      description: Returns the count of available levers.
+      responses:
+        '200':
+          description: The number of available levers.
+          schema:
+            type: string
+            example: "3"
+        '400':
+          description: Failed to retrieve the lever count.
+      security:
+        - MacAuth: []
+
+  /control/leverPosition:
+    get:
+      tags:
+        - "ControlController"
+      summary: Get the position of a specific lever
+      description: Returns the current position of the lever identified by `leverIndex`.
+      parameters:
+        - name: leverIndex
+          in: query
+          required: true
+          type: integer
+          description: The index of the lever whose position to retrieve.
+      responses:
+        '200':
+          description: The position of the specified lever.
+          schema:
+            type: string
+            example: "50"
+        '400':
+          description: Failed to retrieve the lever position.
+      security:
+        - MacAuth: []
+
+  /control/leverType:
+    get:
+      tags:
+        - "ControlController"
+      summary: Get the type of a specific lever
+      description: Returns the type of the lever identified by `leverIndex`.
+      parameters:
+        - name: "leverIndex"
+          in: query
+          required: true
+          description: The index of the lever whose type to retrieve.
+          type: integer
+      responses:
+        '200':
+          description: The type of the specified lever.
+          schema:
+            $ref: '#/definitions/LeverType'
+        '400':
+          description: Failed to retrieve the lever type.
+      security:
+        - MacAuth: []
+
+  /control/emergencybrake:
+    post:
+      tags:
+        - "ControlController"
+      summary: Activate the emergency brake
+      description: Activates the emergency brake for the train.
+      responses:
+        '200':
+          description: Emergency brake successfully activated.
+        '400':
+          description: Failed to activate the emergency brake.
+      security:
+        - MacAuth: []
+
+  /control/easyControl:
+    post:
+      tags:
+        - "ControlController"
+      summary: Set the easy control power for the train
+      description: Adjust the easy control power of the train. A negative value triggers braking.
+      parameters:
+        - name: "power"
+          in: "body"
+          required: true
+          description: The power level to set for easy control. Negative values trigger braking.
+          schema:
+            type: integer
+            example: -100
+      responses:
+        '200':
+          description: Easy control power set successfully.
+        '400':
+          description: Failed to set easy control power.
+      security:
+        - MacAuth: []
+
+  /control/releaseMotor:
+    post:
+      tags:
+        - "ControlController"
+      summary: Release a specific motor
+      description: Releases a specific motor identified by the `motorIndex`.
+      parameters:
+        - name: "motorIndex"
+          in: "body"
+          required: true
+          description: The index of the motor to release.
+          schema:
+            type: integer
+            example: 1
+      responses:
+        '200':
+          description: Motor released successfully.
+        '400':
+          description: Failed to release the motor.
+      security:
+        - MacAuth: []
+
+  /control/releaseMotors:
+    post:
+      tags:
+        - "ControlController"
+      summary: Release all motors
+      description: Releases all motors of the train.
+      responses:
+        '200':
+          description: All motors released successfully.
+        '400':
+          description: Failed to release the motors.
+      security:
+        - MacAuth: []
+
+  /control/engageMotor:
+    post:
+      tags:
+        - "ControlController"
+      summary: Engage a specific motor
+      description: Engage a specific motor identified by the `motorIndex`.
+      parameters:
+        - name: "motorIndex"
+          in: "body"
+          required: true
+          description: The index of the motor to engage.
+          schema:
+            type: integer
+            example: 1
+      responses:
+        '200':
+          description: Motor engaged successfully.
+        '400':
+          description: Failed to engage the motor.
+      security:
+        - MacAuth: []
+
+  /control/engageMotors:
+    post:
+      tags:
+        - "ControlController"
+      summary: Engage all motors
+      description: Engage all motors of the train.
+      responses:
+        '200':
+          description: All motors engaged successfully.
+        '400':
+          description: Failed to engage the motors.
+      security:
+        - MacAuth: []
+
+  /control/setLever:
+    post:
+      tags:
+        - "ControlController"
+      summary: Set the position of a specific lever
+      description: Sets the position of the lever identified by `leverIndex` to the specified percentage.
+      parameters:
+        - name: "data"
+          in: "body"
+          required: true
+          description: The data object containing `leverIndex` and `percentage`.
+          schema:
+            type: object
+            properties:
+              leverIndex:
+                type: integer
+                example: 1
+              percentage:
+                type: integer
+                example: 50
+      responses:
+        '200':
+          description: Lever position set successfully.
+        '400':
+          description: Failed to set lever position.
+      security:
+        - MacAuth: []
 
 
 
@@ -538,6 +826,8 @@ paths:
             type: string
         '400':
           description: Failed to check simulation availability
+      security:
+        - MacAuth: []
 
   /information/isinternetavailable:
     get:
@@ -552,6 +842,8 @@ paths:
             type: string
         '400':
           description: Failed to check internet availability
+      security:
+        - MacAuth: []
 
   /information/login:
     post:
@@ -686,6 +978,8 @@ paths:
           description: The system date was set successfully and the system is restarting.
         '400':
           description: Failed to set the system date.
+      security:
+        - MacAuth: []
 
   /system/update:
     post:
@@ -698,6 +992,8 @@ paths:
           description: The system was successfully updated and is pending a restart.
         '400':
           description: Failed to update the system.
+      security:
+        - MacAuth: []
 
   /system/shutdown:
     post:
@@ -710,6 +1006,8 @@ paths:
           description: The system is shutting down.
         '400':
           description: Failed to shut down the system.
+      security:
+        - MacAuth: []
 
   /system/restart:
     post:
@@ -722,232 +1020,9 @@ paths:
           description: The system is restarting.
         '400':
           description: Failed to restart the system.
+      security:
+        - MacAuth: []
 
-
-
-  /control/speed:
-    get:
-      tags:
-        - "TrainController"
-      summary: Get the current speed of the train
-      description: Returns the current speed of the train.
-      responses:
-        '200':
-          description: The current speed of the train.
-          schema:
-            type: string
-            format: date-time
-        '400':
-          description: Failed to retrieve the speed.
-
-  /control/lastspeedtime:
-    get:
-      tags:
-        - "TrainController"
-      summary: Get the last recorded time for the speed
-      description: Returns the timestamp when the last speed update occurred.
-      responses:
-        '200':
-          description: The timestamp of the last speed recorded.
-          schema:
-            type: string
-            format: date-time
-            example: "2025-04-17T15:30:00Z"
-        '400':
-          description: Failed to retrieve the last speed time.
-
-  /control/areMotorsReleased:
-    get:
-      tags:
-        - "TrainController"
-      summary: Check if motors are released
-      description: Returns a boolean indicating whether the motors are released.
-      responses:
-        '200':
-          description: The status of the motor release.
-          schema:
-            type: string
-            example: "true"
-        '400':
-          description: Failed to retrieve motor release status.
-
-  /control/leverCount:
-    get:
-      tags:
-        - "TrainController"
-      summary: Get the number of levers available
-      description: Returns the count of available levers.
-      responses:
-        '200':
-          description: The number of available levers.
-          schema:
-            type: string
-            example: "3"
-        '400':
-          description: Failed to retrieve the lever count.
-
-  /control/leverPosition:
-    get:
-      tags:
-        - "TrainController"
-      summary: Get the position of a specific lever
-      description: Returns the current position of the lever identified by `leverIndex`.
-      parameters:
-        - name: leverIndex
-          in: query
-          required: true
-          type: integer
-          description: The index of the lever whose position to retrieve.
-      responses:
-        '200':
-          description: The position of the specified lever.
-          schema:
-            type: string
-            example: "50"
-        '400':
-          description: Failed to retrieve the lever position.
-
-  /control/leverType:
-    get:
-      tags:
-        - "TrainController"
-      summary: Get the type of a specific lever
-      description: Returns the type of the lever identified by `leverIndex`.
-      parameters:
-        - name: "leverIndex"
-          in: query
-          required: true
-          description: The index of the lever whose type to retrieve.
-          type: integer
-      responses:
-        '200':
-          description: The type of the specified lever.
-          schema:
-            $ref: '#/definitions/LeverType'
-        '400':
-          description: Failed to retrieve the lever type.
-
-  /control/emergencybrake:
-    post:
-      tags:
-        - "TrainController"
-      summary: Activate the emergency brake
-      description: Activates the emergency brake for the train.
-      responses:
-        '200':
-          description: Emergency brake successfully activated.
-        '400':
-          description: Failed to activate the emergency brake.
-
-  /control/easyControl:
-    post:
-      tags:
-        - "TrainController"
-      summary: Set the easy control power for the train
-      description: Adjust the easy control power of the train. A negative value triggers braking.
-      parameters:
-        - name: "power"
-          in: "body"
-          required: true
-          description: The power level to set for easy control. Negative values trigger braking.
-          schema:
-            type: integer
-            example: -100
-      responses:
-        '200':
-          description: Easy control power set successfully.
-        '400':
-          description: Failed to set easy control power.
-
-  /control/releaseMotor:
-    post:
-      tags:
-        - "TrainController"
-      summary: Release a specific motor
-      description: Releases a specific motor identified by the `motorIndex`.
-      parameters:
-        - name: "motorIndex"
-          in: "body"
-          required: true
-          description: The index of the motor to release.
-          schema:
-            type: integer
-            example: 1
-      responses:
-        '200':
-          description: Motor released successfully.
-        '400':
-          description: Failed to release the motor.
-
-  /control/releaseMotors:
-    post:
-      tags:
-        - "TrainController"
-      summary: Release all motors
-      description: Releases all motors of the train.
-      responses:
-        '200':
-          description: All motors released successfully.
-        '400':
-          description: Failed to release the motors.
-
-  /control/engageMotor:
-    post:
-      tags:
-        - "TrainController"
-      summary: Engage a specific motor
-      description: Engage a specific motor identified by the `motorIndex`.
-      parameters:
-        - name: "motorIndex"
-          in: "body"
-          required: true
-          description: The index of the motor to engage.
-          schema:
-            type: integer
-            example: 1
-      responses:
-        '200':
-          description: Motor engaged successfully.
-        '400':
-          description: Failed to engage the motor.
-
-  /control/engageMotors:
-    post:
-      tags:
-        - "TrainController"
-      summary: Engage all motors
-      description: Engage all motors of the train.
-      responses:
-        '200':
-          description: All motors engaged successfully.
-        '400':
-          description: Failed to engage the motors.
-
-  /control/setLever:
-    post:
-      tags:
-        - "TrainController"
-      summary: Set the position of a specific lever
-      description: Sets the position of the lever identified by `leverIndex` to the specified percentage.
-      parameters:
-        - name: "data"
-          in: "body"
-          required: true
-          description: The data object containing `leverIndex` and `percentage`.
-          schema:
-            type: object
-            properties:
-              leverIndex:
-                type: integer
-                example: 1
-              percentage:
-                type: integer
-                example: 50
-      responses:
-        '200':
-          description: Lever position set successfully.
-        '400':
-          description: Failed to set lever position.
 
 
 
@@ -984,3 +1059,14 @@ definitions:
       - RangedLever
       - TwoStageLever
     example: CombinedLever
+
+
+securityDefinitions:
+  macHeader:
+    type: apiKey
+    name: macAddr
+    in: header
+    description: >
+      MAC-based authorization. Must include a valid `macAddr` in the header for non-local devices.
+      Local IPs (e.g., 192.168.0.x) are automatically authorized.
+      The MAC address given must be first added via `/information/login`.
