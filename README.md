@@ -58,6 +58,10 @@ Exports can be found in
 
 ![OpenApi](https://raw.githubusercontent.com/AutoTF-Rail/AutoTf-Documentation/main/DrawIODOC/Export/OpenApi.png)
 
+### Infrastructure diagram:
+
+![Infrastructure](https://raw.githubusercontent.com/AutoTF-Rail/AutoTf-Documentation/main/DrawIODOC/Export/Infrastructure.png)
+
 
 
 ## 3D models
