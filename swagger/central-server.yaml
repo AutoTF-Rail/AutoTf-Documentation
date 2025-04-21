@@ -96,7 +96,7 @@ paths:
             items:
               type: string
         400:
-          description: Could not supply log index
+          description: Could not supply log index.
         404:
           description: Device not found
       security:
@@ -306,18 +306,12 @@ paths:
         - DeviceController
       summary: Add a new train entry
       parameters:
-        - name: trainName
-          in: query
+        - in: body
+          name: body
+          description: Train details
           required: true
-          type: string
-        - name: authentikUsername
-          in: query
-          required: true
-          type: string
-        - name: trainId
-          in: query
-          required: true
-          type: string
+          schema:
+            $ref: '#/definitions/AddTrainBody'
       responses:
         200:
           description: Train created successfully
@@ -330,23 +324,12 @@ paths:
         - DeviceController
       summary: Edit an existing train
       parameters:
-        - name: id
-          in: query
+        - in: body
+          name: body
+          description: Train details
           required: true
-          type: string
-          format: uuid
-        - name: newTrainName
-          in: query
-          required: true
-          type: string
-        - name: newAuthUsername
-          in: query
-          required: true
-          type: string
-        - name: newTrainId
-          in: query
-          required: true
-          type: string
+          schema:
+            $ref: '#/definitions/EditTrainBody'
       responses:
         200:
           description: Train edited successfully
@@ -361,11 +344,13 @@ paths:
         - DeviceController
       summary: Delete a train
       parameters:
-        - name: id
-          in: query
+        - in: body
+          name: id
+          description: Train ID to delete
           required: true
-          type: string
-          format: uuid
+          schema:
+            type: string
+            format: uuid
       responses:
         200:
           description: Train deleted successfully
@@ -558,6 +543,39 @@ paths:
           schema:
             type: string
             example: "An error occurred while adding the mac address."
+
+definitions:
+  AddTrainBody:
+    type: object
+    required:
+      - TrainName
+      - AuthentikUsername
+      - TrainId
+    properties:
+      TrainName:
+        type: string
+      AuthentikUsername:
+        type: string
+      TrainId:
+        type: string
+
+  EditTrainBody:
+    type: object
+    required:
+      - Id
+      - TrainName
+      - AuthentikUsername
+      - TrainId
+    properties:
+      Id:
+        type: string
+        format: uuid
+      TrainName:
+        type: string
+      AuthentikUsername:
+        type: string
+      TrainId:
+        type: string
 
 securityDefinitions:
   authentikHeader:
