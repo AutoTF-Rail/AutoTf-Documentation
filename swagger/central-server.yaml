@@ -472,16 +472,12 @@ paths:
       summary: Add a new key
       description: Creates a new key using serial number and secret.
       parameters:
-        - name: serialNumber
-          in: query
+        - in: body
+          name: body
+          description: The serial number and secret of the yubikey.
           required: true
-          type: string
-          description: The serial number of the yubikey.
-        - name: secret
-          in: query
-          required: true
-          type: string
-          description: The secret of the yubikey.
+          schema:
+            $ref: '#/definitions/AddTrainBody'
       responses:
         200:
           description: Key added successfully
@@ -575,6 +571,17 @@ definitions:
       AuthentikUsername:
         type: string
       TrainId:
+        type: string
+
+  AddKeyBody:
+    type: object
+    required:
+      - SerialNumber
+      - Secret
+    properties:
+      SerialNumber:
+        type: string
+      Secret:
         type: string
 
 securityDefinitions:
