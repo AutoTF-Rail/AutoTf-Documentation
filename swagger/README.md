@@ -5,3 +5,5 @@ The following APIs have been documented using [SwaggerUI](https://github.com/swa
 [CentralServer](https://docs.autotf.de/centralserver/)
 
 [CentralBridge](https://docs.autotf.de/centralbridge/)
+
+[AIC](https://docs.autotf.de/aic/)
