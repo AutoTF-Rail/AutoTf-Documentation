@@ -1,0 +1,98 @@
+swagger: '2.0'
+info:
+  description: |
+    Documentation of the AIC API by AutoTF. 
+    More documentation can be found at [github@AutoTf-Rail/AutoTf-Documentation](https://github.com/AutoTF-Rail/AutoTf-Documentation).
+
+    The AIC will always set its IP to 192.168.0.3
+
+  version: 1.0.0
+  title: AIC API
+  contact:
+    email: contact@autotf.de
+
+host: "192.168.0.3"
+
+basePath: /
+            
+externalDocs:
+  description: Find out more about AutoTF
+  url: https://autotf.de
+
+schemes:
+  - http
+consumes:
+  - application/json
+produces:
+  - application/json
+
+tags:
+  - name: SystemController
+    description: Provides system-level control operations like setting the date, updating the system, shutting down, and restarting.
+
+
+
+
+paths:
+  /system/available:
+    get:
+      tags:
+        - "SystemController"
+      summary: Gets if the central bridge is available to the AIC
+      responses:
+        '200':
+          description: Returns a nullable bool if the central bridge is available. (Null if it wasn't checked yet.)
+          schema:
+            type: boolean
+
+  /system/version:
+    get:
+      tags:
+        - "SystemController"
+      summary: Get the version of the system
+      description: Returns the current version of the system.
+      responses:
+        '200':
+          description: The current system version.
+          schema:
+            type: string
+
+  /system/shutdown:
+    post:
+      tags:
+        - "SystemController"
+      summary: Shut down the system
+      description: Initiates a system shutdown.
+      responses:
+        '200':
+          description: The system is shutting down.
+        '400':
+          description: Failed to shut down the system.
+      security:
+        - LocalAuth: []
+
+  /system/restart:
+    post:
+      tags:
+        - "SystemController"
+      summary: Restart the system
+      description: Initiates a system restart.
+      responses:
+        '200':
+          description: The system is restarting.
+        '400':
+          description: Failed to restart the system.
+      security:
+        - LocalAuth: []
+
+
+
+
+securityDefinitions:
+  LocalAuth:
+    type: apiKey
+    name: IP-Address
+    in: header
+    description: >
+      Requires the users origin to be inside of the IP range 192.168.0.xxx.
+      This is to protect the system from being called by third party.
