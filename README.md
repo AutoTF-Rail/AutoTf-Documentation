@@ -31,6 +31,7 @@ Active repositories of AutoTF, that contain code that is used in prod are:
 * [AutoTf.CentralBridgeOS](https://github.com/AutoTF-Rail/AutoTf.CentralBridgeOS): OS that runs on the raspberry PI's on a train, that act as a central brain.
 * [AutoTf.TabletOS](https://github.com/AutoTF-Rail/AutoTf.TabletOS): Avalonia OS that runs on a tablet to configure and control a central bridge/train.
 * [Central Server](https://github.com/AutoTF-Rail/Central-Server): Dockerized central server to remote manage trains.
+* [AutoTf.Aic](https://github.com/AutoTF-Rail/AutoTf.Aic): Backend that runs on the AIC (Jetson orin nano super) on a train to handle video streams to detect objects etc.
 
 
 
