@@ -34,6 +34,17 @@ tags:
 
 
 paths:
+  /system/:
+    get:
+      tags:
+        - "SystemController"
+      summary: Endpoint to check if the AIC is online.
+      responses:
+        '200':
+          description: Returns true
+          schema:
+            type: boolean
+
   /system/available:
     get:
       tags:
