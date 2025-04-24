@@ -490,6 +490,19 @@ paths:
       security:
         - MacAuth: []
 
+  /control/isEasyControlAvailable:
+    get:
+      tags:
+        - "ControlController"
+      summary: Check if easy control is available
+      description: Returns a boolean indicating whether easy control is available on the current train.
+      responses:
+        '200':
+          description: The status of easy control.
+          schema:
+            type: boolean
+            example: true
+
   /control/leverCount:
     get:
       tags:
