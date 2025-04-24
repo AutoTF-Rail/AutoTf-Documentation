@@ -31,6 +31,8 @@ produces:
   - application/json
 
 tags:
+  - name: AIC - AicController
+    description: Controls the local AIC unit.
   - name: EbuLa - LocalisationController
     description: Controls localisation for EbuLa devices
   - name: EbuLa - TimetableController
@@ -52,6 +54,80 @@ tags:
 
 
 paths:
+  /aic/online:
+    get:
+      tags:
+        - "AIC - AicController"
+      summary: Returns the cached online state of the AIC unit.
+      description: This value is updated automatically every 15 seconds.
+      responses:
+        '200':
+          description: Ok
+          schema:
+            type: boolean
+
+  /aic/isAvailable:
+    get:
+      tags:
+        - "AIC - AicController"
+      summary: Returns a state of if the AIC can reach the central bridge.
+      description: This value doesn't show if the AIC is available, but instead if the connection works both ways.
+      responses:
+        '200':
+          description: Returns a nullable bool. (Null if it hasn't been checked yet)
+          schema:
+            type: boolean
+
+  /aic/isOnline:
+    get:
+      tags:
+        - "AIC - AicController"
+      summary: Returns the current online state of the AIC unit.
+      description: To reduce bandwidth usage, please use `/aic/online` instead.
+      responses:
+        '200':
+          description: Returns a bool indicating the online status.
+          schema:
+            type: boolean
+
+  /aic/version:
+    get:
+      tags:
+        - "AIC - AicController"
+      summary: Returns the current git version of the AIC unit.
+      description: Returns the current git version of the branch the AIC is on.
+      responses:
+        '200':
+          description: Returns a string indicating the git version.
+          schema:
+            type: string
+
+  /aic/shutdown:
+    post:
+      tags:
+        - "AIC - AicController"
+      summary: Shuts down the AIC unit.
+      description: Sends a shutdown signal to the AIC unit.
+      responses:
+        '200':
+          description: Ok
+      security:
+        - MacAuth: []
+
+  /aic/restart:
+    post:
+      tags:
+        - "AIC - AicController"
+      summary: Restarts the AIC unit.
+      description: Sends a restart signal to the AIC unit.
+      responses:
+        '200':
+          description: Ok
+      security:
+        - MacAuth: []
+
+
+
   /ebula/localisation/disable:
     post:
       tags:
