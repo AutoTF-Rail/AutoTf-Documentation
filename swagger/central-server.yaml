@@ -36,6 +36,19 @@ schemes:
   - https
 
 paths:
+  /evuName:
+    get:
+      tags:
+        - RootController
+      summary: Returns the EVU name.
+      produces:
+        - text/html
+      responses:
+        '200':
+          description: EVU name
+          schema:
+            type: string
+            example: "example-Evu"
   /token:
     get:
       tags:
