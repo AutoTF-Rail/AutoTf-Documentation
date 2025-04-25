@@ -31,7 +31,9 @@ produces:
   - application/json
 
 tags:
-  - name: AIC - AicController
+  - name: Aic - AicInformationController
+    description: Provies information about the AIC unit.
+  - name: Aic - AicController
     description: Controls the local AIC unit.
   - name: EbuLa - LocalisationController
     description: Controls localisation for EbuLa devices
@@ -54,10 +56,46 @@ tags:
 
 
 paths:
+  /aic/information/logdates:
+    get:
+      tags:
+        - "Aic - AicInformationController"
+      summary: Get available log dates
+      responses:
+        '200':
+          description: A list of available log dates (filenames)
+          schema:
+            type: array
+            items:
+              type: string
+        '400':
+          description: Failed to retrieve log dates
+
+  /aic/information/logs:
+    get:
+      tags:
+        - "Aic - AicInformationController"
+      summary: Get logs for a specific date.
+      parameters:
+        - name: date
+          in: query
+          required: true
+          type: string
+          description: The date for which logs should be retrieved (in format YYYY-MM-DD).
+      responses:
+        '200':
+          description: A list of log entries for the given date
+          schema:
+            type: array
+            items:
+              type: string
+        '400':
+          description: Failed to retrieve logs for the specified date
+
   /aic/online:
     get:
       tags:
-        - "AIC - AicController"
+        - "Aic - AicController"
       summary: Returns the cached online state of the AIC unit.
       description: This value is updated automatically every 15 seconds.
       responses:
@@ -69,7 +107,7 @@ paths:
   /aic/isAvailable:
     get:
       tags:
-        - "AIC - AicController"
+        - "Aic - AicController"
       summary: Returns a state of if the AIC can reach the central bridge.
       description: This value doesn't show if the AIC is available, but instead if the connection works both ways.
       responses:
@@ -81,7 +119,7 @@ paths:
   /aic/isOnline:
     get:
       tags:
-        - "AIC - AicController"
+        - "Aic - AicController"
       summary: Returns the current online state of the AIC unit.
       description: To reduce bandwidth usage, please use `/aic/online` instead.
       responses:
@@ -93,7 +131,7 @@ paths:
   /aic/version:
     get:
       tags:
-        - "AIC - AicController"
+        - "Aic - AicController"
       summary: Returns the current git version of the AIC unit.
       description: Returns the current git version of the branch the AIC is on.
       responses:
@@ -105,7 +143,7 @@ paths:
   /aic/shutdown:
     post:
       tags:
-        - "AIC - AicController"
+        - "Aic - AicController"
       summary: Shuts down the AIC unit.
       description: Sends a shutdown signal to the AIC unit.
       responses:
@@ -117,7 +155,7 @@ paths:
   /aic/restart:
     post:
       tags:
-        - "AIC - AicController"
+        - "Aic - AicController"
       summary: Restarts the AIC unit.
       description: Sends a restart signal to the AIC unit.
       responses:
