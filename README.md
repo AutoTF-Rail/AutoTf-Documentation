@@ -28,7 +28,7 @@ Active repositories of AutoTF, that contain code that is used in prod are:
 * [CentralBridgeInstall](https://github.com/AutoTF-Rail/CentralBridgeInstall/): Contains scripts used in the install script generated in [AutoTf.Manager](https://github.com/AutoTF-Rail/AutoTf.Manager).
 
 ### Central Code:
-* [AutoTf.CentralBridgeOS](https://github.com/AutoTF-Rail/AutoTf.CentralBridgeOS): OS that runs on the raspberry PI's on a train, that act as a central brain.
+* [AutoTf.CentralBridge](https://github.com/AutoTF-Rail/AutoTf.CentralBridge): Backend that runs on the raspberry PI's on a train, that act as a central brain.
 * [AutoTf.TabletOS](https://github.com/AutoTF-Rail/AutoTf.TabletOS): Avalonia OS that runs on a tablet to configure and control a central bridge/train.
 * [Central Server](https://github.com/AutoTF-Rail/Central-Server): Dockerized central server to remote manage trains.
 * [AutoTf.Aic](https://github.com/AutoTF-Rail/AutoTf.Aic): Backend that runs on the AIC (Jetson orin nano super) on a train to handle video streams to detect objects etc.
@@ -76,7 +76,7 @@ There will always be a printable example version in the [ExampleLever](https://g
 
 ## Licenses
 
-While some repositories are listed under the Apache 2.0 license, main parts like the [CentralBridge](https://github.com/AutoTF-Rail/AutoTf.CentralBridgeOS) are listed under the [GPL](https://www.gnu.org/licenses/gpl-3.0.txt) due to the usage of software/packages of third party listed as well under the GPL license.
+While some repositories are listed under the Apache 2.0 license, main parts like the [CentralBridge](https://github.com/AutoTF-Rail/AutoTf.CentralBridge) are listed under the [GPL](https://www.gnu.org/licenses/gpl-3.0.txt) due to the usage of software/packages of third party listed as well under the GPL license.
 
 For a list of used packages please refer to the individiual repository.
 
