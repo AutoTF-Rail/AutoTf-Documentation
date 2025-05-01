@@ -26,6 +26,8 @@ Active repositories of AutoTF, that contain code that is used in prod are:
 * [AutoTf.FahrplanParser](https://github.com/AutoTF-Rail/AutoTf.FahrplanParser): A console app/package that parses images of a fahrplan into code to be used in automation.
 * [AutoTf.Localisation](https://github.com/AutoTF-Rail/AutoTf.Localisation): CLI Demo to localise a train based on train display outputs + Hektometer recognition infront of the train. (Works with [AutoTf.FahrplanParser](https://github.com/AutoTF-Rail/AutoTf.FahrplanParser))
 * [CentralBridgeInstall](https://github.com/AutoTF-Rail/CentralBridgeInstall/): Contains scripts used in the install script generated in [AutoTf.Manager](https://github.com/AutoTF-Rail/AutoTf.Manager).
+* [AutoTf.AuthentikDashboard](https://github.com/AutoTF-Rail/AutoTf.AuthentikDashboard): API for interactions with the Authentik API for external users. (Includes somewhat working Avalonia WASM frontend).
+* [AutoTf.AdminPanel](https://github.com/AutoTF-Rail/AutoTf.AdminPanel): API and Frontend for interactions with cloudflare, docker, plesk, and authentik to create new EVU servers easier.
 
 ### Central Code:
 * [AutoTf.CentralBridge](https://github.com/AutoTF-Rail/AutoTf.CentralBridge): Backend that runs on the raspberry PI's on a train, that act as a central brain.
