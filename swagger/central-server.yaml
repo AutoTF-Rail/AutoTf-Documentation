@@ -313,6 +313,19 @@ paths:
       security:
         - authentikHeader: []
 
+  /sync/device/trainCount:
+    get:
+      tags:
+        - DeviceController
+      summary: Gets the count of all trains
+      responses:
+        200:
+          description: Integer representing the count of trains.
+          schema:
+            type: integer
+      security:
+        - authentikHeader: []
+
   /sync/device/addTrain:
     post:
       tags:
