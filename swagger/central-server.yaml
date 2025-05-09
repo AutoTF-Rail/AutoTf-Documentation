@@ -326,6 +326,19 @@ paths:
       security:
         - authentikHeader: []
 
+  /sync/device/allowedTrainsCount:
+    get:
+      tags:
+        - DeviceController
+      summary: Gets the count of trains allowed to be created.
+      responses:
+        200:
+          description: Integer representing the count of trains being allowed to created.
+          schema:
+            type: integer
+      security:
+        - authentikHeader: []
+
   /sync/device/addTrain:
     post:
       tags:
