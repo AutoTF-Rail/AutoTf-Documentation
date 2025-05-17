@@ -72,8 +72,11 @@ Exports can be found in
 
 The molds for motors, and other prototyping is done in blender, and all models can be found in [Models](https://github.com/AutoTF-Rail/AutoTf-Documentation/tree/main/Models/).
 
+Rendered screenshots can also be found in the Models folder.
 
 There will always be a printable example version in the [ExampleLever](https://github.com/AutoTF-Rail/AutoTf-Documentation/tree/main/Models/Export/Print/ExampleLever/) folder.
+
+
 
 
 ## Licenses
