@@ -1,0 +1,201 @@
+<mxfile host="Electron" agent="Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) draw.io/26.2.2 Chrome/134.0.6998.178 Electron/35.1.2 Safari/537.36" version="26.2.2">
+  <diagram name="Page-1" id="8s0H8GVzz3k_I11jaiji">
+    <mxGraphModel dx="2579" dy="1504" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="1920" pageHeight="1200" math="0" shadow="0">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+        <mxCell id="QPg3V_gkQnF1XBl8xNJR-53" value="" style="group" vertex="1" connectable="0" parent="1">
+          <mxGeometry x="180" y="70" width="1080" height="440" as="geometry" />
+        </mxCell>
+        <mxCell id="QPg3V_gkQnF1XBl8xNJR-50" value="" style="endArrow=none;html=1;rounded=0;entryX=1;entryY=1;entryDx=0;entryDy=0;" edge="1" parent="QPg3V_gkQnF1XBl8xNJR-53" target="QPg3V_gkQnF1XBl8xNJR-36">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <mxPoint y="440" as="sourcePoint" />
+            <mxPoint x="420" y="400" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="QPg3V_gkQnF1XBl8xNJR-52" value="" style="group" vertex="1" connectable="0" parent="QPg3V_gkQnF1XBl8xNJR-53">
+          <mxGeometry width="1080" height="440" as="geometry" />
+        </mxCell>
+        <mxCell id="QPg3V_gkQnF1XBl8xNJR-39" value="" style="endArrow=none;html=1;rounded=0;entryX=1;entryY=1;entryDx=0;entryDy=0;" edge="1" parent="QPg3V_gkQnF1XBl8xNJR-52" target="QPg3V_gkQnF1XBl8xNJR-2">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="120" y="440" as="sourcePoint" />
+            <mxPoint x="230" y="240" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="QPg3V_gkQnF1XBl8xNJR-40" value="" style="endArrow=none;html=1;rounded=0;entryX=1;entryY=1;entryDx=0;entryDy=0;" edge="1" parent="QPg3V_gkQnF1XBl8xNJR-52">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <mxPoint y="440" as="sourcePoint" />
+            <mxPoint as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="QPg3V_gkQnF1XBl8xNJR-43" value="" style="endArrow=none;html=1;rounded=0;entryX=1;entryY=1;entryDx=0;entryDy=0;" edge="1" parent="QPg3V_gkQnF1XBl8xNJR-52">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="479.30999999999995" y="440" as="sourcePoint" />
+            <mxPoint x="479.30999999999995" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="QPg3V_gkQnF1XBl8xNJR-44" value="" style="endArrow=none;html=1;rounded=0;entryX=1;entryY=1;entryDx=0;entryDy=0;" edge="1" parent="QPg3V_gkQnF1XBl8xNJR-52">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="599.31" y="440" as="sourcePoint" />
+            <mxPoint x="599.31" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="QPg3V_gkQnF1XBl8xNJR-45" value="" style="endArrow=none;html=1;rounded=0;entryX=1;entryY=1;entryDx=0;entryDy=0;" edge="1" parent="QPg3V_gkQnF1XBl8xNJR-52">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="720" y="440" as="sourcePoint" />
+            <mxPoint x="720" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="QPg3V_gkQnF1XBl8xNJR-46" value="" style="endArrow=none;html=1;rounded=0;entryX=1;entryY=1;entryDx=0;entryDy=0;" edge="1" parent="QPg3V_gkQnF1XBl8xNJR-52">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="840" y="440" as="sourcePoint" />
+            <mxPoint x="840" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="QPg3V_gkQnF1XBl8xNJR-47" value="" style="endArrow=none;html=1;rounded=0;entryX=1;entryY=1;entryDx=0;entryDy=0;" edge="1" parent="QPg3V_gkQnF1XBl8xNJR-52">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="958.8199999999999" y="440" as="sourcePoint" />
+            <mxPoint x="958.8199999999999" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="QPg3V_gkQnF1XBl8xNJR-48" value="" style="endArrow=none;html=1;rounded=0;entryX=1;entryY=1;entryDx=0;entryDy=0;" edge="1" parent="QPg3V_gkQnF1XBl8xNJR-52">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="1080" y="440" as="sourcePoint" />
+            <mxPoint x="1080" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="QPg3V_gkQnF1XBl8xNJR-51" value="" style="group" vertex="1" connectable="0" parent="QPg3V_gkQnF1XBl8xNJR-52">
+          <mxGeometry x="240" width="119.30999999999995" height="440" as="geometry" />
+        </mxCell>
+        <mxCell id="QPg3V_gkQnF1XBl8xNJR-41" value="" style="endArrow=none;html=1;rounded=0;entryX=1;entryY=1;entryDx=0;entryDy=0;" edge="1" parent="QPg3V_gkQnF1XBl8xNJR-51">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <mxPoint y="440" as="sourcePoint" />
+            <mxPoint as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="QPg3V_gkQnF1XBl8xNJR-42" value="" style="endArrow=none;html=1;rounded=0;entryX=1;entryY=1;entryDx=0;entryDy=0;" edge="1" parent="QPg3V_gkQnF1XBl8xNJR-51">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="119.30999999999995" y="440" as="sourcePoint" />
+            <mxPoint x="119.30999999999995" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="QPg3V_gkQnF1XBl8xNJR-1" value="Woche" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#f5f5f5;fontColor=#333333;strokeColor=#666666;" vertex="1" parent="1">
+          <mxGeometry x="180" y="30" width="960" height="20" as="geometry" />
+        </mxCell>
+        <mxCell id="QPg3V_gkQnF1XBl8xNJR-2" value="1" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#dae8fc;strokeColor=#6c8ebf;" vertex="1" parent="1">
+          <mxGeometry x="180" y="50" width="120" height="20" as="geometry" />
+        </mxCell>
+        <mxCell id="QPg3V_gkQnF1XBl8xNJR-3" value="2" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#d5e8d4;strokeColor=#82b366;" vertex="1" parent="1">
+          <mxGeometry x="300" y="50" width="120" height="20" as="geometry" />
+        </mxCell>
+        <mxCell id="QPg3V_gkQnF1XBl8xNJR-4" value="3" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#ffe6cc;strokeColor=#d79b00;" vertex="1" parent="1">
+          <mxGeometry x="420" y="50" width="120" height="20" as="geometry" />
+        </mxCell>
+        <mxCell id="QPg3V_gkQnF1XBl8xNJR-5" value="4" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#f8cecc;strokeColor=#b85450;" vertex="1" parent="1">
+          <mxGeometry x="540" y="50" width="120" height="20" as="geometry" />
+        </mxCell>
+        <mxCell id="QPg3V_gkQnF1XBl8xNJR-6" value="5" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#e1d5e7;strokeColor=#9673a6;" vertex="1" parent="1">
+          <mxGeometry x="660" y="50" width="120" height="20" as="geometry" />
+        </mxCell>
+        <mxCell id="QPg3V_gkQnF1XBl8xNJR-7" value="6" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#dae8fc;strokeColor=#6c8ebf;" vertex="1" parent="1">
+          <mxGeometry x="780" y="50" width="120" height="20" as="geometry" />
+        </mxCell>
+        <mxCell id="QPg3V_gkQnF1XBl8xNJR-8" value="Darüber hinaus" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="1140" y="50" width="120" height="20" as="geometry" />
+        </mxCell>
+        <mxCell id="QPg3V_gkQnF1XBl8xNJR-9" value="3D scan des Zuges" style="rounded=0;whiteSpace=wrap;html=1;fontSize=9;fillColor=#d5e8d4;strokeColor=#82b366;" vertex="1" parent="1">
+          <mxGeometry x="180" y="80" width="60" height="20" as="geometry" />
+        </mxCell>
+        <mxCell id="QPg3V_gkQnF1XBl8xNJR-10" value="Streckenaufnahmen unter diversen umgebungen" style="rounded=0;whiteSpace=wrap;html=1;fontSize=9;fillColor=#fff2cc;strokeColor=#d6b656;" vertex="1" parent="1">
+          <mxGeometry x="180" y="110" width="120" height="20" as="geometry" />
+        </mxCell>
+        <mxCell id="QPg3V_gkQnF1XBl8xNJR-11" value="Bestellung der hardware" style="rounded=0;whiteSpace=wrap;html=1;fontSize=9;fillColor=#d5e8d4;strokeColor=#82b366;" vertex="1" parent="1">
+          <mxGeometry x="360" y="230" width="60" height="20" as="geometry" />
+        </mxCell>
+        <mxCell id="QPg3V_gkQnF1XBl8xNJR-12" value="&lt;font&gt;Streckenaufnahme bei fester Geschwindigkeit (e.g. 80km/h)&lt;/font&gt;" style="rounded=0;whiteSpace=wrap;html=1;fontSize=8;fillColor=#e1d5e7;strokeColor=#9673a6;" vertex="1" parent="1">
+          <mxGeometry x="180" y="170" width="120" height="20" as="geometry" />
+        </mxCell>
+        <mxCell id="QPg3V_gkQnF1XBl8xNJR-14" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0;entryY=0.5;entryDx=0;entryDy=0;" edge="1" parent="1" source="QPg3V_gkQnF1XBl8xNJR-13" target="QPg3V_gkQnF1XBl8xNJR-12">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="QPg3V_gkQnF1XBl8xNJR-13" value="Zum digitalen testen der lokalisierung" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="20" y="150" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="QPg3V_gkQnF1XBl8xNJR-15" value="3D nachbau des Zuges" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#dae8fc;strokeColor=#6c8ebf;" vertex="1" parent="1">
+          <mxGeometry x="240" y="200" width="180" height="20" as="geometry" />
+        </mxCell>
+        <mxCell id="QPg3V_gkQnF1XBl8xNJR-16" value="Entwicklung der Motor Module" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#ffe6cc;strokeColor=#d79b00;" vertex="1" parent="1">
+          <mxGeometry x="360" y="260" width="540" height="20" as="geometry" />
+        </mxCell>
+        <mxCell id="QPg3V_gkQnF1XBl8xNJR-17" value="Testen der Motor Module (Anbau der Schrauben und Baseplate)" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#fff2cc;strokeColor=#d6b656;" vertex="1" parent="1">
+          <mxGeometry x="360" y="280" width="540" height="20" as="geometry" />
+        </mxCell>
+        <mxCell id="QPg3V_gkQnF1XBl8xNJR-18" value="Fernsteuerungs tests (Werkstatt)" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#f8cecc;strokeColor=#b85450;fontSize=9;" vertex="1" parent="1">
+          <mxGeometry x="540" y="310" width="120" height="20" as="geometry" />
+        </mxCell>
+        <mxCell id="QPg3V_gkQnF1XBl8xNJR-19" value="Autonome fahrt tests nach fahrplan" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#e1d5e7;strokeColor=#9673a6;" vertex="1" parent="1">
+          <mxGeometry x="660" y="340" width="240" height="20" as="geometry" />
+        </mxCell>
+        <mxCell id="QPg3V_gkQnF1XBl8xNJR-20" value="Entwicklung von Signal/Schienen erkennung" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#f8cecc;strokeColor=#b85450;" vertex="1" parent="1">
+          <mxGeometry x="300" y="140" width="360" height="20" as="geometry" />
+        </mxCell>
+        <mxCell id="QPg3V_gkQnF1XBl8xNJR-21" value="Autonome fahrt tests nach fahrplan mit Signalerkennung und lokalisierung" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#dae8fc;strokeColor=#6c8ebf;fontSize=10;" vertex="1" parent="1">
+          <mxGeometry x="780" y="370" width="360" height="20" as="geometry" />
+        </mxCell>
+        <mxCell id="QPg3V_gkQnF1XBl8xNJR-23" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0;entryY=0.5;entryDx=0;entryDy=0;" edge="1" parent="1" source="QPg3V_gkQnF1XBl8xNJR-22" target="QPg3V_gkQnF1XBl8xNJR-19">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="340" y="370" />
+              <mxPoint x="340" y="350" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="QPg3V_gkQnF1XBl8xNJR-22" value="Schließt nur Grundlegende motoren steuerung von Fahrhebel/Bremse, PZB etc. ein" style="rounded=0;whiteSpace=wrap;html=1;fontSize=10;" vertex="1" parent="1">
+          <mxGeometry x="20" y="340" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="QPg3V_gkQnF1XBl8xNJR-26" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0.5;entryY=1;entryDx=0;entryDy=0;" edge="1" parent="1" source="QPg3V_gkQnF1XBl8xNJR-25" target="QPg3V_gkQnF1XBl8xNJR-22">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="QPg3V_gkQnF1XBl8xNJR-25" value="z.B. Motoren start, ansagen, FDL kommunikation, gefahren erkennung entfällt" style="rounded=0;whiteSpace=wrap;html=1;fontSize=10;" vertex="1" parent="1">
+          <mxGeometry x="20" y="420" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="QPg3V_gkQnF1XBl8xNJR-29" value="PZB Integration" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#d5e8d4;strokeColor=#82b366;" vertex="1" parent="1">
+          <mxGeometry x="900" y="400" width="120" height="20" as="geometry" />
+        </mxCell>
+        <mxCell id="QPg3V_gkQnF1XBl8xNJR-32" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0;entryY=0.5;entryDx=0;entryDy=0;" edge="1" parent="1" source="QPg3V_gkQnF1XBl8xNJR-31" target="QPg3V_gkQnF1XBl8xNJR-18">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="QPg3V_gkQnF1XBl8xNJR-31" value="Beinhaltet entwicklung von seiten wechsel funktion" style="rounded=0;whiteSpace=wrap;html=1;fontSize=10;" vertex="1" parent="1">
+          <mxGeometry x="20" y="270" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="QPg3V_gkQnF1XBl8xNJR-33" value="Voll autonome fahrten tests" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#ffe6cc;strokeColor=#d79b00;fontSize=9;" vertex="1" parent="1">
+          <mxGeometry x="1020" y="430" width="120" height="20" as="geometry" />
+        </mxCell>
+        <mxCell id="QPg3V_gkQnF1XBl8xNJR-34" value="7" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#d5e8d4;strokeColor=#82b366;" vertex="1" parent="1">
+          <mxGeometry x="900" y="50" width="120" height="20" as="geometry" />
+        </mxCell>
+        <mxCell id="QPg3V_gkQnF1XBl8xNJR-35" value="Gefahrenerkennung" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#fff2cc;strokeColor=#d6b656;fontSize=9;" vertex="1" parent="1">
+          <mxGeometry x="1140" y="460" width="120" height="20" as="geometry" />
+        </mxCell>
+        <mxCell id="QPg3V_gkQnF1XBl8xNJR-36" value="Bei Bedarf Radar tests" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#f8cecc;strokeColor=#b85450;fontSize=9;" vertex="1" parent="1">
+          <mxGeometry x="1140" y="490" width="120" height="20" as="geometry" />
+        </mxCell>
+        <mxCell id="QPg3V_gkQnF1XBl8xNJR-37" value="Einzelne Schritte können je nach komplexität länger dauern, und die nächsten Schritte nach hinten schieben. Auch Lieferzeiten können einzelne Schritte verschieben&lt;br&gt;Dies ist eine grobe Roadmap die einen &quot;perfekten flow&quot; darstellt." style="text;html=1;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;" vertex="1" parent="1">
+          <mxGeometry x="180" y="520" width="380" height="70" as="geometry" />
+        </mxCell>
+        <mxCell id="QPg3V_gkQnF1XBl8xNJR-38" value="8" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#ffe6cc;strokeColor=#d79b00;" vertex="1" parent="1">
+          <mxGeometry x="1020" y="50" width="120" height="20" as="geometry" />
+        </mxCell>
+        <mxCell id="QPg3V_gkQnF1XBl8xNJR-49" value="Kontinuierliche verbesserung von Signalerkennung" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#f8cecc;strokeColor=#b85450;fontSize=9;" vertex="1" parent="1">
+          <mxGeometry x="1140" y="140" width="120" height="20" as="geometry" />
+        </mxCell>
+        <mxCell id="QPg3V_gkQnF1XBl8xNJR-54" value="Der nächste Schritt in Fahrtentests wird erst begonnen wenn das resultat des vorherigen zu mehreren Zeitpunkten und von mehreren personen Individuell getestet und &quot;abgesegnet&quot; wurde." style="text;html=1;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;" vertex="1" parent="1">
+          <mxGeometry x="570" y="525" width="300" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="QPg3V_gkQnF1XBl8xNJR-55" value="Zu jederzeit eines fahr tests muss min. 1 Person im Führerstand sein, welcher den Zug im Notfall stoppen kann." style="text;html=1;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;" vertex="1" parent="1">
+          <mxGeometry x="880" y="525" width="300" height="60" as="geometry" />
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+</mxfile>
