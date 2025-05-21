@@ -49,6 +49,10 @@ Documentation is made using Draw.IO and saved in [DrawIODOC](https://github.com/
 
 Exports can be found in
 
+### Testing Roadmap:
+
+![Test roadmap](https://raw.githubusercontent.com/AutoTF-Rail/AutoTf-Documentation/main/DrawIODOC/Export/TestRoadmap.png)
+
 ### Train setup diagram:
 
 ![Train Setup](https://raw.githubusercontent.com/AutoTF-Rail/AutoTf-Documentation/main/DrawIODOC/Export/TrainSetup.png)
