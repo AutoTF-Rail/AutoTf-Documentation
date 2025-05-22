@@ -12,6 +12,9 @@ The documentation might lag behind a bit, because the safety and functionality o
 ### **All info given in this repository are without warranty. AutoTF and individiuals representing AutoTF are not liable for any damanges occuring due to the contents unless specified otherwise in a contract.**
 
 
+## LFS
+Large files are hosted on the AutoTF LFS feed at [feed.autotf.de](https://feed.autotf.de/)
+
 ## Active repositories
 
 Active repositories of AutoTF, that contain code that is used in prod are:
