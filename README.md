@@ -13,7 +13,7 @@ The documentation might lag behind a bit, because the safety and functionality o
 
 
 ## LFS
-Large files are hosted on the AutoTF LFS feed at [feed.autotf.de](https://feed.autotf.de/)
+Large files are hosted on the AutoTF Gitea instance at [lfs.autotf.de](https://lfs.autotf.de/admin/AutoTf-Documentation)
 
 ## Active repositories
 
