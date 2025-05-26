@@ -645,87 +645,18 @@ paths:
       security:
         - MacAuth: []
 
-  /control/releaseMotor:
+  /control/areMotorsEngaged:
     post:
       tags:
         - "ControlController"
-      summary: Release a specific motor
-      description: Releases a specific motor identified by the `motorIndex`.
-      parameters:
-        - name: "motorIndex"
-          in: "body"
-          required: true
-          description: The index of the motor to release.
+      summary: Represents the state of the physical power switch.
+      description: State of if the motors and solenoids have power.
+      responses:
+        '200':
+          description: Returns state of physical switch.
           schema:
-            type: object
-            properties:
-              power:
-                type: integer
-                format: int32
-                example: 1
-            required:
-              - motorIndex
-      responses:
-        '200':
-          description: Motor released successfully.
-        '400':
-          description: Failed to release the motor.
-      security:
-        - MacAuth: []
-
-  /control/releaseMotors:
-    post:
-      tags:
-        - "ControlController"
-      summary: Release all motors
-      description: Releases all motors of the train.
-      responses:
-        '200':
-          description: All motors released successfully.
-        '400':
-          description: Failed to release the motors.
-      security:
-        - MacAuth: []
-
-  /control/engageMotor:
-    post:
-      tags:
-        - "ControlController"
-      summary: Engage a specific motor
-      description: Engage a specific motor identified by the `motorIndex`.
-      parameters:
-        - name: "motorIndex"
-          in: "body"
-          required: true
-          description: The index of the motor to engage.
-          schema:
-            type: object
-            properties:
-              power:
-                type: integer
-                format: int32
-                example: 1
-            required:
-              - motorIndex
-      responses:
-        '200':
-          description: Motor engaged successfully.
-        '400':
-          description: Failed to engage the motor.
-      security:
-        - MacAuth: []
-
-  /control/engageMotors:
-    post:
-      tags:
-        - "ControlController"
-      summary: Engage all motors
-      description: Engage all motors of the train.
-      responses:
-        '200':
-          description: All motors engaged successfully.
-        '400':
-          description: Failed to engage the motors.
+            type: boolean
+            example: "true"
       security:
         - MacAuth: []
 
